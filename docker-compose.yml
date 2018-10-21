@@ -1,0 +1,24 @@
+version: '2'
+services:
+  ftfe:
+    image: node:8
+    container_name: ftfe
+    build: ./
+    # image: 'node_react:latest'
+    # working_dir: /usr/src/app
+    working_dir: /usr/src/app/ftfe
+    volumes:
+      - ./app:/usr/src/app
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    # This is a dependency free script to make this container keep running
+    # command: 'node app.js'
+    command: 'npm start'
+    # command: 'npm run-script build'
+
+networks:
+  default:
+    external:
+      name: docker_node_default
