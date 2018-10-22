@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { Row, Col, Icon, Badge } from 'antd'
+import Logo from './logo'
+import Trending from './trending'
+import Category from './category'
 
 class TopHeader extends Component {
   render () {
@@ -16,42 +19,16 @@ class TopHeader extends Component {
       >
         <Row>
           <Col span={12}>
-            <Row type="flex" justify="start" style={{
-              color: 'white',
-            }}>
+            <Row type="flex" justify="start">
               <Col span={4}></Col>
               <Col span={5}>
-                <span style={{
-                  position: 'absolute',
-                  lineHeight: '100%',
-                  marginTop: '13px',
-                  fontSize: '30px',
-                  fontWeight: '500',
-                }}>
-                  FT 链
-                </span>
+                <Logo></Logo>
               </Col>
               <Col span={4}>
-                <span style={{
-                  position: 'absolute',
-                  lineHeight: '100%',
-                  marginTop: '17px',
-                  fontSize: '20px',
-                  fontWeight: '300',
-                }}>
-                  热门
-                </span>
+                <Trending></Trending>
               </Col>
               <Col span={4}>
-                <span style={{
-                  position: 'absolute',
-                  lineHeight: '100%',
-                  marginTop: '17px',
-                  fontSize: '20px',
-                  fontWeight: '300',
-                }}>
-                  分类
-                </span>
+                <Category></Category>
               </Col>
             </Row>
           </Col>
@@ -62,7 +39,9 @@ class TopHeader extends Component {
               marginTop: '10px',
             }}>
               <Col span={1} style={{ marginRight: '15px' }}>
-                <Icon type="search" theme="outlined" />
+                <a href="/search" style={{ color: 'white' }}>
+                  <Icon type="search" theme="outlined" />
+                </a>
               </Col>
               <Col span={1} style={{ marginRight: '15px' }}>
                 <Badge count={5} style={{ backgroundColor: '#F8E71C', color: 'black' }}>

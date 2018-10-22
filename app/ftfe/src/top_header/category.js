@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Trending extends Component {
+class Category extends Component {
   state ={
     hover: false,
   }
@@ -43,10 +43,10 @@ class Trending extends Component {
           fontWeight: fw,
         }}
       >
-        热门
+        分类
       </span>
     )
   }
 }
 
-export default Trending
+export default Category
