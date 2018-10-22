@@ -5,13 +5,27 @@ import Trending from './trending'
 import Category from './category'
 
 class TopHeader extends Component {
+  state ={
+    clientWidth: 1000,
+    height: 60
+  }
+
+  componentDidMount () {
+    this.setState((state) => {
+      return {
+        clientWidth: this.refs.topheader.clientWidth,
+      }
+    })
+  }
+
   render () {
     return (
       <div
+        ref="topheader"
         style={{
           position: 'fixed',
           width: '100%',
-          height: '60px',
+          height: `${this.state.height}px`,
           border: 0,
           // background: 'linear-gradient(rgba(45, 46, 45, 0.8), rgba(45, 46, 45, 0.01))',
           background: 'rgba(45, 46, 45, 0.7)',
@@ -25,7 +39,10 @@ class TopHeader extends Component {
                 <Logo></Logo>
               </Col>
               <Col span={4}>
-                <Trending></Trending>
+                <Trending
+                  subheight={ this.state.height }
+                  subwidth={ this.state.clientWidth }
+                ></Trending>
               </Col>
               <Col span={4}>
                 <Category></Category>
