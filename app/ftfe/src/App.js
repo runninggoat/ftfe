@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {Route, BrowserRouter} from 'react-router-dom'
-import TopHeader from './topHeader/topHeader.js'
+import TopHeader from './top_header/top_header.js'
 import Home from './home/home.js'
 import Search from './search/search.js'
-import BottomFooter from './bottomFooter/bottomFooter.js'
+import BottomFooter from './bottom_footer/bottom_footer.js'
 
 class App extends Component {
   render() {
