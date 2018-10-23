@@ -7,7 +7,7 @@ export default class AlertBell extends Component {
   }
 
   handleEnter (e) {
-    console.log('enter')
+    // console.log('enter')
     this.setState((state) => {
       return {
         hover: true,
@@ -16,7 +16,7 @@ export default class AlertBell extends Component {
   }
 
   handleLeave (e) {
-    console.log('leave')
+    // console.log('leave')
     this.setState((state) => {
       return {
         hover: false,

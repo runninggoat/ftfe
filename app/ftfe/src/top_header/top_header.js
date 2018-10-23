@@ -83,7 +83,7 @@ export default class TopHeader extends Component {
               <Col span={1} style={{ marginRight: '15px' }}>
                 <AlertBell />
               </Col>
-              <Col span={1}>
+              <Col span={1} onClick={ () => this.props.handleOpenLogin() }>
                 <Icon type="user" theme="outlined" />
               </Col>
               <Col span={3}></Col>
