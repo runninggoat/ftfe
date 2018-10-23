@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CategoryContent from './category_content'
 
 class Category extends Component {
   state ={
@@ -24,7 +25,6 @@ class Category extends Component {
   render () {
     let jumbo = null
     if (this.state.hover) {
-    // if (true) {
       jumbo = (
         <div
           style={{
@@ -35,7 +35,9 @@ class Category extends Component {
             height: '200px',
             background: 'rgba(37, 38, 37, 1.0)',
           }}
-        ></div>
+        >
+          <CategoryContent></CategoryContent>
+        </div>
       )
     }
     let fw = 300
