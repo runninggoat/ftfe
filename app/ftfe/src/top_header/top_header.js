@@ -17,6 +17,14 @@ class TopHeader extends Component {
     })
   }
 
+  handleHover (e) {
+    this.setState((state) => {
+      return {
+        clientWidth: this.refs.topheader.clientWidth,
+      }
+    })
+  }
+
   render () {
     return (
       <div
@@ -41,7 +49,22 @@ class TopHeader extends Component {
                 <Category
                   subheight={ this.state.height }
                   subwidth={ this.state.clientWidth }
+                  handleHover={ this.handleHover.bind(this) }
                 ></Category>
+              </Col>
+              <Col span={4}>
+                <div style={{ height: '60px' }}>
+                  <span style={{
+                      position: 'absolute',
+                      lineHeight: '100%',
+                      marginTop: '17px',
+                      fontSize: '20px',
+                      color: 'white',
+                      fontWeight: 300,
+                    }}>
+                    众筹
+                  </span>
+                </div>
               </Col>
             </Row>
           </Col>

@@ -12,6 +12,7 @@ class Category extends Component {
         hover: true,
       }
     })
+    this.props.handleHover()
   }
 
   handleLeave () {
@@ -25,6 +26,7 @@ class Category extends Component {
   render () {
     let jumbo = null
     if (this.state.hover) {
+    // if (true) {
       jumbo = (
         <div
           style={{
@@ -58,7 +60,7 @@ class Category extends Component {
             fontWeight: fw,
           }}
         >
-          分类
+          热门
         </span>
         { jumbo }
       </div>
