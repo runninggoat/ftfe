@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Row, Col, Icon, Badge } from 'antd'
+import { Row, Col, Icon } from 'antd'
 import Logo from './logo'
 import Category from './category'
+import AlertBell from './alert_bell'
 
-class TopHeader extends Component {
+export default class TopHeader extends Component {
   state ={
     clientWidth: 1000,
     height: 60,
@@ -80,9 +81,7 @@ class TopHeader extends Component {
                 </a>
               </Col>
               <Col span={1} style={{ marginRight: '15px' }}>
-                <Badge count={5} style={{ backgroundColor: '#F8E71C', color: 'black' }}>
-                  <Icon type="bell" theme="outlined" style={{ fontSize: '25px' }} />
-                </Badge>
+                <AlertBell />
               </Col>
               <Col span={1}>
                 <Icon type="user" theme="outlined" />
@@ -95,5 +94,3 @@ class TopHeader extends Component {
     )
   }
 }
-
-export default TopHeader
