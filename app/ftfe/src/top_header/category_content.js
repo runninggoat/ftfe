@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'antd'
-import './category_content.css'
 
 export default class CategoryContent extends Component {
   render () {
