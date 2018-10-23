@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CategoryContent from './category_content'
 
-class Category extends Component {
+export default class Category extends Component {
   state ={
     hover: false,
   }
@@ -67,5 +67,3 @@ class Category extends Component {
     )
   }
 }
-
-export default Category
