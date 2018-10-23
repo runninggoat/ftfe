@@ -5,12 +5,6 @@ class Category extends Component {
     hover: false,
   }
 
-  constructor (props) {
-    super(props)
-    this.handleEnter = this.handleEnter.bind(this)
-    this.handleLeave = this.handleLeave.bind(this)
-  }
-
   handleEnter () {
     this.setState((state) => {
       return {
@@ -28,23 +22,44 @@ class Category extends Component {
   }
 
   render () {
+    let jumbo = null
+    if (this.state.hover) {
+    // if (true) {
+      jumbo = (
+        <div
+          style={{
+            position: 'fixed',
+            top: `${this.props.subheight}px`,
+            left: 0,
+            width: `${this.props.subwidth}px`,
+            height: '200px',
+            background: 'rgba(37, 38, 37, 1.0)',
+          }}
+        ></div>
+      )
+    }
     let fw = 300
     if (this.state.hover) fw = 700
     return (
-      <span
-        onMouseEnter={ this.handleEnter }
-        onMouseLeave={ this.handleLeave }
-        style={{
-          position: 'absolute',
-          lineHeight: '100%',
-          marginTop: '17px',
-          fontSize: '20px',
-          color: 'white',
-          fontWeight: fw,
-        }}
+      <div
+        onMouseEnter={ this.handleEnter.bind(this) }
+        onMouseLeave={ this.handleLeave.bind(this) }
+        style={{ height: '60px' }}
       >
-        分类
-      </span>
+        <span
+          style={{
+            position: 'absolute',
+            lineHeight: '100%',
+            marginTop: '17px',
+            fontSize: '20px',
+            color: 'white',
+            fontWeight: fw,
+          }}
+        >
+          分类
+        </span>
+        { jumbo }
+      </div>
     )
   }
 }

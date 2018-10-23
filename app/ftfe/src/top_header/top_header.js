@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { Row, Col, Icon, Badge } from 'antd'
 import Logo from './logo'
-import Trending from './trending'
 import Category from './category'
 
 class TopHeader extends Component {
   state ={
     clientWidth: 1000,
-    height: 60
+    height: 60,
   }
 
   componentDidMount () {
@@ -39,13 +38,10 @@ class TopHeader extends Component {
                 <Logo></Logo>
               </Col>
               <Col span={4}>
-                <Trending
+                <Category
                   subheight={ this.state.height }
                   subwidth={ this.state.clientWidth }
-                ></Trending>
-              </Col>
-              <Col span={4}>
-                <Category></Category>
+                ></Category>
               </Col>
             </Row>
           </Col>
