@@ -77,6 +77,9 @@ export default class TopHeader extends Component {
               marginTop: '10px',
             }}>
               <Col span={1} style={{ marginRight: '15px' }}>
+                <Icon type="upload" theme="outlined" />
+              </Col>
+              <Col span={1} style={{ marginRight: '15px' }}>
                 <a href="/search" style={{ color: 'white' }}>
                   <Icon type="search" theme="outlined" />
                 </a>
