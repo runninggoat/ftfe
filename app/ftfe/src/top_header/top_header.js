@@ -36,6 +36,7 @@ class TopHeader extends Component {
           border: 0,
           // background: 'linear-gradient(rgba(45, 46, 45, 0.8), rgba(45, 46, 45, 0.01))',
           background: 'rgba(45, 46, 45, 0.7)',
+          zIndex: '999',
         }}
       >
         <Row>
