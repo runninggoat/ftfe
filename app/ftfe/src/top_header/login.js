@@ -23,7 +23,6 @@ export default class LoginPanel extends Component {
         footer={ null }
         width="350px"
         bodyStyle={{
-          width: '100%',
           background: '#212221',
           padding: 0,
         }}

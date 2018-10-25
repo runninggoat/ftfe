@@ -74,6 +74,7 @@ class App extends Component {
     if (this.state.displayUpload) {
       uploadP = (
         <UploadPanel
+          display={ this.state.displayUpload }
           onCloseUpload={ this.handleCloseUpload.bind(this) }
         />
       )
