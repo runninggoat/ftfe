@@ -4,14 +4,15 @@ import HotMovieList from './hot_movie_list'
 import { Row, Col,Button,Icon } from 'antd'
 import WatchList from './watch_list'
 import NewUpload from './new_upload'
-import PlayModal from '../modal/play_modal'
+import PlayModal from '../modal/test'
+
 
 class Home extends Component {
   render () {
     return (
       <div
         style={{
-          backgroundColor:'grey'
+          backgroundColor:'white'
         }}
       >
       <Row gutter={12}>
@@ -30,7 +31,7 @@ class Home extends Component {
         </Row>
         <Row>
           <Col span={8}  />
-          <Col span={8} ><Button ghost size={'large'} style={{margin:'0 10%',width:'80%'}}> <Icon type="redo" theme="outlined" />加载更多</Button></Col>
+          <Col span={8} ><Button  size={'large'} style={{margin:'0 10%',width:'80%'}}> <Icon type="redo" theme="outlined" />加载更多</Button></Col>
           <Col span={8}  />
         </Row>
       </Row>

@@ -6,28 +6,7 @@ const img1 =
 
 export default () => (
   
-    <Row>
-      <Col >
-        <Row>
-          <Col>
-            <div>
-              <img  src={img1} />
-            </div>
-          </Col>
-        </Row>
-      </Col>
-      <Col >
-        <Row>
-          <Col>
-             <div>
-              <img  src={img1} />
-            </div>
-          </Col>
-        </Row>
-      </Col>
-    </Row>
-  
-
-  
-    
+     <div >
+      <img  src={img1} style={{width:'100%',height:'150px',margin:'1%'}} />
+     </div>
   )
