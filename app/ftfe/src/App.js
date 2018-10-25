@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   handleCloseUpload (e) {
-    console.log(e)
+    // console.log(e)
     this.setState((state) => {
       return { displayUpload: false }
     })

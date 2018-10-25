@@ -49,13 +49,6 @@ export default class UploadPanel extends Component {
               </Row>
               <Row type="flex" justify="center">
                 <Col span={24}>
-                  <div style={{
-                    marginTop: '-20px',
-                    color: 'white',
-                    fontSize: '30px',
-                    fontWeight: 700,
-                    textAlign: 'center',
-                  }}>FT 链</div>
                 </Col>
               </Row>
             </div>
