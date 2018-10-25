@@ -65,6 +65,7 @@ class App extends Component {
     if (this.state.displayLogin) {
       loginP = (
         <LoginPanel
+          display={ this.state.displayLogin }
           onCloseLogin={ this.handleCloseLogin.bind(this) }
         />
       )

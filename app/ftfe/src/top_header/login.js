@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, Col, Icon, Input, Button, Tabs } from 'antd'
+import { Modal, Row, Col, Icon, Input, Button, Tabs } from 'antd'
 
 const TabPane = Tabs.TabPane
 
@@ -15,66 +15,52 @@ export default class LoginPanel extends Component {
 
   render () {
     return (
-      <div style={{
-        position: 'fixed',
-        top: 0,
-        width: '100%',
-        height: '100%',
-        background: 'rgba(45, 46, 45, 0.3)',
-      }}>
-        <Row
-          type="flex"
-          justify="center"
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            marginTop: '100px',
-            width: '100%',
-          }}
-        >
-          <Col span={5}>
-            <div style={{
-              width: '100%',
-              background: '#212221',
-              borderRadius: '10px',
-            }}>
-              <Row>
-                <Col span={24}>
-                  <div
-                    onClick={ () => this.props.onCloseLogin('Close') }
-                    style={{
-                      color: 'white',
-                      fontSize: '30px',
-                      float: 'right',
-                      marginRight: '6px',
-                      textAlign: 'center',
-                    }}
-                  >
-                    <Icon type="close" theme="outlined" />
-                  </div>
-                </Col>
-              </Row>
-              <Row type="flex" justify="center">
-                <Col span={12}>
-                  <div style={{
-                    marginTop: '-20px',
-                    color: 'white',
-                    fontSize: '30px',
-                    fontWeight: 700,
-                    textAlign: 'center',
-                  }}>FT 链</div>
-                </Col>
-              </Row>
-              <LoginForm
-                onLogin={ this.handleLogin.bind(this) }
-                onSignup={ this.handleSignup.bind(this) }
-              />
-              <div style={{ clear: 'both' }}></div>
+      <Modal
+        visible={ this.props.display }
+        closable={ false }
+        keyboard={ false }
+        maskClosable={ false }
+        footer={ null }
+        width="350px"
+        bodyStyle={{
+          width: '100%',
+          background: '#212221',
+          padding: 0,
+        }}
+      >
+        <Row>
+          <Col span={24}>
+            <div
+              onClick={ () => this.props.onCloseLogin('Close') }
+              style={{
+                color: 'white',
+                fontSize: '30px',
+                float: 'right',
+                marginRight: '6px',
+                textAlign: 'center',
+              }}
+            >
+              <Icon type="close" theme="outlined" />
             </div>
           </Col>
         </Row>
-      </div>
+        <Row type="flex" justify="center">
+          <Col span={12}>
+            <div style={{
+              marginTop: '-20px',
+              color: 'white',
+              fontSize: '30px',
+              fontWeight: 700,
+              textAlign: 'center',
+            }}>FT 链</div>
+          </Col>
+        </Row>
+        <LoginForm
+          onLogin={ this.handleLogin.bind(this) }
+          onSignup={ this.handleSignup.bind(this) }
+        />
+        <div style={{ clear: 'both' }}></div>
+      </Modal>
     )
   }
 }
