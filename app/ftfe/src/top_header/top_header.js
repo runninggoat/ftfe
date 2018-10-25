@@ -76,7 +76,11 @@ export default class TopHeader extends Component {
               fontSize: '25px',
               marginTop: '10px',
             }}>
-              <Col span={1} style={{ marginRight: '15px' }}>
+              <Col
+                span={1}
+                onClick={ () => this.props.handleOpenUpload() }
+                style={{ marginRight: '15px' }}
+              >
                 <Icon type="upload" theme="outlined" />
               </Col>
               <Col span={1} style={{ marginRight: '15px' }}>

@@ -92,7 +92,7 @@ class Section extends Component {
   render () {
     const subtitles = this.props.subtitles.map((item, idx) => {
       return (
-        <div>
+        <div key={item}>
           { item }
         </div>
       )
