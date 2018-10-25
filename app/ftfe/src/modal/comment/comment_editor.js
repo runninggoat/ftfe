@@ -47,7 +47,9 @@ export default () => (
           <Col>
             <Row>
               <Col span={3}>
-                <div>热门评论</div>
+                <div style={{fontSize:'150%',marginTop: '15%'}}>
+                  热门评论
+                </div>
               </Col>
               <Col span={21} />
             </Row>
