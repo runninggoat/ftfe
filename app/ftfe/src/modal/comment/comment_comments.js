@@ -10,6 +10,7 @@ const img1 =
 
 export default () => (
   <div style={{width: '100%'}}>
+  
   <Divider />
     <img src={img1}  style={{width:60,height:60,float:'left',margin:'10px 5px  60px' }}/>
     

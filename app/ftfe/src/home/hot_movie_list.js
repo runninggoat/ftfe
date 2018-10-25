@@ -14,7 +14,12 @@ export default () => (
                 <Row gutter={4}>
                     
                     <Col span={2} />
-                    <Col span={20} ><h2 style={{color:'white',fontSize:'150%'}}>热门电影 <span style={{color:'black',fontSize: '50%'}}>查看更多</span></h2></Col>
+                    <Col span={20} >
+                        <h2 style={{color:'black',fontSize:'150%'}}>热门佳作
+                            <span style={{color:'grey',marginLeft:'1%'}}>POPULAR</span> 
+                            <span style={{color:'grey',fontSize: '50%',marginLeft:'1%'}}>查看更多</span>
+                        </h2>
+                    </Col>
                     <Col span={2} />
                 </Row>
                 <Col span={2} >

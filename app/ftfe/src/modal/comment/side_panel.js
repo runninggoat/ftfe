@@ -4,27 +4,82 @@ import { Button,Tabs } from "antd";
 import { Row, Col } from 'antd';
 
 const TabPane = Tabs.TabPane;
-
 export default () => (
   <div >
     <Row>
-      <Col span={1}/>
-      <Col span={22}>
+      <Col>
+        <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'blue'}}>
+        <Row>
+          <Col>
+            <MovieList />
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col>
+            <h1>
+              导演老李
+            </h1>
+            <h2>
+              100 作品  202.33万 粉丝
+            </h2>
+            <h3>
+              议义结众积把度引这状科，派多人度越已况看石外，第证-京坝事定该采。指则影研上确干它平局提，属该众代共列点口交场满道，位备励行才乱枝情据型。矿住青共实走的先图江，切切每须都素可利等率，路马H定隶军志严。易越参向北我细角农体，志量后说次八正须较领，连别届秃术型制矿。
+            </h3>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col>
+            <Row>
+              <Col>
+                <Button  type="primary">打赏</Button>
+              </Col>
+            </Row>
+             <Row>
+              <Col>
+                <Button ghost>关注</Button>
+              </Col>
+            </Row>
+          </Col>
+        </Row></div>
+        
+        <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'pink'}}>
+        <Row>
+          <Col>
+          
+            <Row>
+              <Col><h1>视频表列</h1></Col>
+            </Row>
+            <Row>
+              <Col><MovieList /></Col>
+            </Row>
+            <Row>
+              <Col><MovieList /></Col>
+            </Row>
+            <Row>
+              <Col><MovieList /></Col>
+            </Row>
+            <Row>
+              <Col><MovieList /></Col>
+            </Row>
+            
+          </Col>
+        </Row>
+        </div>
+        
+      </Col>
+    </Row>
+  </div>
+);
+/*
         <Row>
       <Col>
         <Button  type="primary">打赏</Button>
       </Col>
       <Col>
-        <Button  type="primary">分享</Button>
+        <Button ghost>关注</Button>
       </Col>
-        <Button ghost>赞</Button>
-      <Col>
-        <Button ghost>添加到收藏</Button>
-      </Col>
-      <Col>
-        <h4>99,999 次观看</h4><h4>99,999 条评论</h4>
-      </Col>
-      
     </Row>
     <Row>
         <Col>
@@ -37,6 +92,4 @@ export default () => (
     </Row>
       </Col>
       <Col span={1}/>
-    </Row>
-  </div>
-);
+      */
