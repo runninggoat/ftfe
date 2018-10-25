@@ -7,6 +7,6 @@ const img1 =
 export default () => (
   
      <div >
-      <img  src={img1} style={{height:'150px',margin:'1%'}} />
+      <img  src={img1} style={{width:'100%',height:'150px',margin:'1%'}} />
      </div>
   )

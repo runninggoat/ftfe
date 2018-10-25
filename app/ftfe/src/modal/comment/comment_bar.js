@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs } from 'antd';
 import Intro from './introduction';
-import CommentEditor from './comment_editor';
+import Staff from './staff';
 import CopyRight from './copy_right';
 const TabPane = Tabs.TabPane;
 
@@ -15,7 +15,7 @@ export default () => (
   <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'red'}} >
     <Tabs defaultActiveKey="1">
       <TabPane tab="简介" key="1"><Intro /></TabPane>
-      <TabPane tab="评论" key="2"><CommentEditor /></TabPane>
+      <TabPane tab="团队" key="2"><Staff /></TabPane>
       <TabPane tab="版权" key="3"><CopyRight /></TabPane>
     </Tabs>
   </div>

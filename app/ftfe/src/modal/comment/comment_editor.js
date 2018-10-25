@@ -9,7 +9,8 @@ const { TextArea } = Input;
 
 
 export default () => (
-  <div >
+  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'purple'}}>
+  
     <TextArea style={{ margin: '5px 0' }} placeholder="Autosize height based on content lines" autosize={{ minRows: 3, maxRows: 3 }} />
     <span style={{fontSize:'15px',margin: '5px 0'}}>
       <Icon type="smile" theme="filled" style={{fontSize:'15px',marginLeft:'5px',marginRight: '5px'}}/>

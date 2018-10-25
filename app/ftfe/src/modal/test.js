@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Modal,Button } from "antd";
-import MovieList from './movie/movie_list';
+import { Modal } from "antd";
 import SidePanel from './comment/side_panel';
 import CommentBar from './comment/comment_bar';
 import PaidMovie from './movie/paid_movie';
-
+import Comments from './comment/comment_editor';
 import { Row, Col } from 'antd';
 
 class PlayModal extends Component{
@@ -45,16 +44,23 @@ class PlayModal extends Component{
         
             <Col span={18}>
                 <Row>
+                    <Col>
                     <PaidMovie />
+                    </Col>
                 </Row>
                 
                 <Row>
+                    <Col>
                     <CommentBar />
+                    </Col>
+                    
+                </Row>
+                <Row>
+                    <Col>
+                    <Comments />
+                    </Col>
                 </Row>
             </Col>
-            
-            
-            
             
             <Col span={6}>
                 <SidePanel />
