@@ -12,7 +12,7 @@ const img1 =
 
 export default () => (
   
-  <div style={{width: '70%', height:'auto'}} >
+  <div  >
     <Tabs defaultActiveKey="3">
       <TabPane tab="简介" key="1"><Intro /></TabPane>
       <TabPane tab="评论" key="2"><CommentEditor /></TabPane>

@@ -60,8 +60,7 @@ class PlayModal extends Component{
             
             <Row>
               <Col>
-              <h1>这个播放列表的标题 </h1>
-              <h2>这条视频的标题</h2>
+                <CommentBar />
               </Col>
             </Row>
             
