@@ -5,11 +5,13 @@ import Home from './home/home.js'
 import Search from './search/search.js'
 import BottomFooter from './bottom_footer/bottom_footer.js'
 import LoginPanel from './top_header/login'
+import UploadPanel from './top_header/upload'
 
 class App extends Component {
   state = {
     blur: false,
     displayLogin: false,
+    displayUpload: false,
   }
 
   turnOnBlur () {
@@ -38,9 +40,22 @@ class App extends Component {
   handleCloseLogin (e) {
     // console.log(e)
     this.setState((state) => {
-      return {
-        displayLogin: false,
-      }
+      return { displayLogin: false }
+    })
+    this.turnOffBlur()
+  }
+
+  handleOpenUpload (e) {
+    this.setState(() => {
+      return { displayUpload: true }
+    })
+    this.turnOnBlur()
+  }
+
+  handleCloseUpload (e) {
+    console.log(e)
+    this.setState((state) => {
+      return { displayUpload: false }
     })
     this.turnOffBlur()
   }
@@ -54,6 +69,14 @@ class App extends Component {
         />
       )
     }
+    let uploadP = null
+    if (this.state.displayUpload) {
+      uploadP = (
+        <UploadPanel
+          onCloseUpload={ this.handleCloseUpload.bind(this) }
+        />
+      )
+    }
     return (
       <BrowserRouter>
         <div>
@@ -62,12 +85,14 @@ class App extends Component {
           }}>
             <TopHeader
               handleOpenLogin={ this.handleOpenLogin.bind(this) }
+              handleOpenUpload={ this.handleOpenUpload.bind(this) }
             />
             <Route exact path="/" component={ Home } />
             <Route exact path="/search" component={ Search } />
             <BottomFooter></BottomFooter>
           </div>
           { loginP }
+          { uploadP }
         </div>
       </BrowserRouter>
     )
