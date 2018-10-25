@@ -4,6 +4,7 @@ import HotMovieList from './hot_movie_list'
 import { Row, Col,Button,Icon } from 'antd'
 import WatchList from './watch_list'
 import NewUpload from './new_upload'
+import PlayModal from '../modal/play_modal'
 
 class Home extends Component {
   render () {
@@ -19,6 +20,7 @@ class Home extends Component {
         </Row>
         <Row>
           <HotMovieList />
+          <PlayModal />
         </Row>
         <Row>
           <WatchList />
