@@ -50,8 +50,8 @@ export default class AlertBell extends Component {
       list = (
         <div>
           <div style={{
-            marginTop: '-25px',
-            marginLeft: '-8px',
+            marginTop: '-23px',
+            marginLeft: '-9px',
             width: 0,
             height: 0,
             borderTop: '20px solid transparent',
