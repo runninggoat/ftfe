@@ -9,6 +9,10 @@ module.exports = function override(config, env) {
   )
   config = rewireLess.withLoaderOptions({
     modifyVars: {
+      '@input-bg': '#F8F8F8',
+      '@input-placeholder-color': '#BCBCBC',
+      '@input-border-color': '#F8F8F8',
+      '@input-hover-border-color': '#F8F8F8',
     },
     javascriptEnabled: true,
   })(config, env)
