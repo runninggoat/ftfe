@@ -6,6 +6,7 @@ import AlertBell from './alert_bell'
 
 export default class TopHeader extends Component {
   state ={
+    scrollOut: false,
     clientWidth: 1000,
     height: 42,
   }
@@ -16,6 +17,16 @@ export default class TopHeader extends Component {
         clientWidth: this.refs.topheader.clientWidth,
       }
     })
+    window.addEventListener('scroll', this.handleScroll.bind(this))
+  }
+
+  handleScroll (e) {
+    // console.log(document.documentElement.scrollTop)
+    if (!this.state.scrollOut && document.documentElement.scrollTop > 40) {
+      this.setState(() => {return { scrollOut: true }})
+    } else if (this.state.scrollOut && document.documentElement.scrollTop < 40) {
+      this.setState(() => {return { scrollOut: false }})
+    }
   }
 
   handleHover (e) {
@@ -36,8 +47,9 @@ export default class TopHeader extends Component {
           height: `${this.state.height}px`,
           border: 0,
           // background: 'linear-gradient(rgba(45, 46, 45, 0.8), rgba(45, 46, 45, 0.01))',
-          background: 'transparent',
+          background: this.state.scrollOut ? '#3D316A' : 'transparent',
           zIndex: '99',
+          transition: 'all 0.3s',
         }}
       >
         <Row>
@@ -101,8 +113,8 @@ export default class TopHeader extends Component {
           <Col span={12}>
             <Row type="flex" justify="end" style={{
               color: 'white',
-              fontSize: '25px',
-              marginTop: '10px',
+              fontSize: '22px',
+              marginTop: '4px',
             }}>
               <Col
                 span={1}

@@ -80,7 +80,7 @@ class MyTabBar extends Component {
   render () {
     let tabs = this.props.names.map((value, idx) => {
       return (
-        <Col span={Math.floor(24 / this.props.names.length)}>
+        <Col key={value} span={Math.floor(24 / this.props.names.length)}>
           <div
             style={{
               color: idx + 1 === this.props.active ? '#000' : '#BCBCBC',
@@ -92,7 +92,7 @@ class MyTabBar extends Component {
             }}
             onClick={ () => this.props.handleChange(idx + 1) }
           >
-            <div dangerouslySetInnerHTML={{ __html: this.props.names[idx] }}></div>
+            <div dangerouslySetInnerHTML={{ __html: value }}></div>
           </div>
         </Col>
       )

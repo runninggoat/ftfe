@@ -111,7 +111,7 @@ export default class AlertBell extends Component {
             boxShadow: '0 0 0',
           }}
         >
-          <Icon type="bell" theme="outlined" style={{ fontSize: '25px' }} />
+          <Icon type="bell" theme="outlined" style={{ fontSize: '22px' }} />
         </Badge>
         { list }
       </div>
