@@ -21,10 +21,18 @@ export default class LoginPanel extends Component {
         keyboard={ false }
         maskClosable={ false }
         footer={ null }
-        width="350px"
-        bodyStyle={{
-          background: '#212221',
+        width="410px"
+        style={{
           padding: 0,
+          borderRadius: '16px',
+          overflow: 'hidden',
+        }}
+        bodyStyle={{
+          background: '#fff',
+          padding: 0,
+        }}
+        maskStyle={{
+          background: 'linear-gradient(360deg,rgba(63,0,74,0.75) 0%,rgba(32,32,124,0.85) 100%)',
         }}
       >
         <Row>
@@ -46,10 +54,10 @@ export default class LoginPanel extends Component {
         <Row type="flex" justify="center">
           <Col span={12}>
             <div style={{
-              marginTop: '-20px',
-              color: 'white',
-              fontSize: '30px',
-              fontWeight: 700,
+              marginTop: '-28px',
+              color: '#4A4A4A',
+              fontSize: '36px',
+              fontWeight: 600,
               textAlign: 'center',
             }}>FT 链</div>
           </Col>
@@ -64,13 +72,36 @@ export default class LoginPanel extends Component {
   }
 }
 
-class TabTitle extends Component {
+class MyTabBar extends Component {
   render () {
+    let tabs = this.props.names.map((value, idx) => {
+      return (
+        <Col span={Math.floor(24 / this.props.names.length)}>
+          <div
+            style={{
+              color: idx + 1 === this.props.active ? '#000' : '#BCBCBC',
+              fontSize: '16px',
+              fontWeight: idx + 1 === this.props.active ? '500' : '400',
+              padding: '19px',
+              borderBottom: idx + 1 === this.props.active ? '5px solid' : '0',
+              borderImage: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%) 1',
+            }}
+            onClick={ () => this.props.handleChange(idx + 1) }
+          >
+            <div dangerouslySetInnerHTML={{ __html: this.props.names[idx] }}></div>
+          </div>
+        </Col>
+      )
+    })
     return (
       <div style={{
-        color: this.props.active ? '' : 'white',
+        display: 'flex',
+        width: '100%',
+        textAlign: 'center',
       }}>
-        { this.props.text }
+        <Row style={{ width: '100%' }}>
+          { tabs }
+        </Row>
       </div>
     )
   }
@@ -95,67 +126,87 @@ class LoginForm extends Component {
   }
 
   render () {
+    const names = ['登&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp录', '注&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp册']
     return (
       <Row type="flex" justify="center">
-        <Col span={18}>
+        <Col span={16}>
           <Tabs
-            onChange={ this.handleChange.bind(this) }
-            defaultActiveKey="1"
-            size="large"
-            tabBarStyle={{ border: 0, textAlign:'center' }}
+            activeKey={ this.state.activeKey + '' }
+            renderTabBar={
+              () => {
+                return (
+                  <MyTabBar
+                    active={ this.state.activeKey }
+                    names={ names }
+                    handleChange={ this.handleChange.bind(this) }
+                  />
+                )
+              }
+            }
+            style={{ overflow: 'visible' }}
           >
-            <TabPane tab={ <TabTitle text="登录" active={ this.state.activeKey === 1 } /> } key="1">
-              <Row type="flex" justify="center" style={{ marginTop: '20px' }}>
+            <TabPane key="1">
+              <Row type="flex" justify="center" style={{ marginTop: '26px' }}>
                 <Col span={24}>
                   <Input
                     prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.35)' }} />}
-                    placeholder="邮箱/手机号码"
+                    placeholder="请输入邮箱地址"
                   />
                 </Col>
               </Row>
-              <Row type="flex" justify="center" style={{ marginTop: '20px' }}>
+              <Row type="flex" justify="center" style={{ marginTop: '30px' }}>
                 <Col span={24}>
                   <Input
                     type={ this.state.visual ? 'text' : 'password' }
                     prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.35)' }} />}
-                    suffix={<Icon type="eye" style={{ color: 'rgba(0,0,0,.35)' }} onClick={() => this.toggleVisual()} />}
+                    suffix={<Icon type="eye" style={{ fontSize: '20px', color: '#222222' }} onClick={() => this.toggleVisual()} />}
                     placeholder="密码"
                   />
                 </Col>
               </Row>
-              <Row type="flex" justify="center" style={{ marginTop: '20px' }}>
+              <Row type="flex" justify="center" style={{ marginTop: '30px' }}>
                 <Col span={24}>
                   <Button
                     onClick={ () => this.props.onLogin() }
                     type="primary"
                     style={{
-                      color: 'black',
+                      color: '#fff',
                       width: '100%',
+                      height: '40px',
+                      border: 0,
+                      borderRadius: '18px',
+                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                      boxShadow: '0px 5px 10px 0px rgba(255,79,81,0.66)',
+                      fontSize: '16px',
+                      fontWeight: '500',
                     }}
-                  >登录</Button>
+                  >
+                    <div dangerouslySetInnerHTML={{ __html: '登&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp录' }}></div>
+                  </Button>
                 </Col>
               </Row>
-              <Row type="flex" justify="center" style={{ marginTop: '20px', marginBottom: '20px' }}>
+              <Row type="flex" justify="center" style={{ marginTop: '20px', marginBottom: '40px' }}>
                 <Col span={24}>
-                  <p style={{
-                    color: 'white',
+                  <div style={{
+                    color: '#0058D1',
                     textAlign: 'center',
                     textDecoration: 'underline',
-                    fontSize: '16px',
-                  }}>忘记密码？</p>
+                    fontSize: '14px',
+                    fontWeight: '400',
+                  }}>忘记密码？</div>
                 </Col>
               </Row>
             </TabPane>
-            <TabPane tab={ <TabTitle text="注册" active={ this.state.activeKey === 2 } /> } key="2">
-              <Row type="flex" justify="center" style={{ marginTop: '20px' }}>
+            <TabPane key="2">
+              <Row type="flex" justify="center" style={{ marginTop: '25px' }}>
                 <Col span={24}>
                   <Input
                     prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.35)' }} />}
-                    placeholder="邮箱/手机号码"
+                    placeholder="请输入邮箱地址"
                   />
                 </Col>
               </Row>
-              <Row type="flex" justify="center" style={{ marginTop: '20px' }}>
+              <Row type="flex" justify="center" style={{ marginTop: '25px' }}>
                 <Col span={24}>
                   <Input
                     type="password"
@@ -164,7 +215,7 @@ class LoginForm extends Component {
                   />
                 </Col>
               </Row>
-              <Row type="flex" justify="center" style={{ marginTop: '20px' }}>
+              <Row type="flex" justify="center" style={{ marginTop: '25px' }}>
                 <Col span={24}>
                   <Input
                     type="password"
@@ -173,16 +224,25 @@ class LoginForm extends Component {
                   />
                 </Col>
               </Row>
-              <Row type="flex" justify="center" style={{ marginTop: '20px', marginBottom: '40px' }}>
+              <Row type="flex" justify="center" style={{ marginTop: '30px', marginBottom: '60px' }}>
                 <Col span={24}>
                   <Button
                     onClick={ () => this.props.onSignup() }
                     type="primary"
                     style={{
-                      color: 'black',
+                      color: '#fff',
                       width: '100%',
+                      height: '40px',
+                      border: 0,
+                      borderRadius: '18px',
+                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                      boxShadow: '0px 5px 10px 0px rgba(255,79,81,0.66)',
+                      fontSize: '16px',
+                      fontWeight: '500',
                     }}
-                  >注册</Button>
+                  >
+                    <div dangerouslySetInnerHTML={{ __html: '注&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp册' }}></div>
+                  </Button>
                 </Col>
               </Row>
             </TabPane>
