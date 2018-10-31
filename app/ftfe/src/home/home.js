@@ -4,7 +4,7 @@ import HotMovieList from './hot_movie_list'
 import { Row, Col,Button,Icon,Carousel } from 'antd'
 import WatchList from './watch_list'
 import NewUpload from './new_upload'
-import PlayModal from '../modal/test'
+import PlayModal from '../modal/play_modal'
 import { Tabs } from 'antd';
 import './home.css'
 
@@ -85,7 +85,7 @@ class Home extends Component {
             <Col span={6} >
               <div>
                 <Button style={{
-                  background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                  background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
                   margin:'0 10%',
                   width:'80%',
                   boxShadow:'0px 5px 10px 0px rgba(255,79,81,0.66)',

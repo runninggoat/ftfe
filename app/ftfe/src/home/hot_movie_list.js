@@ -1,9 +1,7 @@
 import React from 'react'
-import MovieCard from './movie_card'
+import MovieCard from './hot_movie_cards'
 
-import { Row, Col,Icon } from 'antd';
-const img1 =
-  "https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
+import { Row, Col } from 'antd';
   
   
   

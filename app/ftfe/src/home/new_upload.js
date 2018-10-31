@@ -32,7 +32,12 @@ export default () => (
                                     </span>
                                 </div>
                             </Col>
-                    <Col span={12} />
+                    <Col span={7} />
+                        
+                    <Col span={4}>
+                        <span><span style={{fontWeight:'900'}}>视频</span> | 文学 | 音乐 | 其他</span>
+                    </Col>
+                    <Col span={1} />
                     </Row>
                 </Col>
                 
