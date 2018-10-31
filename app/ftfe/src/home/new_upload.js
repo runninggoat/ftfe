@@ -39,32 +39,44 @@ export default () => (
                 
                 <Col span={24} >
                     <Row>
-                        <Col span={2} />
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={2} />
+                        <Col span={1} />
+                        <Col span={22} >
+                            <Row>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                            </Row>
+                        </Col>
+                        <Col span={1} />
                     </Row>
                 </Col>
                 <Col span={24} >
                     <Row>
-                        <Col span={2} />
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={2} />
+                        <Col span={1} />
+                        <Col span={22} >
+                            <Row>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                            </Row>
+                        </Col>
+                        <Col span={1} />
                     </Row>
                 </Col>
                 <Col span={24} >
                     <Row>
-                        <Col span={2} />
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={2} />
+                        <Col span={1} />
+                        <Col span={22} >
+                            <Row>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                                <Col span={6}><MovieCard /></Col>
+                            </Row>
+                        </Col>
+                        <Col span={1} />
                     </Row>
                 </Col>
               

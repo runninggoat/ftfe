@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import Ad from './ad_title'
 import HotMovieList from './hot_movie_list'
-import { Row, Col,Button,Icon } from 'antd'
+import { Row, Col,Button,Icon,Carousel } from 'antd'
 import WatchList from './watch_list'
 import NewUpload from './new_upload'
 import PlayModal from '../modal/test'
 import { Tabs } from 'antd';
 import './home.css'
 
-import { Carousel } from 'antd';
 
 const TabPane = Tabs.TabPane;
 
@@ -76,22 +75,31 @@ class Home extends Component {
             </Row>
         </Col>
         <Col span={24} >
-            <Row>
-               <Carousel>
-                <div><NewUpload /></div>
-                <div><NewUpload /></div>
-                <div><NewUpload /></div>
-                <div><NewUpload /></div>
-                <div><NewUpload /></div>
-              </Carousel>
-            </Row>
+          <div><NewUpload /></div>
         </Col>
         
         
-        
-        
-        
-        <Col span ={24}><div><Button  size={'large'} style={{margin:'0 10%',width:'80%'}}> <Icon type="redo" theme="outlined" />加载更多</Button></div></Col>
+        <Col span ={24}>
+          <Row>
+            <Col span={9} />
+            <Col span={6} >
+              <div>
+                <Button style={{
+                  background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                  margin:'0 10%',
+                  width:'80%',
+                  boxShadow:'0px 5px 10px 0px rgba(255,79,81,0.66)',
+                  borderRadius:'41px'
+                }}> 
+                <Icon type="redo" theme="outlined" style={{color:'#FFFFFF'}} />
+                <span style={{color:'#FFFFFF'}}>加载更多</span>
+                </Button>
+              </div>
+            </Col>
+            <Col span={9} />
+          </Row>
+          
+        </Col>
           
       </Row>
       <PlayModal />
