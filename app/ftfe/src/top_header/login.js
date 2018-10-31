@@ -35,26 +35,30 @@ export default class LoginPanel extends Component {
           background: 'linear-gradient(360deg,rgba(63,0,74,0.75) 0%,rgba(32,32,124,0.85) 100%)',
         }}
       >
+        <div
+          onClick={ () => this.props.onCloseLogin('Close') }
+          style={{
+            position: 'fixed',
+            top: '30px',
+            right: '40px',
+            color: 'white',
+            fontSize: '30px',
+            float: 'right',
+            marginRight: '6px',
+            textAlign: 'center',
+          }}
+        >
+          <Icon type="close" theme="outlined" />
+        </div>
         <Row>
           <Col span={24}>
-            <div
-              onClick={ () => this.props.onCloseLogin('Close') }
-              style={{
-                color: 'white',
-                fontSize: '30px',
-                float: 'right',
-                marginRight: '6px',
-                textAlign: 'center',
-              }}
-            >
-              <Icon type="close" theme="outlined" />
-            </div>
           </Col>
         </Row>
         <Row type="flex" justify="center">
           <Col span={12}>
             <div style={{
-              marginTop: '-28px',
+              marginTop: '28px',
+              lineHeight: '100%',
               color: '#4A4A4A',
               fontSize: '36px',
               fontWeight: 600,
