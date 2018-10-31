@@ -8,6 +8,8 @@ import PlayModal from '../modal/test'
 import { Tabs } from 'antd';
 import './home.css'
 
+import { Carousel } from 'antd';
+
 const TabPane = Tabs.TabPane;
 
 
@@ -16,7 +18,7 @@ class Home extends Component {
     return (
       <div
         style={{
-          backgroundColor:'white'
+          background:'rgba(254,254,254,1)'
         }}
       >
       <Row gutter={12}>
@@ -26,25 +28,63 @@ class Home extends Component {
         </Col>
         
         
-          <Col span ={1} />
-          <Col span ={11}>
-            <div>
-            <Tabs defaultActiveKey="1" >
-              <TabPane tab="推荐" key="1"></TabPane>
-              <TabPane tab="视频" key="2"></TabPane>
-              <TabPane tab="文学" key="3"></TabPane>
-              <TabPane tab="其他" key="4"></TabPane>
-            </Tabs>
-            </div>
-          </Col>
-          <Col span ={12} />
         
-         
+        <Col><div style={{
+          background:'#FFFFFF'
+        }}>
+          <Row>
+            <Col span ={1} />
+              <Col span ={11}>
+                
+                <Tabs defaultActiveKey="1" >
+                  <TabPane tab="推荐" key="1"></TabPane>
+                  <TabPane tab="视频" key="2"></TabPane>
+                  <TabPane tab="文学" key="3"></TabPane>
+                  <TabPane tab="其他" key="4"></TabPane>
+                </Tabs>
+                
+              </Col>
+              <Col span ={12} />
+          </Row>
+        
+        </div></Col>
         
         
         
-        <Col span ={24}>
-          <HotMovieList />
+        
+        <Col span={24} >
+            <Row>
+               <Carousel>
+                <div><HotMovieList /></div>
+                <div><HotMovieList /></div>
+                <div><HotMovieList /></div>
+                <div><HotMovieList /></div>
+                <div><HotMovieList /></div>
+              </Carousel>
+            </Row>
+        </Col>
+        
+        <Col span={24} >
+            <Row>
+               <Carousel>
+                <div><WatchList /></div>
+                <div><WatchList /></div>
+                <div><WatchList /></div>
+                <div><WatchList /></div>
+                <div><WatchList /></div>
+              </Carousel>
+            </Row>
+        </Col>
+        <Col span={24} >
+            <Row>
+               <Carousel>
+                <div><NewUpload /></div>
+                <div><NewUpload /></div>
+                <div><NewUpload /></div>
+                <div><NewUpload /></div>
+                <div><NewUpload /></div>
+              </Carousel>
+            </Row>
         </Col>
         
         
