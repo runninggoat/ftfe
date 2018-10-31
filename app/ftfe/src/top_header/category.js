@@ -42,8 +42,8 @@ export default class Category extends Component {
         </div>
       )
     }
-    let fw = 300
-    if (this.state.hover) fw = 700
+    let fw = 500
+    if (this.state.hover) fw = 500
     return (
       <div
         onMouseEnter={ this.handleEnter.bind(this) }
@@ -53,14 +53,14 @@ export default class Category extends Component {
         <span
           style={{
             position: 'absolute',
-            lineHeight: '100%',
-            marginTop: '17px',
-            fontSize: '20px',
-            color: 'white',
+            lineHeight: '22px',
+            marginTop: '10px',
+            fontSize: '16px',
+            color: '#fff',
             fontWeight: fw,
           }}
         >
-          热门
+          <div dangerouslySetInnerHTML={{ __html: '首&nbsp&nbsp&nbsp&nbsp&nbsp页' }}></div>
         </span>
         { jumbo }
       </div>
