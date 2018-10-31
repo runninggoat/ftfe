@@ -1,7 +1,6 @@
 import React from 'react'
 import { Carousel } from 'antd'
 
-
 const img1 =
   "https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
   const img2 =
@@ -18,13 +17,13 @@ export default () => (
     
   
     
-    <div  >
+    <div  style={{marginBot:'2%'}}>
         <Carousel  effect="fade">
-            <div><h3  style={{ height: '800px',  backgroundSize:'cover',backgroundImage: `url(${img1})` }}><span style={{float:'left'}} >1</span></h3></div>
-            <div><h3  style={{ height: '800px',  backgroundSize:'cover',backgroundImage: `url(${img2})` }}>2</h3></div>
-            <div><h3  style={{ height: '800px',  backgroundSize:'cover',backgroundImage: `url(${img3})` }}>3</h3></div>
-            <div><h3  style={{ height: '800px',  backgroundSize:'cover',backgroundImage: `url(${img4})` }}>4</h3></div>
-            <div><h3  style={{ height: '800px',  backgroundSize:'cover',backgroundImage: `url(${img5})` }}>5</h3></div>
+            <div><img src={img1}  style={{ height: '570px',width:'100%'}} /></div>
+            <div><img src={img2}  style={{ height: '570px',width:'100%'}} /></div>
+            <div><img src={img3}  style={{ height: '570px',width:'100%'}} /></div>
+            <div><img src={img1}  style={{ height: '570px',width:'100%'}} /></div>
+            <div><img src={img5}  style={{ height: '570px',width:'100%'}} /></div>
         </Carousel>
     </div>
     

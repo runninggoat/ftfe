@@ -50,18 +50,18 @@ export default () => (
           
             <Row>
               <Col><h1>视频表列</h1></Col>
-            </Row>
-            <Row>
-              <Col><MovieList /></Col>
-            </Row>
-            <Row>
-              <Col><MovieList /></Col>
-            </Row>
-            <Row>
-              <Col><MovieList /></Col>
-            </Row>
-            <Row>
-              <Col><MovieList /></Col>
+           
+            
+              <Col><div><MovieList /></div></Col>
+           
+            
+              <Col><div><MovieList /></div></Col>
+            
+            
+              <Col><div><MovieList /></div></Col>
+            
+            
+              <Col><div><MovieList /></div></Col>
             </Row>
             
           </Col>
