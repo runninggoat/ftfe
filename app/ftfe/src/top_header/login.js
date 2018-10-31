@@ -88,7 +88,7 @@ class MyTabBar extends Component {
               fontWeight: idx + 1 === this.props.active ? '500' : '400',
               padding: '19px',
               borderBottom: idx + 1 === this.props.active ? '5px solid' : '0',
-              borderImage: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%) 1',
+              borderImage: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%) 1',
             }}
             onClick={ () => this.props.handleChange(idx + 1) }
           >
@@ -179,7 +179,7 @@ class LoginForm extends Component {
                       height: '40px',
                       border: 0,
                       borderRadius: '18px',
-                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
                       boxShadow: '0px 5px 10px 0px rgba(255,79,81,0.66)',
                       fontSize: '16px',
                       fontWeight: '500',
@@ -239,7 +239,7 @@ class LoginForm extends Component {
                       height: '40px',
                       border: 0,
                       borderRadius: '18px',
-                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
                       boxShadow: '0px 5px 10px 0px rgba(255,79,81,0.66)',
                       fontSize: '16px',
                       fontWeight: '500',

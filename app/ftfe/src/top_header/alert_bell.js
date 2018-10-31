@@ -77,7 +77,7 @@ export default class AlertBell extends Component {
                   badge = (
                     <Col span={4}>
                       <Badge count={item.count} style={{
-                        background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                        background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
                         color: '#fff',
                       }}></Badge>
                     </Col>
@@ -107,7 +107,7 @@ export default class AlertBell extends Component {
             width: '11px',
             height: '11px',
             right: '4px',
-            background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+            background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
             boxShadow: '0 0 0',
           }}
         >
@@ -148,7 +148,7 @@ class ItemRow extends Component {
     return (
       <List.Item style={{
         border: 0,
-        background: this.state.hover ? 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)' : '',
+        background: this.state.hover ? 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)' : '',
       }}>
         <Row
           onMouseEnter={ this.handleEnter.bind(this) }
@@ -160,7 +160,7 @@ class ItemRow extends Component {
             width: '100%',
           }}
         >
-          <Col span={4} offset={2} style={{ fontSize: '19px', }}>
+          <Col span={4} offset={2} style={{ fontSize: '19px' }}>
             <Icon type={ item.icon } theme="outlined"></Icon>
           </Col>
           <Col span={12}>
