@@ -13,10 +13,10 @@ export default () => (
       <div style={{background:'rgba(255,255,255,1)',boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
         borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px',
       }}> 
-        <div style={{fontWight:'900',color:'rgba(0,0,0,1)',margin:'3%',
+        <div style={{fontWight:'900',color:'rgba(0,0,0,1)',padding:'2%',
         }}>自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥
         </div>
-        <div style={{color:'#9B9B9B'}}>
+        <div style={{color:'#9B9B9B',padding:'2%',}}>
           <Tag color="#EEEEEE"><span style={{color:'#9B9B9B'}}>访谈</span> </Tag>
           <span style={{float:'right'}}>X 9,999   X 10万</span>
         </div>
