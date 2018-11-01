@@ -6,7 +6,7 @@ export default class BottomFooter extends Component {
     return (
       <div style={{
         width: '100%',
-        background: '#4A4A4A',
+        background: '#3D316A',
       }}>
         <Row justify="start">
           <Col offset={6} span={12}>
