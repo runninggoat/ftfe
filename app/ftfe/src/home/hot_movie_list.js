@@ -1,8 +1,8 @@
 import React from 'react'
-import MovieCard from './hot_movie_cards'
+import HotMovieCard from './hot_movie_cards'
 
 import { Row, Col } from 'antd';
-  
+import img1 from'../image/006.jpg'
   
   
 export default () => (
@@ -38,10 +38,16 @@ export default () => (
                 <Col span={24} >
                     <Row>
                         <Col span={1} />
-                        <Col span={6} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={6} ><MovieCard /></Col>
+                        <Col span={6} ><HotMovieCard 
+                        img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
+                        type2={'访谈'} type1={'视频'}
+                        /></Col>
+                        <Col span={5} ><HotMovieCard /></Col>
+                        <Col span={5} ><HotMovieCard 
+                        img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
+                        title2={'Mumford & Sons'} type2={'独立摇滚'}
+                        /></Col>
+                        <Col span={6} ><HotMovieCard /></Col>
                         <Col span={1} />
                     </Row>
                 </Col>
@@ -50,10 +56,10 @@ export default () => (
                 <Col span={24} >
                     <Row>
                         <Col span={1} />
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={6} ><MovieCard /></Col>
-                        <Col span={6} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
+                        <Col span={5} ><HotMovieCard /></Col>
+                        <Col span={6} ><HotMovieCard /></Col>
+                        <Col span={6} ><HotMovieCard /></Col>
+                        <Col span={5} ><HotMovieCard /></Col>
                         <Col span={1} />
                     </Row>
                 </Col>
