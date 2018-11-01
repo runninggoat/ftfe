@@ -14,7 +14,7 @@ export default () => (
     
     <div  style={{marginBot:'2%'}}>
         <Carousel  effect="fade">
-            <div><img src={img1}  style={{ width:'100%'}} /></div>
+            <div><img src={img1}  style={{ height: '570px',width:'100%'}} /></div>
             <div><img src={img2}  style={{ height: '570px',width:'100%'}} /></div>
             <div><img src={img3}  style={{ height: '570px',width:'100%'}} /></div>
             <div><img src={img4}  style={{ height: '570px',width:'100%'}} /></div>

@@ -28,7 +28,7 @@ class Home extends Component {
         
         
         
-        <Col><div style={{
+        <Col span ={24}><div style={{
           background:'#FFFFFF'
         }}>
           <Row>
@@ -89,7 +89,8 @@ class Home extends Component {
                   margin:'0 10%',
                   width:'80%',
                   boxShadow:'0px 5px 10px 0px rgba(255,79,81,0.66)',
-                  borderRadius:'41px'
+                  borderRadius:'41px',
+                  border:'0px'
                 }}> 
                 <Icon type="redo" theme="outlined" style={{color:'#FFFFFF'}} />
                 <span style={{color:'#FFFFFF'}}>加载更多</span>
