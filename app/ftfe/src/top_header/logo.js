@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 class Logo extends Component {
   render () {
     return (
-        <a href="/" style={{ color: 'white' }}>
+      <a href="/" style={{ color: '#fff' }}>
         <span style={{
           position: 'absolute',
-          lineHeight: '100%',
-          marginTop: '13px',
-          fontSize: '30px',
+          lineHeight: '36px',
+          marginTop: '4px',
+          fontSize: '25px',
           fontWeight: '500',
         }}>
           FT 链

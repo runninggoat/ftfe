@@ -17,7 +17,7 @@ export default () => (
                             <Col span={11}>
                                 <div style={{marginBot:'2%'}}>
                                     <span
-                                        style={{padding:'1%',marginRight:'2%',background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)'}}
+                                        style={{padding:'1%',marginRight:'2%',background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)'}}
                                     />
                                     <span style={{fontSize:'150%',color:'#222222',marginRight:'2%'}}>
                                         热门佳作

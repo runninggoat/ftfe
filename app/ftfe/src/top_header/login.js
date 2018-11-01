@@ -35,26 +35,30 @@ export default class LoginPanel extends Component {
           background: 'linear-gradient(360deg,rgba(63,0,74,0.75) 0%,rgba(32,32,124,0.85) 100%)',
         }}
       >
+        <div
+          onClick={ () => this.props.onCloseLogin('Close') }
+          style={{
+            position: 'fixed',
+            top: '30px',
+            right: '40px',
+            color: 'white',
+            fontSize: '30px',
+            float: 'right',
+            marginRight: '6px',
+            textAlign: 'center',
+          }}
+        >
+          <Icon type="close" theme="outlined" />
+        </div>
         <Row>
           <Col span={24}>
-            <div
-              onClick={ () => this.props.onCloseLogin('Close') }
-              style={{
-                color: 'white',
-                fontSize: '30px',
-                float: 'right',
-                marginRight: '6px',
-                textAlign: 'center',
-              }}
-            >
-              <Icon type="close" theme="outlined" />
-            </div>
           </Col>
         </Row>
         <Row type="flex" justify="center">
           <Col span={12}>
             <div style={{
-              marginTop: '-28px',
+              marginTop: '28px',
+              lineHeight: '100%',
               color: '#4A4A4A',
               fontSize: '36px',
               fontWeight: 600,
@@ -76,7 +80,7 @@ class MyTabBar extends Component {
   render () {
     let tabs = this.props.names.map((value, idx) => {
       return (
-        <Col span={Math.floor(24 / this.props.names.length)}>
+        <Col key={value} span={Math.floor(24 / this.props.names.length)}>
           <div
             style={{
               color: idx + 1 === this.props.active ? '#000' : '#BCBCBC',
@@ -84,11 +88,11 @@ class MyTabBar extends Component {
               fontWeight: idx + 1 === this.props.active ? '500' : '400',
               padding: '19px',
               borderBottom: idx + 1 === this.props.active ? '5px solid' : '0',
-              borderImage: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%) 1',
+              borderImage: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%) 1',
             }}
             onClick={ () => this.props.handleChange(idx + 1) }
           >
-            <div dangerouslySetInnerHTML={{ __html: this.props.names[idx] }}></div>
+            <div dangerouslySetInnerHTML={{ __html: value }}></div>
           </div>
         </Col>
       )
@@ -175,7 +179,7 @@ class LoginForm extends Component {
                       height: '40px',
                       border: 0,
                       borderRadius: '18px',
-                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
                       boxShadow: '0px 5px 10px 0px rgba(255,79,81,0.66)',
                       fontSize: '16px',
                       fontWeight: '500',
@@ -235,7 +239,7 @@ class LoginForm extends Component {
                       height: '40px',
                       border: 0,
                       borderRadius: '18px',
-                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)',
+                      background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
                       boxShadow: '0px 5px 10px 0px rgba(255,79,81,0.66)',
                       fontSize: '16px',
                       fontWeight: '500',

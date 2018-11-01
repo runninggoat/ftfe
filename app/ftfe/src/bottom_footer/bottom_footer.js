@@ -6,16 +6,17 @@ export default class BottomFooter extends Component {
     return (
       <div style={{
         width: '100%',
-        background: '#212221',
+        background: '#4A4A4A',
       }}>
         <Row justify="start">
-          <Col offset={2} span={18}>
+          <Col offset={6} span={12}>
             <Row type="flex" justify="space-around">
               <Col span={3}>
                 <div style={{
-                  color: 'white',
-                  fontSize: '40px',
+                  color: '#fff',
+                  fontSize: '24px',
                   padding: '30px 0',
+                  marginTop: '28px',
                 }}>FT 链</div>
               </Col>
               <Col span={3}>
@@ -74,9 +75,10 @@ export default class BottomFooter extends Component {
         <Row type="flex" justify="center">
           <Col span={24}>
             <div style={{
-              marginTop: '20px',
-              marginBottom: '20px',
-              color: '#BBBCBB',
+              marginTop: '32px',
+              marginBottom: '22px',
+              color: '#9B9B9B',
+              fontSize: '16px',
               textAlign: 'center',
             }}>
               &copy; 2018 UnityLabs &reg; All rights reserved.
@@ -92,20 +94,14 @@ class Section extends Component {
   render () {
     const subtitles = this.props.subtitles.map((item, idx) => {
       return (
-        <div key={item}>
+        <div key={item} style={{ fontSize: '12px', lineHeight: '28px' }}>
           { item }
         </div>
       )
     })
     return (
-      <div style={{
-        color: '#BBBCBB',
-        marginBottom: '20px',
-      }}>
-        <div style={{
-          marginTop: '20px',
-          fontSize: '20px',
-        }}>
+      <div style={{ color: '#BBBCBB', marginTop: '28px' }}>
+        <div style={{ fontSize: '16px', lineHeight: '28px' }}>
           { this.props.title }
         </div>
         { subtitles }

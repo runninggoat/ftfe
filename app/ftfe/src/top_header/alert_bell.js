@@ -48,47 +48,50 @@ export default class AlertBell extends Component {
         },
       ]
       list = (
-        <div style={{
-            position: 'absolute',
-            top: '60px',
-            left: '-90px',
-            width: '200px',
-            background: '#212221',
-            borderRadius: '10px',
-        }}>
+        <div>
           <div style={{
-            marginTop: '-40px',
-            marginLeft: '80px',
+            marginTop: '-23px',
+            marginLeft: '-9px',
             width: 0,
             height: 0,
             borderTop: '20px solid transparent',
             borderRight: '20px solid transparent',
-            borderBottom: '20px solid #212221',
+            borderBottom: '20px solid #fff',
             borderLeft: '20px solid transparent',
           }}></div>
-          <List
-            itemLayout="horizontal"
-            dataSource={ data }
-            renderItem={item => {
-              let badge = null
-              if (item.count) {
-                badge = (
-                  <Col span={4}>
-                    <Badge count={item.count} style={{
-                      backgroundColor: '#F8E71C',
-                      color: 'black',
-                    }}></Badge>
-                  </Col>
+          <div style={{
+              position: 'absolute',
+              top: '50px',
+              left: '-85px',
+              width: '190px',
+              background: '#fff',
+              borderRadius: '10px',
+              overflow: 'hidden',
+          }}>
+            <List
+              itemLayout="horizontal"
+              dataSource={ data }
+              renderItem={item => {
+                let badge = null
+                if (item.count) {
+                  badge = (
+                    <Col span={4}>
+                      <Badge count={item.count} style={{
+                        background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+                        color: '#fff',
+                      }}></Badge>
+                    </Col>
+                  )
+                }
+                return (
+                  <ItemRow
+                    item={ item }
+                    badge={ badge }
+                  />
                 )
-              }
-              return (
-                <ItemRow
-                  item={ item }
-                  badge={ badge }
-                />
-              )
-            }}
-          />
+              }}
+            />
+          </div>
         </div>
       )
     }
@@ -101,13 +104,14 @@ export default class AlertBell extends Component {
         <Badge
           status="default"
           style={{
-            width: '10px',
-            height: '10px',
-            backgroundColor: '#F8E71C',
-            color: 'black',
+            width: '11px',
+            height: '11px',
+            right: '4px',
+            background: 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+            boxShadow: '0 0 0',
           }}
         >
-          <Icon type="bell" theme="outlined" style={{ fontSize: '25px' }} />
+          <Icon type="bell" theme="outlined" style={{ fontSize: '22px' }} />
         </Badge>
         { list }
       </div>
@@ -144,19 +148,19 @@ class ItemRow extends Component {
     return (
       <List.Item style={{
         border: 0,
-        background: this.state.hover ? '#F8E71C' : '',
+        background: this.state.hover ? 'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)' : '',
       }}>
         <Row
           onMouseEnter={ this.handleEnter.bind(this) }
           onMouseLeave={ this.handleLeave.bind(this) }
           style={{
-            color: this.state.hover ? 'black' : 'white',
-            fontSize: '20px',
-            fontWeight: 700,
+            color: this.state.hover ? '#fff' : '#4A4A4A',
+            fontSize: '16px',
+            fontWeight: 400,
             width: '100%',
           }}
         >
-          <Col span={4} offset={2}>
+          <Col span={4} offset={2} style={{ fontSize: '19px' }}>
             <Icon type={ item.icon } theme="outlined"></Icon>
           </Col>
           <Col span={12}>
