@@ -1,9 +1,8 @@
 import React from 'react'
-import MovieCard from './movie_card'
+import HotMovieCard from './hot_movie_cards'
 
-import { Row, Col,Icon } from 'antd';
-const img1 =
-  "https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
+import { Row, Col } from 'antd';
+import img1 from'../image/006.jpg'
   
   
 export default () => (
@@ -39,10 +38,16 @@ export default () => (
                 <Col span={24} >
                     <Row>
                         <Col span={1} />
-                        <Col span={6} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={6} ><MovieCard /></Col>
+                        <Col span={6} ><HotMovieCard 
+                        img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
+                        type2={'访谈'} type1={'视频'}
+                        /></Col>
+                        <Col span={5} ><HotMovieCard /></Col>
+                        <Col span={5} ><HotMovieCard 
+                        img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
+                        title2={'Mumford & Sons'} type2={'独立摇滚'}
+                        /></Col>
+                        <Col span={6} ><HotMovieCard /></Col>
                         <Col span={1} />
                     </Row>
                 </Col>
@@ -51,16 +56,13 @@ export default () => (
                 <Col span={24} >
                     <Row>
                         <Col span={1} />
-                        <Col span={5} ><MovieCard /></Col>
-                        <Col span={6} ><MovieCard /></Col>
-                        <Col span={6} ><MovieCard /></Col>
-                        <Col span={5} ><MovieCard /></Col>
+                        <Col span={5} ><HotMovieCard /></Col>
+                        <Col span={6} ><HotMovieCard /></Col>
+                        <Col span={6} ><HotMovieCard /></Col>
+                        <Col span={5} ><HotMovieCard /></Col>
                         <Col span={1} />
                     </Row>
                 </Col>
-                
-                
-                
                 
                 
                 
@@ -69,39 +71,4 @@ export default () => (
             </Row>
         
         </div>
-   
-
-  )
-  
-//   <Row gutter={4}>
-                    
-                    
-//                     <Col span={24} >
-//                         <h2 style={{color:'black',fontSize:'150%'}}>热门佳作
-//                             <span style={{color:'grey',marginLeft:'1%'}}>POPULAR</span> 
-//                             <span style={{color:'grey',fontSize: '50%',marginLeft:'1%'}}>查看更多</span>
-//                         </h2>
-//                     </Col>
-                    
-//                 </Row>
-//                 <Col span={2} >
-                
-//                 </Col>
-//               <Col span={8} >
-//                 <div><img  style={{width: '100%', height: '300px',  backgroundSize:'cover',backgroundImage: `url(${img1})` }}/></div>
-//               </Col>
-//               <Col span={12} >
-//                 <Row gutter={4}>
-//                     <Col span={8} ><MovieCard /></Col>
-//                     <Col span={8} ><MovieCard /></Col>
-//                     <Col span={8} ><MovieCard /></Col>
-//                 </Row>
-//                 <Row gutter={4} style={{marginTop:'10px'}}>
-//                     <Col span={8} ><MovieCard /></Col>
-//                     <Col span={8} ><MovieCard /></Col>
-//                     <Col span={8} ><MovieCard /></Col>
-//                 </Row>
-//               </Col>
-//               <Col span={2}  style={{fontSize:'50px', position:'relative',top:'75px'}}>
-//                 <Icon type="right" theme="outlined" />
-//               </Col>
+ )

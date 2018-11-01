@@ -7,7 +7,7 @@ const img1 =
 export default () => (
   
     <div style={{margin:'2%'}}>
-    <img  style={{borderRadius:'16px',width: '100%', height: '245px',  backgroundSize:'cover',backgroundImage: `url(${img1})` }} />
+      <img src={img1} style={{borderRadius:'16px',width: '100%', height: '245px',  backgroundSize:'cover' }} />
     </div>
   
    
