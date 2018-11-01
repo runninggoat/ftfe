@@ -50,22 +50,26 @@ export default () => (
                 <Col span={24} >
                     <Row>
                         <Col span={1} />
-                        <Col span={6} ><HotMovieCard 
-                        img={img6} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
-                        type1={'视频'} type2={'访谈'} 
-                        /></Col>
-                        <Col span={5} ><HotMovieCard 
-                        img={img4} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
-                        type1={'文学'} type2={'言情'} 
-                        /></Col>
-                        <Col span={5} ><HotMovieCard 
-                        img={img13} title1={"BABEL"}
-                        title2={'Mumford & Sons'} type1={'音乐'} type2={'独立摇滚'}
-                        /></Col>
-                        <Col span={6} ><HotMovieCard 
-                        img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
-                        type1={'其他'} type2={'编舞'} 
-                        /></Col>
+                            <Col span={22}>
+                                <Row>
+                                    <Col span={7} ><HotMovieCard 
+                                        img={img6} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
+                                        type1={'视频'} type2={'访谈'} 
+                                        /></Col>
+                                        <Col span={4} ><HotMovieCard 
+                                        img={img4} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
+                                        type1={'文学'} type2={'言情'} 
+                                        /></Col>
+                                        <Col span={6} ><HotMovieCard 
+                                        img={img13} title1={"BABEL"}
+                                        title2={'Mumford & Sons'} type1={'音乐'} type2={'独立摇滚'}
+                                        /></Col>
+                                        <Col span={7} ><HotMovieCard 
+                                        img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
+                                        type1={'其他'} type2={'编舞'} 
+                                        /></Col>
+                                </Row>
+                            </Col>
                         <Col span={1} />
                     </Row>
                 </Col>
@@ -74,22 +78,28 @@ export default () => (
                 <Col span={24} >
                     <Row>
                         <Col span={1} />
-                        <Col span={5} ><HotMovieCard 
-                        img={img7} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
-                        type1={'文学'} type2={'言情'} 
-                        /></Col>
-                        <Col span={6} ><HotMovieCard 
-                        img={img12} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
-                        type1={'其他'} type2={'访谈'} 
-                        /></Col>
-                        <Col span={6} ><HotMovieCard 
-                        img={img9} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
-                        type1={'视频'} type2={'访谈'} 
-                        /></Col>
-                        <Col span={5} ><HotMovieCard 
-                        img={img10} title1={"BABEL"}
-                        title2={'Mumford & Sons'} type1={'音乐'} type2={'独立摇滚'}
-                        /></Col>
+                        <Col span={22}>
+                            <Row>
+                                <Col span={4} ><HotMovieCard 
+                                    img={img7} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
+                                    type1={'文学'} type2={'言情'} 
+                                /></Col>
+                                <Col span={7} ><HotMovieCard 
+                                    img={img12} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
+                                    type1={'其他'} type2={'访谈'} 
+                                /></Col>
+                                <Col span={7} ><HotMovieCard 
+                                    img={img9} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
+                                    type1={'视频'} type2={'访谈'} 
+                                /></Col>
+                                <Col span={6} ><HotMovieCard 
+                                    img={img10} title1={"BABEL"}
+                                    title2={'Mumford & Sons'} type1={'音乐'} type2={'独立摇滚'}
+                                /></Col>
+                            </Row>
+                        </Col>
+                        
+                        
                         <Col span={1} />
                     </Row>
                 </Col>
