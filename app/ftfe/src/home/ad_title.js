@@ -44,7 +44,9 @@ export default () => (
         
         <div style={{position:'absolute',top:'20%',left:'10%', marginRight:'65%'}}>
             <div style={{fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'250%'}}>这幅广告图的正标题</div>
+            <br />
             <div style={{fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'150%'}}>这幅广告图的副标题</div>
+            <br />
             <div style={{fontWeight:400,color:'rgba(255,255,255,1)',fontSize:'100%'}}>
             同言想人別安，多學水不事少百量他策自、交施力演線成，的打小放你，竟事清保身人張著大片國相院人靜連美海證體情孩幾一。度關文出學。
             </div>
