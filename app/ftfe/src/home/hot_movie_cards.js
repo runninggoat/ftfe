@@ -16,7 +16,7 @@ class HotMovieCard extends Component{
       <div style={{margin:'2%'}}>
         
         
-        <div style={{width: '100%', height: '245px',  backgroundSize:'cover',
+        <div style={{width: '100%', height: '245px',
           backgroundPosition:'50% 50%',
           backgroundColor:'black',
           backgroundRepeat:'no-repeat',
