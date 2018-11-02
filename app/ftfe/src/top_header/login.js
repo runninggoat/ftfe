@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, Row, Col, Icon, Input, Button, Tabs } from 'antd'
+import MyIcon from '../my_icon'
 
 const TabPane = Tabs.TabPane
 
@@ -48,7 +49,7 @@ export default class LoginPanel extends Component {
             textAlign: 'center',
           }}
         >
-          <Icon type="close" theme="outlined" />
+          <MyIcon type="icon-close" />
         </div>
         <Row>
           <Col span={24}>
@@ -163,7 +164,7 @@ class LoginForm extends Component {
                   <Input
                     type={ this.state.visual ? 'text' : 'password' }
                     prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.35)' }} />}
-                    suffix={<Icon type="eye" style={{ fontSize: '20px', color: '#222222' }} onClick={() => this.toggleVisual()} />}
+                    suffix={<MyIcon type="icon-browse" style={{ fontSize: '20px', color: '#222222' }} onClick={() => this.toggleVisual()} />}
                     placeholder="密码"
                   />
                 </Col>

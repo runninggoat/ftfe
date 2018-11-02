@@ -3,6 +3,7 @@ import { Row, Col, Icon } from 'antd'
 import Logo from './logo'
 import Category from './category'
 import AlertBell from './alert_bell'
+import MyIcon from '../my_icon'
 
 export default class TopHeader extends Component {
   state ={
@@ -125,14 +126,14 @@ export default class TopHeader extends Component {
               </Col>
               <Col span={1} style={{ marginRight: '15px' }}>
                 <a href="/search" style={{ color: 'white' }}>
-                  <Icon type="search" theme="outlined" />
+                  <MyIcon type="icon-search" />
                 </a>
               </Col>
               <Col span={1} style={{ marginRight: '15px' }}>
                 <AlertBell />
               </Col>
               <Col span={1} onClick={ () => this.props.handleOpenLogin() }>
-                <Icon type="user" theme="outlined" />
+                <MyIcon type="icon-people" />
               </Col>
               <Col span={3}></Col>
             </Row>
