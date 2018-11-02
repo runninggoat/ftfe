@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col, Icon, Badge, List } from 'antd'
+import MyIcon from '../my_icon'
 
 export default class AlertBell extends Component {
   state ={
@@ -29,21 +30,21 @@ export default class AlertBell extends Component {
     if (this.state.hover) {
       const data = [
         {
-          icon: 'heart',
+          icon: 'icon-collection',
           text: '关注收藏',
           count: 100,
         },
         {
-          icon: 'like',
+          icon: 'icon-praise',
           text: '点 赞',
           count: 6,
         },
         {
-          icon: 'message',
+          icon: 'icon-interactive',
           text: '评 论',
         },
         {
-          icon: 'pay-circle',
+          icon: 'icon-money',
           text: '糖分收益',
         },
       ]
@@ -111,7 +112,7 @@ export default class AlertBell extends Component {
             boxShadow: '0 0 0',
           }}
         >
-          <Icon type="bell" theme="outlined" style={{ fontSize: '22px' }} />
+          <MyIcon type="icon-remind" style={{ fontSize: '22px' }} />
         </Badge>
         { list }
       </div>
@@ -161,7 +162,7 @@ class ItemRow extends Component {
           }}
         >
           <Col span={4} offset={2} style={{ fontSize: '19px' }}>
-            <Icon type={ item.icon } theme="outlined"></Icon>
+            <MyIcon type={ item.icon } />
           </Col>
           <Col span={12}>
             { item.text }
