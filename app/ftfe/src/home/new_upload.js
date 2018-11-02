@@ -1,7 +1,7 @@
 import React from 'react'
 import MovieCard from './new_upload_cards'
 
-import { Row, Col,Icon } from 'antd';
+import { Row, Col,Icon,Divider } from 'antd';
 
 import img1 from'../image/006.jpg'
   
@@ -35,7 +35,16 @@ export default () => (
                     <Col span={7} />
                         
                     <Col span={4}>
-                        <span><span style={{fontWeight:'900'}}>视频</span> | 文学 | 音乐 | 其他</span>
+                        <span>
+                            视频
+                            <Divider type="vertical" />
+                            <a href="#">文学</a>
+                            <Divider type="vertical" />
+                            <a href="#">音乐</a>
+                            <Divider type="vertical" />
+                            <a href="#">其他</a>
+                        </span>
+                        
                     </Col>
                     <Col span={1} />
                     </Row>
