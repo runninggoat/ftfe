@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import { Tag } from 'antd';
-
+import MyIcon from '../my_icon'
 
 //const img1 ="https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
   
@@ -13,14 +13,14 @@ class MovieCards extends Component{
     
     return(
       
-      <div style={{margin:'2%'}}>
+      <div style={{margin:'2%',height: '320px'}}>
         
         
-        <div style={{width: '100%', height: '245px',
-          backgroundPosition:'50% 50%',
+        <div style={{width: '100%', height: '210px',
+          backgroundPosition:'50% 50%', 
           backgroundColor:'black',
           backgroundRepeat:'no-repeat',
-          backgroundSize:'contain',
+          backgroundSize:'cover',
           borderTopLeftRadius:'16px',borderTopRightRadius:'16px',backgroundImage : `url(${this.props.img?this.props.img:'black'})`}}>
         
             <span>{this.props.time?(<Tag style={{float:'right',position:'relative',top:'85%',border:0,borderRadius:'10px',background:"#222222"}}>
@@ -33,7 +33,7 @@ class MovieCards extends Component{
         </div>
         
         <div style={{background:'rgba(255,255,255,1)',boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
-          borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px',
+          borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'110px'
         }}> 
          
           
@@ -45,7 +45,7 @@ class MovieCards extends Component{
             
             <div style={{color:'#9B9B9B',padding:'2%'}}>
               {this.props.type2?(<Tag color="#EEEEEE" style={{borderRadius:'10px'}}><span style={{color:'#9B9B9B'}}>{this.props.type2}</span> </Tag>):''}
-              <span style={{float:'right'}}>X 9,999   X 10万</span>
+              <span style={{float:'right'}}><MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万</span>
             </div>
         </div>
     </div>
