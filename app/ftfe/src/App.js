@@ -5,7 +5,7 @@ import Home from './home/home.js'
 import Search from './search/search.js'
 import BottomFooter from './bottom_footer/bottom_footer.js'
 import LoginPanel from './top_header/login'
-import UploadPanel from './top_header/upload'
+import UploadPanel from './top_header/upload/upload'
 
 class App extends Component {
   state = {
@@ -95,6 +95,14 @@ class App extends Component {
           </div>
           { loginP }
           { uploadP }
+          <div style={{ height: 0 }}>
+            <svg width="0" height="0">
+              <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop stopColor="#FF8487" offset="0%" />
+                <stop stopColor="#FF1367" offset="100%" />
+              </linearGradient>
+            </svg>
+          </div>
         </div>
       </BrowserRouter>
     )

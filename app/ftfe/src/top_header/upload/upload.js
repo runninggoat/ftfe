@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Modal, Row, Col, Icon, Input, Button, Checkbox, Steps, Tag, Select, Tabs } from 'antd'
 import { Player, BigPlayButton, ControlBar, VolumeMenuButton, LoadingSpinner } from 'video-react'
 import 'video-react/dist/video-react.css'
-import PicWall from './picwall'
+import PicWall from '../picwall'
+import MyIcon from '../../my_icon'
 
 const Step = Steps.Step
 const TextArea = Input.TextArea
@@ -79,26 +80,32 @@ export default class UploadPanel extends Component {
         maskClosable={ false }
         footer={ null }
         width="1200px"
-        bodyStyle={{
-          background: '#2D2E2D',
+        style={{
           padding: 0,
+          background: 'transparent',
+        }}
+        bodyStyle={{
+          background: 'transparent',
+          padding: 0,
+        }}
+        maskStyle={{
+          background: 'linear-gradient(360deg,rgba(63,0,74,0.75) 0%,rgba(32,32,124,0.85) 100%)',
         }}
       >
         <div
           onClick={ () => this.props.onCloseUpload('Close') }
           style={{
-            position: 'absolute',
-            top: 0,
-            right: '5px',
-            color: 'white',
-            fontSize: '30px',
-            zIndex: 99,
+            position: 'fixed',
+            top: '31px',
+            right: '41px',
+            color: '#BCBCBC',
+            fontSize: '32px',
           }}
         >
-          <Icon type="close" theme="outlined" />
+          <MyIcon type="icon-close" />
         </div>
-        <Row>
-          <Col span={20} style={{
+        <Row type="flex" justify="center">
+          {/* <Col span={20} style={{
             padding: '10px',
           }}>
             <Steps>
@@ -123,13 +130,81 @@ export default class UploadPanel extends Component {
                 icon={<Icon type="eye" theme="outlined" />}
               />
             </Steps>
+          </Col> */}
+          <Col span={12}>
+            <Row>
+              <Col span={24}>
+                <div style={{
+                  width: '100%',
+                  fontSize: '20px',
+                  color: '#EEEEEE',
+                  textAlign: 'center',
+                }}>
+                  { '选择文件类型' }
+                </div>
+              </Col>
+            </Row>
+            <Row type="flex" justify="center" style={{ marginTop: '10px' }}>
+              <Col span={6}>
+                <TypeButton icon="video-camera" text="视频" />
+              </Col>
+              <Col span={6}>
+                <TypeButton icon="video-camera" text="音频" />
+              </Col>
+            </Row>
+            <Row type="flex" justify="center" style={{ marginTop: '10px' }}>
+              <Col span={6}>
+                <TypeButton icon="video-camera" text="文学" />
+              </Col>
+              <Col span={6}>
+                <TypeButton icon="video-camera" text="其它(图片)" />
+              </Col>
+            </Row>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           { content }
         </Row>
-        <div style={{ clear: 'both' }}></div>
+        <div style={{ clear: 'both' }}></div> */}
       </Modal>
+    )
+  }
+}
+
+class TypeButton extends Component {
+  render () {
+    return (
+      <div style={{
+        background: '#fff',
+        height: '142px',
+        width: '142px',
+        borderRadius: '20px',
+      }}>
+        <div style={{
+          width: '100%',
+          textAlign: 'center',
+        }}>
+          {/* <MyIcon className="gradient-icon" type={ this.props.icon } style={{
+            marginTop: '40px',
+            fontSize: '37px',
+          }} /> */}
+          <Icon className="gradient-icon" type={ this.props.icon } theme="outlined" style={{
+            marginTop: '40px',
+            fontSize: '37px',
+          }}/>
+        </div>
+        <div style={{
+          width: '100%',
+          textAlign: 'center',
+          fontSize: '16px',
+          fontWeight: 400,
+          color: '#FF1367',
+          lineHeight: '22px',
+          marginTop: '10px',
+        }}>
+          { this.props.text }
+        </div>
+      </div>
     )
   }
 }
