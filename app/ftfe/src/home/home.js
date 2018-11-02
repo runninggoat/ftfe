@@ -6,6 +6,7 @@ import WatchList from './watch_list'
 import NewUpload from './new_upload'
 import PlayModal from '../modal/play_modal'
 import { Tabs } from 'antd';
+import './hot.less'
 
 const TabPane = Tabs.TabPane;
 

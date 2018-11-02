@@ -1,13 +1,14 @@
 import React from 'react'
-import { Carousel,Divider } from 'antd'
+import { Carousel} from 'antd'
 import img1 from '../image/001.jpeg'
 import img2 from '../image/003.jpg'
 import img3 from '../image/004.jpeg'
 import img4 from '../image/005.jpg'
 import img5 from '../image/006.jpg'
+import './hot.less'
 
 export default () => (
-    <div  style={{marginBot:'2%',
+    <div  style={{marginBot:'4%',
     }}>
         <Carousel  effect="fade">
             <div><div style={{backgroundRepeat:'no-repeat',
@@ -42,7 +43,7 @@ export default () => (
             </div></div>
         </Carousel>
         
-        <div style={{position:'absolute',top:'20%',left:'10%', marginRight:'65%'}}>
+        <div style={{position:'absolute',top:'20%',left:'10%', marginRight:'60%'}}>
             <div style={{fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'250%'}}>这幅广告图的正标题</div>
             <br />
             <div style={{fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'150%'}}>这幅广告图的副标题</div>
