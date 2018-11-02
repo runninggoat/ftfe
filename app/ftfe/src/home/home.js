@@ -16,7 +16,7 @@ class Home extends Component {
     return (
       <div
         style={{
-          background:'rgba(254,254,254,1)'
+          backgroundColor:'#FEFEFE'
         }}
       >
       <Row gutter={12}>
@@ -28,7 +28,7 @@ class Home extends Component {
         
         
         <Col span ={24}><div style={{
-          background:'#FFFFFF'
+          backgroundColor:'#FFFFFF',boxShadow:'0px 2px 31px 0px rgba(205,205,205,0.27)'
         }}>
           <Row>
             <Col span ={1} />

@@ -8,8 +8,7 @@ import img5 from '../image/006.jpg'
 import './hot.less'
 
 export default () => (
-    <div  style={{marginBot:'4%',
-    }}>
+    <div  style={{}}>
         <Carousel  effect="fade">
             <div><div style={{backgroundRepeat:'no-repeat',
             backgroundPosition:'50% 50%',
