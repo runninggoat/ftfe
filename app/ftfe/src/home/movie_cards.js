@@ -38,12 +38,12 @@ class MovieCards extends Component{
          
           
         
-            <div style={{fontWight:'900',color:'rgba(0,0,0,1)',padding:'2%',
+            <div style={{fontWight:'900',color:'rgba(0,0,0,1)',
             }}>{this.props.title1?this.props.title1:''}
               <div style={{color:'rgba(155,155,155,1)'}}>{this.props.title2?this.props.title2:''}</div>
             </div>
             
-            <div style={{color:'#9B9B9B',padding:'2%'}}>
+            <div style={{color:'#9B9B9B'}}>
               {this.props.type2?(<Tag color="#EEEEEE" style={{borderRadius:'10px'}}><span style={{color:'#9B9B9B'}}>{this.props.type2}</span> </Tag>):''}
               <span style={{float:'right'}}><MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万</span>
             </div>
