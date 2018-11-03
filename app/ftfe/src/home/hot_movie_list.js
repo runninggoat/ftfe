@@ -50,7 +50,7 @@ export default () => (
                         <Col span={12} />
                     </Row>
                         <Col span={24}>
-                            <Row>
+                            <Row gutter={4}>
                                 <Col span={7} ><MovieCards 
                                     img={img6} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
                                     type1={'视频'} type2={'访谈'} time={'1460:59'}
@@ -72,7 +72,7 @@ export default () => (
                     <Row>
                     </Row>
                         <Col span={24}>
-                            <Row>
+                            <Row gutter={12}>
                                 <Col span={4} ><MovieCards 
                                     img={img7} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
                                     type1={'文学'} type2={'言情'} time={'长篇小说'}
