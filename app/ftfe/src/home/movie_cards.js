@@ -14,7 +14,7 @@ class MovieCards extends Component{
     
     return(
       <div>
-        <Row gutter={8}>
+        <Row>
           <Col span={24}>
             <div style={{width: '100%', height: '210px',
               backgroundPosition:'50% 50%', 
