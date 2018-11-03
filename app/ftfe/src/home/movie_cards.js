@@ -35,18 +35,29 @@ class MovieCards extends Component{
           
           <Col span={24}>
             <div style={{background:'rgba(255,255,255,1)',boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
-              borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'110px'
+              borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'70px'
             }}> 
-            
-                <div style={{fontWight:'900',color:'rgba(0,0,0,1)',
-                }}>{this.props.title1?this.props.title1:''}
-                  <div style={{color:'rgba(155,155,155,1)'}}>{this.props.title2?this.props.title2:''}</div>
-                </div>
+              <Row>
+                <Col span={24}>
+                  <div style={{fontWight:'900',color:'rgba(0,0,0,1)',
+                  }}>{this.props.title1?this.props.title1:''}
+                    <div style={{color:'rgba(155,155,155,1)'}}>{this.props.title2?this.props.title2:''}</div>
+                  </div>
+                </Col>
+                <Col span={12}>
+                  <div style={{color:'#9B9B9B',fontSize:'80%', marginLeft:'2%'}}>
+                    {this.props.type2?(<Tag color="#EEEEEE" style={{borderRadius:'10px'}}><span style={{color:'#9B9B9B'}}>{this.props.type2}</span> </Tag>):''}
+                  </div>
+                </Col>
+                <Col span={12}>
+                  <div style={{fontSize:'80%',float:'right',color:'#9B9B9B',marginRight:'5%'}}>
+                    <MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万
+                  </div>
+                </Col>
+              </Row>
                 
-                <div style={{color:'#9B9B9B'}}>
-                  {this.props.type2?(<Tag color="#EEEEEE" style={{borderRadius:'10px'}}><span style={{color:'#9B9B9B'}}>{this.props.type2}</span> </Tag>):''}
-                  <span style={{float:'right'}}><MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万</span>
-                </div>
+                
+                
             </div>
           </Col>
         </Row>
