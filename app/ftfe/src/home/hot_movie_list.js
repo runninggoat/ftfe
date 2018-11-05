@@ -19,7 +19,7 @@ import MyIcon from '../my_icon'
 
   
 export default () => (
-        <div >
+        <div style={{margin:'1% 0'}}>
             <Row gutter={12}>
                 <Col span={1}>
                     <div style={{maxWidth:60}}>
@@ -72,7 +72,7 @@ export default () => (
                         </Col>
                     <Row>
                     </Row>
-                        <Col span={24}><div style={{margin:'1% 0'}}>
+                        <Col span={24}><div style={{margin:'1% 0 2%'}}>
                             <Row gutter={12}>
                                 <Col span={4} ><MovieCards 
                                     img={img7} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
