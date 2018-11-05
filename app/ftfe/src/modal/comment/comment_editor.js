@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentEditor from './comment_editor';
-import CommentComments from './comment_comments';
+import HotComments from './comments_hot';
+import NewComments from './comments_new';
 import { Row, Col } from 'antd';
 import MyIcon from '../../my_icon'
 
@@ -56,17 +57,33 @@ export default () => (
         <Row>
           <Col>
             <Row>
-              <Col span={3}>
-                <div style={{fontSize:'100%',marginTop: '15%',fontWeight:500,color:'rgba(74,74,74,1)'}}>
+              <Col span={24}>
+                <div style={{fontSize:'100%',marginTop: '5%',fontWeight:500,color:'rgba(74,74,74,1)'}}>
                   热门评论
                 </div>
               </Col>
-              <Col span={21} />
             </Row>
             
             <Row>
               <Col>
-                <div><CommentComments /></div>
+                <div><HotComments /></div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Row>
+              <Col span={24}>
+                <div style={{fontSize:'100%',marginTop: '5%',fontWeight:500,color:'rgba(74,74,74,1)'}}>
+                  最新评论 (1,999万)
+                </div>
+              </Col>
+            </Row>
+            
+            <Row>
+              <Col>
+                <div><NewComments /></div>
               </Col>
             </Row>
           </Col>
@@ -79,4 +96,5 @@ export default () => (
 
       
    
-  </div>);
+  </div>
+);
