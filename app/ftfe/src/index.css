@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.ant-modal-content {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.gradient-icon svg * {
+  fill: url(#rg) !important;
+}
