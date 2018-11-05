@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     blur: false,
     displayLogin: false,
-    displayUpload: true,
+    displayUpload: false,
   }
 
   turnOnBlur () {

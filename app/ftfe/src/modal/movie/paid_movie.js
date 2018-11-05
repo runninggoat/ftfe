@@ -51,7 +51,7 @@ export default () => (
           <Col span={6}/>
           <Col span={12}>
             <div style={{float:'right'}}>
-            <span style={{color:'rgba(188,188,188,1)'}}><MyIcon type='icon-browse'/>9,999 观看  &nbsp;&nbsp;</span>
+            <span style={{color:'rgba(188,188,188,1)'}}><MyIcon type='icon-browse' />9,999 观看  &nbsp;&nbsp;</span>
             <span style={{color:'rgba(255,19,103,1)'}}><MyIcon type='icon-praise_fill'/>9,999 赞  &nbsp;&nbsp;</span>
             <span style={{color:'rgba(255,19,103,1)'}}><MyIcon type='icon-collection_fill'/>已收藏  &nbsp;&nbsp;</span>
             <span style={{color:'rgba(188,188,188,1)'}}><MyIcon type='icon-share'/>分享</span>

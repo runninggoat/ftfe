@@ -35,10 +35,10 @@ class PlayModal extends Component{
           onCancel={this.handleCancel}
           footer={null}
           centered={true}
-          width={'80%'}
+          width={'90%'}
           bodyStyle={{padding:'0px',margin:'5% 0'}}
         >
-        <div style={{backgroundColor:'rgba(0, 255, 255,0.5)'}}>
+        <div>
         
         <Row >
         
