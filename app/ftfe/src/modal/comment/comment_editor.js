@@ -26,10 +26,10 @@ export default () => (
           <Col span={3}>
             <Row>
               <Col span={8}>
-                <MyIcon type="icon-picture"  style={{fontSize:'150%',marginLeft:'1%',marginRight: '1%'}}/>
+                <MyIcon type="icon-Smile"  style={{fontSize:'150%',marginLeft:'1%',marginRight: '1%'}}/>
               </Col >
               <Col span={8}>
-                <MyIcon type="icon-picture"  style={{fontSize:'150%',marginRight: '1%'}}/>
+                <MyIcon type="icon-at"  style={{fontSize:'150%',marginRight: '1%'}}/>
               </Col>
               <Col span={8}>
                 <MyIcon type="icon-picture" style={{fontSize:'150%',marginRight: '1%'}} />
