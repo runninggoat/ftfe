@@ -43,11 +43,7 @@ export default class LiteratureEditor extends Component {
                   { '标题（30字内）' }
                 </span>
               </div>
-              <Input placeholder="请输入作品标题" addonAfter={ () => {
-                return (
-                  <span>0/30</span>
-                )
-              } } />
+              <Input placeholder="请输入作品标题" />
             </Col>
           </Row>
         </div>
