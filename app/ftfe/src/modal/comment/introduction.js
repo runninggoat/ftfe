@@ -11,6 +11,8 @@ export default () => (
   
   <Row >
     <Col>
+      <div style={{borderTop:'1px solid rgba(216,216,216,1)'}}></div>
+      <div style={{margin:'2% 0'}}>
         <Row>
           <Col span={4}>
             <img src={img1}  style={{width:'100%' }}/>
@@ -23,13 +25,7 @@ export default () => (
           </Col>
           <Col span={1} />
         </Row>
-          <Col>
-            <div style={{textAlign:'center'}}>展开全部</div>
-          </Col>
-        <Row>
-        
-        </Row>
-    </Col>
+    </div></Col>
   </Row>
   
   

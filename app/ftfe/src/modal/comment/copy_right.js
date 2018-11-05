@@ -4,12 +4,13 @@ import { Table } from 'antd';
 
 export default () => (
   
-  <div style={{width: '400px', height:'225px'}}>
+  <div style={{borderTop:'1px solid rgba(216,216,216,1)'}}>
     <Table 
     dataSource={dataSource} 
     columns={columns}
     showHeader={false}
     align='center'
+    pagination={false}
      />
   </div>
   )
