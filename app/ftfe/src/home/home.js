@@ -85,7 +85,7 @@ class Home extends Component {
               <div>
                 <Button style={{
                   background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
-                  margin:'0 10%',
+                  margin:'5% 10%',
                   width:'80%',
                   boxShadow:'0px 5px 10px 0px rgba(255,79,81,0.66)',
                   borderRadius:'41px',
