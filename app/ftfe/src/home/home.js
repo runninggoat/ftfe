@@ -5,6 +5,7 @@ import { Row, Col,Button,Icon,Carousel } from 'antd'
 import WatchList from './watch_list'
 import NewUpload from './new_upload'
 import PlayModal from '../modal/play_modal'
+import MyIcon from '../my_icon'
 import { Tabs } from 'antd';
 import './hot.less'
 
@@ -91,7 +92,7 @@ class Home extends Component {
                   borderRadius:'41px',
                   border:'0px'
                 }}> 
-                <Icon type="redo" theme="outlined" style={{color:'#FFFFFF'}} />
+                <MyIcon type="icon-refresh" theme="outlined" style={{color:'#FFFFFF'}} />
                 <span style={{color:'#FFFFFF'}}>加载更多</span>
                 </Button>
               </div>
