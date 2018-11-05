@@ -48,7 +48,7 @@ export default class TopHeader extends Component {
           height: `${this.state.height}px`,
           border: 0,
           // background: 'linear-gradient(rgba(45, 46, 45, 0.8), rgba(45, 46, 45, 0.01))',
-          background: this.state.scrollOut ? '#3D316A' : 'transparent',
+          background: this.state.scrollOut ? 'rgba(56, 57, 56, 0.7)' : 'transparent',
           zIndex: '99',
           transition: 'all 0.3s',
         }}
