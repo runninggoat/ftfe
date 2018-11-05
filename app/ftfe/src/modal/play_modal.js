@@ -9,7 +9,7 @@ import { Row, Col } from 'antd';
 class PlayModal extends Component{
   
 
-  state = { visible: false }
+  state = { visible: true }
   
   showModal = () => {
     this.setState({

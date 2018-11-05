@@ -12,7 +12,7 @@ const img1 =
 
 export default () => (
   
-  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'green'}}>
+  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'green',borderRadius:'16px'}}>
     <Row>
       <Col>
       

@@ -12,7 +12,7 @@ const img1 =
 
 export default () => (
   
-  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'red'}} >
+  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'red',borderRadius:'16px'}} >
     <Tabs defaultActiveKey="1">
       <TabPane tab="简介" key="1"><Intro /></TabPane>
       <TabPane tab="团队" key="2"><Staff /></TabPane>

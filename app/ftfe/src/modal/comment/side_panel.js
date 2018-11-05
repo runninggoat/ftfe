@@ -44,7 +44,7 @@ export default () => (
           </Col>
         </Row></div>
         
-        <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'pink'}}>
+        <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'pink',borderRadius:'16px'}}>
         <Row>
           <Col>
           

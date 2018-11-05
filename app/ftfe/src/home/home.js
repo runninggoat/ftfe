@@ -110,12 +110,3 @@ class Home extends Component {
 }
 
 export default Home
-// <Col span ={24}>
-//           <WatchList />
-          
-//         </Col>
-        
-        
-//         <Col span ={24}>
-//           <NewUpload />
-//         </Col>

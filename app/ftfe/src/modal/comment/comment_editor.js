@@ -9,7 +9,7 @@ const { TextArea } = Input;
 
 
 export default () => (
-  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'purple'}}>
+  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'purple',borderRadius:'16px'}}>
     
     <Row>
       <Col>
