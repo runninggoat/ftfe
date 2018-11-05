@@ -42,7 +42,7 @@ class PlayModal extends Component{
         
         <Row >
         
-            <Col span={18}>
+            <Col span={19}>
                 <Row>
                     <Col>
                     <PaidMovie />
@@ -62,7 +62,7 @@ class PlayModal extends Component{
                 </Row>
             </Col>
             
-            <Col span={6}>
+            <Col span={5}>
                 <SidePanel />
             </Col>
         </Row>

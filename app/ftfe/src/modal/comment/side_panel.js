@@ -2,7 +2,7 @@ import React from 'react';
 import MovieList from '../movie/movie_list';
 import { Button,Tabs } from "antd";
 import { Row, Col } from 'antd';
-
+import img1 from'../../image/001.jpeg'
 const TabPane = Tabs.TabPane;
 export default () => (
   <div >
@@ -11,21 +11,21 @@ export default () => (
         <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'blue',borderRadius:'16px'}}>
         <Row>
           <Col>
-            <MovieList />
+            <div><img src={img1}  style={{width:130,height:130,borderRadius:65,float:'left',margin:'10% 30%' }}/></div>
           </Col>
         </Row>
         
         <Row>
           <Col>
-            <h1>
+            <div>
               导演老李
-            </h1>
-            <h2>
+            </div>
+            <div>
               100 作品  202.33万 粉丝
-            </h2>
-            <h3>
+            </div>
+            <div>
               议义结众积把度引这状科，派多人度越已况看石外，第证-京坝事定该采。指则影研上确干它平局提，属该众代共列点口交场满道，位备励行才乱枝情据型。矿住青共实走的先图江，切切每须都素可利等率，路马H定隶军志严。易越参向北我细角农体，志量后说次八正须较领，连别届秃术型制矿。
-            </h3>
+            </div>
           </Col>
         </Row>
         
