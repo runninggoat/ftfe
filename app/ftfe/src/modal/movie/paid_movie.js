@@ -2,47 +2,59 @@ import React from 'react';
 import { Player,BigPlayButton,ControlBar,VolumeMenuButton,LoadingSpinner } from "video-react";
 import { Button } from "antd";
 import "video-react/dist/video-react.css";
-
+import MyIcon from '../../my_icon'
 import { Row, Col,Tag } from 'antd';
-
-const img1 =
-  "https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
-
+import img12 from'../../image/012.jpg'
 
 
 export default () => (
   
-  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'green',borderRadius:'16px'}}>
+  <div style={{padding:'2.5%', margin:'1% 1% 1% 1%',backgroundColor:'#FFFFFF',borderRadius:'16px'}}>
     <Row>
-      <Col>
+      <Col  span={24}>
       
         <Row>
-          <Col>
-            <Player poster={img1} preload='metadata'>
+          <Col span={24}><div style={{}}>
+            <Player poster={img12} preload='metadata'>
               <BigPlayButton position="center" />
               <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
               <LoadingSpinner />
               <ControlBar autoHide={true} >
               <VolumeMenuButton vertical />
               </ControlBar>
-            </Player>
-            <h1>这个视频标题</h1>
-            <h2>2018-10-30 12:59:22</h2>
+            </Player></div>
+          </Col>
+          
+          <Col span={24}>
+            <div style ={{fontWeight:500,fontSize:'24px'}}>这个视频标题这个视频标题</div>
+          </Col>
+          <Col span={24}>
+            <div style ={{fontWeight:400,fontSize:'16px',color:'rgba(155,155,155,1)'}}>2018-10-30 12:59:22</div>
           </Col>
         </Row>
         
         <Row>
           
           <Col span={6}>
-            <Tag color="magenta">视频</Tag>
-            <Tag color="red">动画</Tag>
-            <Tag color="volcano">原创</Tag>
-          
+            <div style={{}}>
+              <Tag style={{border:0,borderRadius:'10px',background:"linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)"}}>
+                <span style={{color:'#FFFFFF'}}>视频</span> 
+              </Tag>
+              <Tag style={{border:0,borderRadius:'10px',background:"#EEEEEE"}}>
+                <span style={{color:'#9B9B9B'}}>动画</span> 
+              </Tag>
+              <Tag style={{border:0,borderRadius:'10px',background:"#EEEEEE"}}>
+                <span style={{color:'#9B9B9B'}}>原创</span> 
+              </Tag>
+            </div>
           </Col>
           <Col span={6}/>
           <Col span={12}>
             <div style={{float:'right'}}>
-            9,999 观看 9,999 赞 已收藏 分享
+            <span style={{color:'rgba(188,188,188,1)'}}><MyIcon type='icon-browse'/>9,999 观看  &nbsp;&nbsp;</span>
+            <span style={{color:'rgba(255,19,103,1)'}}><MyIcon type='icon-praise_fill'/>9,999 赞  &nbsp;&nbsp;</span>
+            <span style={{color:'rgba(255,19,103,1)'}}><MyIcon type='icon-collection_fill'/>已收藏  &nbsp;&nbsp;</span>
+            <span style={{color:'rgba(188,188,188,1)'}}><MyIcon type='icon-share'/>分享</span>
             </div>
           </Col>
         </Row>

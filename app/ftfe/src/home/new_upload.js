@@ -3,7 +3,7 @@ import MovieCard from './movie_cards'
 
 import { Row, Col,Icon,Divider } from 'antd';
 
-import img1 from'../image/006.jpg'
+import img1 from '../image/006.jpg'
   
   
   

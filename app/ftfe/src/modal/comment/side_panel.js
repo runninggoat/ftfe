@@ -8,7 +8,7 @@ export default () => (
   <div >
     <Row>
       <Col>
-        <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'blue'}}>
+        <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'blue',borderRadius:'16px'}}>
         <Row>
           <Col>
             <MovieList />
