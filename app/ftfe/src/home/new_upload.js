@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieCard from './new_upload_cards'
+import MovieCard from './movie_cards'
 
 import { Row, Col,Icon,Divider } from 'antd';
 
@@ -10,31 +10,32 @@ import img1 from'../image/006.jpg'
 export default () => (
     
    
-        <div>
+        <div style={{}}>
             <Row gutter={4}>
                 
-                <Col span={24} >
+                <Col span={24} ><div style={{}}>
                     <Row>
                         <Col span={1} />
                             <Col span={11}>
-                                <div style={{marginBot:'2%'}}>
+                                <div style={{margin:'5% 0'}}>
                                     <span
                                         style={{padding:'1%',marginRight:'2%',background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)'}}
                                     />
-                                    <span style={{fontSize:'150%',color:'#222222',marginRight:'2%'}}>
-                                        最新上传
+                                    <span style={{fontSize:'150%',color:'#222222',}}>
+                                        &nbsp;&nbsp;最新上传
                                     </span>
-                                    <span style={{fontSize:'150%',color:'#BCBCBC',marginRight:'2%'}}>
-                                        LASTEST
+                                    <span style={{fontSize:'150%',color:'#BCBCBC',}}>
+                                        &nbsp;&nbsp;LASTEST
                                     </span>
-                                    <span style={{fontSize:'100%',color:'#BCBCBC',marginRight:'2%'}}>
-                                        查看更多 》
+                                    <span style={{fontSize:'100%',color:'#BCBCBC',}}>
+                                        &nbsp;&nbsp;查看更多 》
                                     </span>
                                 </div>
                             </Col>
-                    <Col span={7} />
+                    <Col span={0} />
                         
-                    <Col span={4}>
+                    <Col span={11}>
+                        <div style={{float:'right',margin:'6% 0' }}>
                         <span>
                             视频
                             <Divider type="vertical" />
@@ -44,10 +45,11 @@ export default () => (
                             <Divider type="vertical" />
                             <a href="#">其他</a>
                         </span>
+                        </div>
                         
                     </Col>
                     <Col span={1} />
-                    </Row>
+                    </Row></div>
                 </Col>
                 
                 
@@ -55,39 +57,64 @@ export default () => (
                     <Row>
                         <Col span={1} />
                         <Col span={22} >
-                            <Row>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
+                            <Row gutter={12}>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'}
+                                /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
                             </Row>
                         </Col>
                         <Col span={1} />
                     </Row>
                 </Col>
-                <Col span={24} >
+                <Col span={24} ><div style={{margin:'1% 0'}}>
                     <Row>
                         <Col span={1} />
                         <Col span={22} >
-                            <Row>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
+                            <Row gutter={12}>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
                             </Row>
                         </Col>
                         <Col span={1} />
-                    </Row>
+                    </Row></div>
                 </Col>
                 <Col span={24} >
                     <Row>
                         <Col span={1} />
                         <Col span={22} >
-                            <Row>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
-                                <Col span={6}><MovieCard /></Col>
+                            <Row gutter={12}>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
+                                <Col span={6}><MovieCard 
+                                    img={img1} title1={"自媒体《独白》团队访问徐峥：..."} title2={<span>&nbsp;</span>}
+                                    type2={'访谈'} time={'1460:59'} /></Col>
                             </Row>
                         </Col>
                         <Col span={1} />
