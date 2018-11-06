@@ -26,10 +26,10 @@ export default () => (
           </Col>
           
           <Col span={24}>
-            <div style ={{fontWeight:500,fontSize:'24px'}}>这个视频标题这个视频标题</div>
+            <div style ={{fontWeight:500,fontSize:'120%'}}>这个视频标题这个视频标题</div>
           </Col>
           <Col span={24}>
-            <div style ={{fontWeight:400,fontSize:'16px',color:'rgba(155,155,155,1)'}}>2018-10-30 12:59:22</div>
+            <div style ={{fontWeight:400,fontSize:'90%',color:'rgba(155,155,155,1)'}}>2018-10-30 12:59:22</div>
           </Col>
         </Row>
         

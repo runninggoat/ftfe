@@ -17,7 +17,7 @@ class Home extends Component {
     return (
       <div
         style={{
-          backgroundColor:'#FEFEFE'
+          backgroundColor:'#FEFEFE',textAlign:'center'
         }}
       >
       <Row gutter={12}>
