@@ -1,9 +1,9 @@
 import React from 'react';
-import MovieList from '../movie/movie_list';
 import { Button,Tabs } from "antd";
 import { Row, Col } from 'antd';
 import img1 from'../../image/001.jpeg'
 import MyIcon from '../../my_icon'
+import SidePlayer from './side_player'
 const TabPane = Tabs.TabPane;
 export default () => (
   <div >
@@ -53,33 +53,11 @@ export default () => (
           </Col>
         </Row></div>
         
-        <div style={{padding:'2.5%', margin:'3% 3% 3% 1%',backgroundColor:'pink',borderRadius:'16px'}}>
+        <div style={{ margin:'3% 3% 3% 1%',borderRadius:'16px'}}>
         <Row>
           <Col>
           
-            <Row>
-              <Col><div>视频表列</div></Col>
-           
-            
-              <Col>
-                <Row>
-                  <Col>
-                    <div>
-                    
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-           
-            
-              <Col><div><MovieList /></div></Col>
-            
-            
-              <Col><div><MovieList /></div></Col>
-            
-            
-              <Col><div><MovieList /></div></Col>
-            </Row>
+            <SidePlayer />
             
           </Col>
         </Row>

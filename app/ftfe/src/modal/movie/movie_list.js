@@ -1,12 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import { Row, Col } from 'antd';
-const img1 =
-  "https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
 
-export default () => (
-  
-     <div >
-      <img  src={img1} style={{width:'100%',height:'150px',margin:'1%'}} />
-     </div>
-  )
+export default class extends Component{
+    constructor(props){
+        super(props)
+    }
+    render(){
+        return(
+            <div >
+        <div style={{
+                borderTopRightRadius:'18px',borderTopLeftRadius:'18px',width:'100%',}}>
+            <img  src={this.props.img}  style={{height:'100px',width:'100%', 
+                borderTopRightRadius:'18px',borderTopLeftRadius:'18px',}}/>
+        </div>
+        <div style={{width:'100%',borderBottomRightRadius:'18px',borderBottomLeftRadius:'18px',padding:'2% 5%',
+                height:'30px',fontWeight:500,background:'#FFFFFF'}}>
+                相关视频1
+        </div>
+    </div>
+            )
+    }
+}
