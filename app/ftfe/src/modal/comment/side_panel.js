@@ -20,10 +20,10 @@ export default () => (
         
         <Row>
           <Col>
-            <div style={{textAlign:'center',fontSize:'100%',fontWeight:400,color:'rgba(0,0,0,1)'}}>
+            <div style={{textAlign:'center',margin:'2%',fontSize:'100%',fontWeight:400,color:'rgba(0,0,0,1)'}}>
               导演老李
             </div>
-            <div style={{textAlign:'center',fontSize:'90%',fontWeight:400,color:'rgba(74,74,74,1)'}}>
+            <div style={{textAlign:'center',margin:'1%',fontSize:'90%',fontWeight:400,color:'rgba(74,74,74,1)'}}>
               100 作品  202.33万 粉丝
             </div >
             <div style={{margin:'2% 4% 8%',fontSize:'80%',fontWeight:400,color:'rgba(155,155,155,1)'}}>
