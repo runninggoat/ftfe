@@ -207,7 +207,7 @@ export class CollectionSelecter extends Component {
       <div>
         <Select
           showSearch
-          placeholder="请选择视频列表"
+          placeholder="请选择归属列表"
           optionFilterProp="children"
           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           style={{

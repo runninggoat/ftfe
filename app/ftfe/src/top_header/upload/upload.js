@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Modal, Row, Col } from 'antd'
 import MyIcon from '../../my_icon'
+import AVUploader from './av_upload'
 import LiteratureEditor from './literature_editor'
 import PictureUploader from './picture_uploader'
 
@@ -79,6 +80,26 @@ export default class UploadPanel extends Component {
       case 'figure': {
         content = (
           <PictureUploader handleGoBack={ this.handleGoBack.bind(this) } />
+        )
+        break
+      }
+      case 'video': {
+        content = (
+          <AVUploader
+            uploadType='video'
+            onCloseUpload={ this.props.onCloseUpload }
+            handleGoBack={ this.handleGoBack.bind(this) }
+          />
+        )
+        break
+      }
+      case 'audio': {
+        content = (
+          <AVUploader
+            uploadType='audio'
+            onCloseUpload={ this.props.onCloseUpload }
+            handleGoBack={ this.handleGoBack.bind(this) }
+          />
         )
         break
       }
