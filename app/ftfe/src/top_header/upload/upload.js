@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Modal, Row, Col } from 'antd'
 import MyIcon from '../../my_icon'
 import LiteratureEditor from './literature_editor'
+import PictureUploader from './picture_uploader'
 
 export default class UploadPanel extends Component {
   state = {
@@ -23,6 +24,10 @@ export default class UploadPanel extends Component {
 
   handleChooseType (t) {
     this.setState((state) => {return { uploadType: t }})
+  }
+
+  handleGoBack () {
+    this.setState((state) => {return { uploadType: 'unknow' }})
   }
 
   render () {
@@ -67,8 +72,15 @@ export default class UploadPanel extends Component {
       }
       case 'literature': {
         content = (
-          <LiteratureEditor />
+          <LiteratureEditor handleGoBack={ this.handleGoBack.bind(this) } />
         )
+        break
+      }
+      case 'figure': {
+        content = (
+          <PictureUploader handleGoBack={ this.handleGoBack.bind(this) } />
+        )
+        break
       }
       default: break
     }
@@ -114,7 +126,7 @@ export default class UploadPanel extends Component {
 
 class TypeButton extends Component {
   render () {
-    console.log(this.props.t)
+    // console.log(this.props.t)
     return (
       <div
         onClick={ () => this.props.onChooseType(this.props.t) }
@@ -135,7 +147,7 @@ class TypeButton extends Component {
           }} /> */}
           <MyIcon className="gradient-icon" type={ this.props.icon } theme="outlined" style={{
             marginTop: '40px',
-            fontSize: '37px',
+            fontSize: '42px',
           }}/>
         </div>
         <div style={{
