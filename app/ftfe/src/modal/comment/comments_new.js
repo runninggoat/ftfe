@@ -19,7 +19,7 @@ export default () => (
     <Row>
       <Divider />
       <Col span={2}>
-        <div><img src={img12}  style={{width:60,height:60,borderRadius:30,float:'left',margin:'10px 5px  60px' }}/></div>
+        <div><img src={img12}  style={{width:60,height:60,borderRadius:30,float:'left'  }}/></div>
       </Col>
       <Col span={1} />
       <Col span={21} >
@@ -31,16 +31,16 @@ export default () => (
             <div style={{borderRadius:'9px',marginBottom:'1%',background:'#F8F8F8',color:'#9B9B9B'}}><span style={{color:'#0058D0'}}>{user2}</span>{comment2}</div>
           </Col>
           <Col span={12}>
-            <div style={{float:'left'}}>{time1}</div>
+            <div style={{float:'left',marginBottom:'5%'}}>{time1}</div>
           </Col>
           <Col span={12}>
-            <div style={{float:'right'}}><MyIcon type='icon-praise' />2,999 点赞|<MyIcon type='icon-interactive' />回复</div>
+            <div style={{float:'right',marginBottom:'5%'}}><MyIcon type='icon-praise' />2,999 点赞|<MyIcon type='icon-interactive' />回复</div>
           </Col>
         </Row>
       </Col>
       <Divider />
       <Col span={2}>
-        <div><img src={img12}  style={{width:60,height:60,borderRadius:30,float:'left',margin:'10px 5px  60px' }}/></div>
+        <div><img src={img12}  style={{width:60,height:60,borderRadius:30,float:'left'  }}/></div>
       </Col>
       <Col span={1} />
       <Col span={21} >
@@ -49,10 +49,10 @@ export default () => (
             <div style={{marginBottom:'1%'}}><span style={{color:'#0058D0'}}>{user1}</span>{comment1}</div>
           </Col>
           <Col span={12}>
-            <div style={{float:'left'}}>{time1}</div>
+            <div style={{float:'left',marginBottom:'5%'}}>{time1}</div>
           </Col>
           <Col span={12}>
-            <div style={{float:'right'}}><MyIcon type='icon-praise' />2,999 点赞|<MyIcon type='icon-interactive' />回复</div>
+            <div style={{float:'right',marginBottom:'5%'}}><MyIcon type='icon-praise' />2,999 点赞|<MyIcon type='icon-interactive' />回复</div>
           </Col>
         </Row>
       </Col>
