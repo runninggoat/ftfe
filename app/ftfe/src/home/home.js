@@ -17,7 +17,7 @@ class Home extends Component {
     return (
       <div
         style={{
-          backgroundColor:'#FEFEFE',textAlign:'center'
+          backgroundColor:'#FEFEFE'
         }}
       >
       <Row gutter={12}>
@@ -83,7 +83,7 @@ class Home extends Component {
           <Row>
             <Col span={9} />
             <Col span={6} >
-              <div>
+              <div style={{textAlign:'center'}}>
                 <Button style={{
                   background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
                   margin:'5% 10%',

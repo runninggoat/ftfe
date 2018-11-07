@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
-import { Modal, Row, Col, Icon, Input, Button, Checkbox, Steps, Tag, Select, Tabs } from 'antd'
+import { Modal, Row, Col } from 'antd'
 import MyIcon from '../../my_icon'
+import AVUploader from './av_upload'
 import LiteratureEditor from './literature_editor'
-
-const Step = Steps.Step
-const TextArea = Input.TextArea
-const Option = Select.Option
-const TabPane = Tabs.TabPane
+import PictureUploader from './picture_uploader'
 
 export default class UploadPanel extends Component {
   state = {
     step: 1,
-    uploadType: 'literature',
+    uploadType: 'unknow',
   }
 
   forwardStep () {
@@ -28,6 +25,10 @@ export default class UploadPanel extends Component {
 
   handleChooseType (t) {
     this.setState((state) => {return { uploadType: t }})
+  }
+
+  handleGoBack () {
+    this.setState((state) => {return { uploadType: 'unknow' }})
   }
 
   render () {
@@ -52,18 +53,18 @@ export default class UploadPanel extends Component {
             </Row>
             <Row type="flex" justify="center" style={{ marginTop: '30px' }}>
               <Col span={6} style={{ marginRight: '25px' }}>
-                <TypeButton icon="video-camera" text="视频" t="video" onChooseType={ this.handleChooseType.bind(this) } />
+                <TypeButton icon="icon-video" text="视频" t="video" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
               <Col span={6}>
-                <TypeButton icon="video-camera" text="音频" t="audio" onChooseType={ this.handleChooseType.bind(this) } />
+                <TypeButton icon="icon-music" text="音频" t="audio" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
             </Row>
             <Row type="flex" justify="center" style={{ marginTop: '30px' }}>
               <Col span={6} style={{ marginRight: '25px' }}>
-                <TypeButton icon="video-camera" text="文学" t="literature" onChooseType={ this.handleChooseType.bind(this) } />
+                <TypeButton icon="icon-editor" text="文学" t="literature" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
               <Col span={6}>
-                <TypeButton icon="video-camera" text="其它(图片)" t="figure" onChooseType={ this.handleChooseType.bind(this) } />
+                <TypeButton icon="icon-picture" text="其它(图片)" t="figure" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
             </Row>
           </Col>
@@ -72,8 +73,35 @@ export default class UploadPanel extends Component {
       }
       case 'literature': {
         content = (
-          <LiteratureEditor />
+          <LiteratureEditor handleGoBack={ this.handleGoBack.bind(this) } />
         )
+        break
+      }
+      case 'figure': {
+        content = (
+          <PictureUploader handleGoBack={ this.handleGoBack.bind(this) } />
+        )
+        break
+      }
+      case 'video': {
+        content = (
+          <AVUploader
+            uploadType='video'
+            onCloseUpload={ this.props.onCloseUpload }
+            handleGoBack={ this.handleGoBack.bind(this) }
+          />
+        )
+        break
+      }
+      case 'audio': {
+        content = (
+          <AVUploader
+            uploadType='audio'
+            onCloseUpload={ this.props.onCloseUpload }
+            handleGoBack={ this.handleGoBack.bind(this) }
+          />
+        )
+        break
       }
       default: break
     }
@@ -119,7 +147,7 @@ export default class UploadPanel extends Component {
 
 class TypeButton extends Component {
   render () {
-    console.log(this.props.t)
+    // console.log(this.props.t)
     return (
       <div
         onClick={ () => this.props.onChooseType(this.props.t) }
@@ -138,9 +166,9 @@ class TypeButton extends Component {
             marginTop: '40px',
             fontSize: '37px',
           }} /> */}
-          <Icon className="gradient-icon" type={ this.props.icon } theme="outlined" style={{
+          <MyIcon className="gradient-icon" type={ this.props.icon } theme="outlined" style={{
             marginTop: '40px',
-            fontSize: '37px',
+            fontSize: '42px',
           }}/>
         </div>
         <div style={{
