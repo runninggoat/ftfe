@@ -4,8 +4,8 @@ import SidePanel from './comment/side_panel';
 import CommentBar from './comment/comment_bar';
 import PaidMovie from './movie/paid_movie';
 import Comments from './comment/comment_editor';
-import { Row, Col } from 'antd';
-
+import { Row, Col,Button} from 'antd';
+import MyIcon from '../my_icon'
 class PlayModal extends Component{
   
 
@@ -37,15 +37,17 @@ class PlayModal extends Component{
           centered={true}
           width={'90%'}
           bodyStyle={{padding:'0px',margin:'5% 0'}}
+          
         >
-        <div>
-        
+        <div >
         <Row >
         
             <Col span={19}>
                 <Row>
                     <Col>
+                    <div id='top'>
                     <PaidMovie />
+                    </div>
                     </Col>
                 </Row>
                 
@@ -56,15 +58,35 @@ class PlayModal extends Component{
                     
                 </Row>
                 <Row>
-                    <Col>
+                    <Col><div id='comment'>
                     <Comments />
-                    </Col>
+                    </div></Col>
                 </Row>
             </Col>
             
             <Col span={5}>
-                <SidePanel />
+                <Row>
+                  <Col><SidePanel /></Col>
+                  <Col>
+                    <div style={{position:'fixed',top:'80%'}}>
+                      <div style={{
+                      }}><a href='#top' >&nbsp;<Button 
+                        style={{width:'68px',height:'68px',
+                        background:'rgba(238,238,238,1',
+                        borderRadius:'17px'}}
+                      ><MyIcon type='icon-totop' style={{fontSize:29,color:'#BCBCBC'}} /></Button></a></div>
+                      <br />
+                      <div style={{}}><a href='#comment' >&nbsp;<Button 
+                        style={{width:'68px',height:'68px',
+                        background:'rgba(238,238,238,1',
+                        borderRadius:'17px'}}
+                        ><MyIcon type='icon-interactive' style={{fontSize:40,color:'#BCBCBC'}}/></Button></a></div>
+                    </div>
+                  </Col>
+                </Row>
+                
             </Col>
+            
         </Row>
         </div>
         

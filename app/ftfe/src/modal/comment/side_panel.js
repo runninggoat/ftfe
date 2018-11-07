@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button,Tabs } from "antd";
-import { Row, Col } from 'antd';
+import { Row, Col,BackTop } from 'antd';
 import img1 from'../../image/001.jpeg'
 import MyIcon from '../../my_icon'
 import SidePlayer from './side_player'
@@ -56,13 +56,10 @@ export default () => (
         <div style={{ margin:'3% 3% 3% 1%',borderRadius:'16px'}}>
         <Row>
           <Col>
-          
             <SidePlayer />
-            
           </Col>
         </Row>
         </div>
-        
       </Col>
     </Row>
   </div>
