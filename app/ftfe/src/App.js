@@ -6,6 +6,8 @@ import Search from './search/search.js'
 import BottomFooter from './bottom_footer/bottom_footer.js'
 import LoginPanel from './top_header/login'
 import UploadPanel from './top_header/upload/upload'
+import { Provider } from 'react-redux'
+import store from './stores/store'
 
 class App extends Component {
   state = {
@@ -80,6 +82,7 @@ class App extends Component {
       )
     }
     return (
+      <Provider store={store}>
       <BrowserRouter>
         <div>
           <div style={{
@@ -105,6 +108,7 @@ class App extends Component {
           </div>
         </div>
       </BrowserRouter>
+      </Provider>
     )
   }
 }

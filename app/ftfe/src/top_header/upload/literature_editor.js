@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Row, Col, Input, Select, Tag, InputNumber, Button } from 'antd'
 import MyIcon from '../../my_icon'
 import { Title, CountableInput, CountableTextArea, Classification, CollectionSelecter } from './common'
@@ -6,8 +7,20 @@ import './my_style.css'
 
 const Option = Select.Option
 const CheckableTag = Tag.CheckableTag
+const md5 = require('js-md5')
 
-export default class LiteratureEditor extends Component {
+class LiteratureEditor_ extends Component {
+  constructor (props) {
+    super(props)
+
+    // Init upload ID for literature information
+    let parts = []
+    parts[0] = this.props.literatureInfo.uploadType
+    parts[1] = (new Date()).getTime() + ''
+    parts[2] = Math.floor(Math.random() * 1e5)
+    this.props.set('uploadId', md5(parts.join('-')))
+  }
+
   render () {
     return (
       <Col span={24} style={{
@@ -184,3 +197,28 @@ export default class LiteratureEditor extends Component {
     )
   }
 }
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    literatureInfo: state.uploadInfo.literatureInfo,
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    set: (key, value) => {
+      dispatch({
+        type: 'SET',
+        key: key,
+        value: value,
+      })
+    },
+  }
+}
+
+const LiteratureEditor = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(LiteratureEditor_)
+
+export default LiteratureEditor
