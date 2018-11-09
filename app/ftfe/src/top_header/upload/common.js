@@ -36,11 +36,6 @@ export class Title extends Component {
 }
 
 export class CountableInput extends Component {
-  state = {
-    content: '',
-    maxLen: this.props.maxLen,
-  }
-
   constructor (props) {
     super(props)
     if (!this.props.maxLen) throw new Error('Countable input must define max length.')
@@ -48,11 +43,8 @@ export class CountableInput extends Component {
 
   handleChange (e) {
     // console.log(e.target.value)
-    if (e.target.value.length > this.state.maxLen) return
-    let newState = {
-      content: e.target.value,
-    }
-    this.setState((state) => {return newState})
+    if (e.target.value.length > this.props.maxLen) return
+    this.props.handleChange(e.target.value)
   }
 
   render () {
@@ -62,7 +54,7 @@ export class CountableInput extends Component {
       <div style={ selfStyle }>
         <Input
           placeholder={this.props.placeholder}
-          value={ this.state.content }
+          value={ this.props.value }
           onChange={ this.handleChange.bind(this) }
         />
         <span style={{
@@ -70,7 +62,7 @@ export class CountableInput extends Component {
           top: '5px',
           right: '10px',
         }}>
-          { this.state.content.length }/{ this.state.maxLen }
+          { this.props.value.length }/{ this.props.maxLen }
         </span>
       </div>
     )
@@ -78,11 +70,6 @@ export class CountableInput extends Component {
 }
 
 export class CountableTextArea extends Component {
-  state = {
-    content: '',
-    maxLen: this.props.maxLen,
-  }
-
   constructor (props) {
     super(props)
     if (!this.props.maxLen) throw new Error('Countable text area must define max length.')
@@ -90,11 +77,8 @@ export class CountableTextArea extends Component {
 
   handleChange (e) {
     // console.log(e.target.value)
-    if (e.target.value.length > this.state.maxLen) return
-    let newState = {
-      content: e.target.value,
-    }
-    this.setState((state) => {return newState})
+    if (e.target.value.length > this.props.maxLen) return
+    this.props.handleChange(e.target.value)
   }
 
   render () {
@@ -105,7 +89,7 @@ export class CountableTextArea extends Component {
       <div style={ selfStyle }>
         <TextArea
           placeholder={this.props.placeholder}
-          value={ this.state.content }
+          value={ this.props.value }
           rows={rows}
           onChange={ this.handleChange.bind(this) }
           style={{ backgroundColor: this.props.bgColor }}
@@ -115,7 +99,7 @@ export class CountableTextArea extends Component {
           bottom: '10px',
           right: '10px',
         }}>
-          { this.state.content.length }/{ this.state.maxLen }
+          { this.props.value.length }/{ this.props.maxLen }
         </span>
       </div>
     )
@@ -123,26 +107,15 @@ export class CountableTextArea extends Component {
 }
 
 export class Classification extends Component {
-  state = {
-    chosen: {},
-  }
-
   constructor (props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange (i) {
-    // console.log(i)
-    this.setState((state) => {
-      let c = Object.assign({}, this.state.chosen)
-      if (c[i]) {
-        c[i] = false
-      } else {
-        c[i] = true
-      }
-      return { chosen: c }
-    })
+    let c = Object.assign({}, this.props.value)
+    c[i] = !c[i]
+    this.props.handleChange(c)
   }
 
   render () {
@@ -151,9 +124,9 @@ export class Classification extends Component {
       return (
         <CheckableTag
           key={ v }
-          checked={ this.state.chosen[i] }
+          checked={ this.props.value[i] }
           onChange={ () => this.handleChange(i) }
-          style={this.state.chosen[i] ? {} : { background: '#EEEEEE', color: '#9B9B9B' }}
+          style={this.props.value[i] ? {} : { background: '#EEEEEE', color: '#9B9B9B' }}
         >
           { v }
         </CheckableTag>
@@ -210,6 +183,8 @@ export class CollectionSelecter extends Component {
           placeholder="请选择归属列表"
           optionFilterProp="children"
           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+          value={ this.props.value }
+          onChange={ (v) => this.props.handleChange(v) }
           style={{
             width: '280px',
             marginTop: '10px',

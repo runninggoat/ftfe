@@ -17,11 +17,12 @@ const defaultLiterature = {
   uploadType: 'literature',
   title: '',
   cover: {
+    selected: false,
     file: null,
     thumbUrl: documentIcon,
   },
   introduction: '',
-  classification: [],
+  classification: {},
   album: '',
   tags: '',
   priceType: 0,
