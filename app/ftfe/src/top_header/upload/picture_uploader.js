@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col, Input, Select, Tag, InputNumber, Button } from 'antd'
 import MyIcon from '../../my_icon'
-import { Title, CountableInput, CountableTextArea, Classification, CollectionSelecter } from './common'
+import { Title, CountableInput, CountableTextArea, Classification, AlbumSelector } from './common'
 
 export default class PictureUploader extends Component {
   render () {
@@ -99,7 +99,7 @@ export default class PictureUploader extends Component {
                 }}
               />
               <Title must={false} text="列表归属" margin="20px 0 0 0" />
-              <CollectionSelecter />
+              <AlbumSelector />
               <Title must={true} text="定价￥" margin="20px 0 0 0" />
               <InputNumber
                 min={0}

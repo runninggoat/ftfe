@@ -113,20 +113,20 @@ export class Classification extends Component {
   }
 
   handleChange (i) {
-    let c = Object.assign({}, this.props.value)
+    let c = Object.assign({}, (this.props.value || {}))
     c[i] = !c[i]
     this.props.handleChange(c)
   }
 
   render () {
-    const classes = ['新闻', '动画', '综艺', '电影', '纪录片', '美食', '旅行', '自然']
+    const classes = this.props.classes
     let tags = classes.map((v, i) => {
       return (
         <CheckableTag
           key={ v }
-          checked={ this.props.value[i] }
+          checked={ (this.props.value || {})[i] }
           onChange={ () => this.handleChange(i) }
-          style={this.props.value[i] ? {} : { background: '#EEEEEE', color: '#9B9B9B' }}
+          style={(this.props.value || {})[i] ? {} : { background: '#EEEEEE', color: '#9B9B9B' }}
         >
           { v }
         </CheckableTag>
@@ -166,18 +166,40 @@ export class Classification extends Component {
   }
 }
 
-export class CollectionSelecter extends Component {
+export class AlbumSelector extends Component {
   render () {
-    const collections = ['新闻360', '人与自然', '科教频道', '财经第一线', '喜洋洋']
-    let options = collections.map((v, i) => {
+    const albums = this.props.albums
+    let options = albums.map((v, i) => {
       return (
         <Option key={ v } value={i}>
           { v }
         </Option>
       )
     })
-    return (
-      <div>
+    let select = (
+      <Select
+        showSearch
+        placeholder="请选择归属列表"
+        optionFilterProp="children"
+        filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+        onChange={ (v) => this.props.handleChange(v) }
+        style={{
+          width: '280px',
+          marginTop: '10px',
+          backgroundColor: '#F8F8F8',
+          borderRadius: '4px',
+        }}
+        dropdownStyle={{
+          backgroundColor: '#F8F8F8',
+          borderRadius: '4px',
+        }}
+        suffixIcon={ <MyIcon type="icon-spread" /> }
+      >
+        { options }
+      </Select>
+    )
+    if (this.props.value) {
+      select = (
         <Select
           showSearch
           placeholder="请选择归属列表"
@@ -199,6 +221,11 @@ export class CollectionSelecter extends Component {
         >
           { options }
         </Select>
+      )
+    }
+    return (
+      <div>
+        { select }
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Row, Col, Form, Input, Select, Tag, InputNumber, Button } from 'antd'
 import MyIcon from '../../my_icon'
-import { Title, CountableInput, CountableTextArea, Classification, CollectionSelecter } from './common'
+import { Title, CountableInput, CountableTextArea, Classification, AlbumSelector } from './common'
 import './my_style.css'
 
 const FormItem = Form.Item
@@ -22,6 +22,41 @@ class LiteratureEditor_ extends Component {
     this.props.set('uploadId', md5(parts.join('-')))
   }
 
+  componentDidMount () {
+    this.props.form.setFieldsValue({
+      title: this.props.literatureInfo.title,
+      cover: this.props.literatureInfo.cover,
+      classification: this.props.literatureInfo.classification,
+      price: this.props.literatureInfo.price,
+    })
+  }
+
+  classificationValidator = (rule, value, callback) => {
+    let classes = this.props.form.getFieldValue('classification')
+    let keys = Object.keys(classes)
+    let empty = true
+    for (let k = 0; k < keys.length; k++) {
+      if (classes[keys[k]]) {
+        empty = false
+        break
+      }
+    }
+    if (empty) {
+      callback('请至少选择一个分类')
+    } else {
+      callback()
+    }
+  }
+
+  coverValidator = (rule, value, callback) => {
+    let cover = this.props.form.getFieldValue('cover')
+    if (cover.selected) {
+      callback()
+    } else {
+      callback('请选择封面图片')
+    }
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.form.validateFieldsAndScroll((err, values) => {
@@ -37,6 +72,7 @@ class LiteratureEditor_ extends Component {
       // console.log('no file selected.')
       return
     }
+    //Read image file from local
     const reader = new FileReader()
     reader.onload = (file => {
       return onloadEvent => {
@@ -47,6 +83,7 @@ class LiteratureEditor_ extends Component {
           thumbUrl: thumbUrl,
         }
         this.props.set('cover', cover)
+        this.props.form.setFieldsValue({ cover: cover })
       }
     })(file)
     reader.readAsDataURL(file)
@@ -175,6 +212,19 @@ class LiteratureEditor_ extends Component {
               <Col span={12}>
                 <Title must={true} text="封面" />
                 { cover }
+                <FormItem>
+                  {getFieldDecorator('cover', {
+                    rules: [
+                      {
+                        required: true,
+                        message: '请选择封面图片',
+                      },
+                      {
+                        validator: this.coverValidator,
+                      },
+                    ],
+                  })(<div></div>)}
+                </FormItem>
                 <Title must={false} text="作品简介 (300字内)" margin="20px 0 0 0" />
                 <CountableTextArea
                   placeholder="请输入作品简介"
@@ -189,48 +239,73 @@ class LiteratureEditor_ extends Component {
               </Col>
               <Col span={12}>
                 <Title must={true} text="分类（至少一个）" />
-                <Classification
-                  value={ this.props.literatureInfo.classification }
-                  handleChange={ (p) => this.props.set('classification', p) }
-                  selectStyle={{
-                    width: '300px',
-                    marginTop: '10px',
-                    backgroundColor: '#F8F8F8',
-                    borderRadius: '4px',
-                  }}
-                  radioPartStyle={{
-                    width: '300px',
-                    margin: '10px 0',
-                    lineHeight: '30px',
-                  }}
-                />
+                <FormItem>
+                  {getFieldDecorator('classification', {
+                    rules: [
+                      {
+                        required: true,
+                        message: '请选择分类',
+                      },
+                      {
+                        validator: this.classificationValidator,
+                      },
+                    ],
+                  })(
+                    <Classification
+                      classes={ ['新闻', '动画', '综艺', '电影', '纪录片', '美食', '旅行', '自然'] }
+                      handleChange={ (p) => { this.props.form.setFieldsValue({ classification: p }); this.props.set('classification', p) } }
+                      selectStyle={{
+                        width: '300px',
+                        marginTop: '10px',
+                        backgroundColor: '#F8F8F8',
+                        borderRadius: '4px',
+                      }}
+                      radioPartStyle={{
+                        width: '300px',
+                        margin: '10px 0',
+                        lineHeight: '30px',
+                      }}
+                    />
+                  )}
+                </FormItem>
                 <Title must={false} text="列表归属" margin="20px 0 0 0" />
-                <CollectionSelecter
+                <AlbumSelector
+                  albums={ ['新闻360', '人与自然', '科教频道', '财经第一线', '喜洋洋'] }
                   value={ this.props.literatureInfo.album }
                   handleChange={ (p) => this.props.set('album', p) }
                 />
                 <Title must={true} text="定价￥" margin="20px 0 0 0" />
-                <InputNumber
-                  min={0}
-                  max={Infinity}
-                  step={1}
-                  precision={2}
-                  placeholder="输入金额"
-                  value={ this.props.literatureInfo.price }
-                  onChange={ (p) => this.props.set('price', p) }
-                  style={{
-                    width: '280px',
-                    marginTop: '10px',
-                    backgroundColor: '#F8F8F8',
-                    borderRadius: '4px',
-                    border: 0,
-                  }}
-                />
+                <FormItem>
+                  {getFieldDecorator('price', {
+                    rules: [
+                      {
+                        required: true,
+                        message: '请填写本文定价',
+                      },
+                    ],
+                  })(
+                    <InputNumber
+                      min={0}
+                      max={Infinity}
+                      step={1}
+                      precision={2}
+                      placeholder="输入金额"
+                      onChange={ (p) => { this.props.form.setFieldsValue({ price: p }); this.props.set('price', p)} }
+                      style={{
+                        width: '280px',
+                        marginTop: '10px',
+                        backgroundColor: '#F8F8F8',
+                        borderRadius: '4px',
+                        border: 0,
+                      }}
+                    />
+                  )}
+                </FormItem>
                 <Title must={false} text="添加自定义标签（最多5个）" margin="20px 0 0 0" />
                 <Input
                   placeholder="例：#搞笑；#原创"
                   value={ this.props.literatureInfo.tags }
-                  onChange={ (p) => this.props.set('tags', p) }
+                  onChange={ (e) => this.props.set('tags', e.target.value) }
                   style={{ marginTop: '10px', width: '348px' }}
                 />
               </Col>
