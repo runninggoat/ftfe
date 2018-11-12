@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Row, Col, Input, Select, Tag, InputNumber, Button } from 'antd'
+import { Row, Col, Form, Input, Select, Tag, InputNumber, Button } from 'antd'
 import MyIcon from '../../my_icon'
 import { Title, CountableInput, CountableTextArea, Classification, CollectionSelecter } from './common'
 import './my_style.css'
 
+const FormItem = Form.Item
 const Option = Select.Option
 const CheckableTag = Tag.CheckableTag
 const md5 = require('js-md5')
@@ -19,6 +20,15 @@ class LiteratureEditor_ extends Component {
     parts[1] = (new Date()).getTime() + ''
     parts[2] = Math.floor(Math.random() * 1e5)
     this.props.set('uploadId', md5(parts.join('-')))
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.form.validateFieldsAndScroll((err, values) => {
+      if (!err) {
+        console.log('Receive values of form: ', values)
+      }
+    })
   }
 
   handleCoverSelect (e) {
@@ -43,6 +53,8 @@ class LiteratureEditor_ extends Component {
   }
 
   render () {
+    const { getFieldDecorator } = this.props.form
+
     // Process cover
     let cover = (
       <div style={{
@@ -121,6 +133,7 @@ class LiteratureEditor_ extends Component {
           borderRadius: '15px',
           boxShadow: '0px 2px 15px 0px rgba(0,0,0,0.05)',
         }}>
+        <Form onSubmit={ this.handleSubmit }>
           <Row type="flex" justify="start">
             <Col span={24}>
               <div style={{
@@ -136,16 +149,26 @@ class LiteratureEditor_ extends Component {
           <Row type="flex" justify="start" style={{ marginTop: '25px' }}>
             <Col span={24}>
               <Title must={true} text="标题（30字内）" />
-              <CountableInput
-                placeholder="请输入作品标题"
-                maxLen={30}
-                value={ this.props.literatureInfo.title }
-                handleChange={ (p) => this.props.set('title', p) }
-                style={{
-                  width: '560px',
-                  marginTop: '10px',
-                }}
-              />
+              <FormItem>
+                {getFieldDecorator('title', {
+                  rules: [
+                    {
+                      required: true,
+                      message: '请输入标题',
+                    },
+                  ],
+                })(
+                  <CountableInput
+                    placeholder="请输入作品标题"
+                    maxLen={30}
+                    handleChange={ (p) => { this.props.form.setFieldsValue({ title: p }); this.props.set('title', p) } }
+                    style={{
+                      width: '560px',
+                      marginTop: '10px',
+                    }}
+                  />
+                )}
+              </FormItem>
             </Col>
           </Row>
           <Row type="flex" justify="start" style={{ marginTop: '20px' }}>
@@ -273,6 +296,7 @@ class LiteratureEditor_ extends Component {
               </Button>
               <Button
                 type="primary"
+                htmlType="submit"
                 style={{
                   color: '#fff',
                   width: '140px',
@@ -289,11 +313,14 @@ class LiteratureEditor_ extends Component {
               </Button>
             </Col>
           </Row>
+        </Form>
         </div>
       </Col>
     )
   }
 }
+
+const LiteratureEditor__ = Form.create()(LiteratureEditor_)
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -316,6 +343,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const LiteratureEditor = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(LiteratureEditor_)
+)(LiteratureEditor__)
 
 export default LiteratureEditor

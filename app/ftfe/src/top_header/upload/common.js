@@ -54,15 +54,15 @@ export class CountableInput extends Component {
       <div style={ selfStyle }>
         <Input
           placeholder={this.props.placeholder}
-          value={ this.props.value }
+          value={ (this.props.value || '') }
           onChange={ this.handleChange.bind(this) }
         />
         <span style={{
           position: 'absolute',
-          top: '5px',
+          height: '100%',
           right: '10px',
         }}>
-          { this.props.value.length }/{ this.props.maxLen }
+          { (this.props.value || '').length }/{ this.props.maxLen }
         </span>
       </div>
     )
