@@ -407,7 +407,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     set: (key, value) => {
       dispatch({
-        type: 'SET',
+        type: 'SET_LITERATURE',
         key: key,
         value: value,
       })

@@ -3,7 +3,7 @@ import { documentIcon } from './upload_info'
 
 export function literatureInfo (state = defaultLiterature, action) {
   switch (action.type) {
-    case 'SET': {
+    case 'SET_LITERATURE': {
       let o = Object.assign({}, state)
       o[action.key] = action.value
       return o

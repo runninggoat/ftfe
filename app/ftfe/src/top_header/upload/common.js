@@ -55,6 +55,7 @@ export class CountableInput extends Component {
         <Input
           placeholder={this.props.placeholder}
           value={ (this.props.value || '') }
+          disabled={ this.props.disabled || false }
           onChange={ this.handleChange.bind(this) }
         />
         <span style={{
@@ -91,6 +92,7 @@ export class CountableTextArea extends Component {
           placeholder={this.props.placeholder}
           value={ this.props.value }
           rows={rows}
+          disabled={ this.props.disabled || false }
           onChange={ this.handleChange.bind(this) }
           style={{ backgroundColor: this.props.bgColor }}
         />
@@ -140,11 +142,18 @@ export class Classification extends Component {
       )
     })
     return (
-      <div>
+      <div style={{ position: 'relative' }}>
+        <div style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          display: (this.props.disabled || false) ? '' : 'none',
+        }}></div>
         <Select
           showSearch
           placeholder="搜索分类"
           optionFilterProp="children"
+          disabled={ this.props.disabled || false }
           onChange={ this.handleChange }
           // onFocus={handleFocus}
           // onBlur={handleBlur}
@@ -171,7 +180,7 @@ export class AlbumSelector extends Component {
     const albums = this.props.albums
     let options = albums.map((v, i) => {
       return (
-        <Option key={ v } value={i}>
+        <Option key={ v } value={v}>
           { v }
         </Option>
       )
@@ -181,6 +190,7 @@ export class AlbumSelector extends Component {
         showSearch
         placeholder="请选择归属列表"
         optionFilterProp="children"
+        disabled={ this.props.disabled }
         filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
         onChange={ (v) => this.props.handleChange(v) }
         style={{
@@ -204,6 +214,7 @@ export class AlbumSelector extends Component {
           showSearch
           placeholder="请选择归属列表"
           optionFilterProp="children"
+          disabled={ this.props.disabled }
           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           value={ this.props.value }
           onChange={ (v) => this.props.handleChange(v) }
