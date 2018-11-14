@@ -28,7 +28,6 @@ class MovieCards extends Component{
                 bottom:'10px',
                 right:'10px',
                 maxHeight:20,
-                maxWidth:59,
                 border:0,
                 borderRadius:'10px',
                 background:"#222222",
@@ -44,7 +43,6 @@ class MovieCards extends Component{
                 margin:'10px',
                 border:0,
                 maxHeight:20,
-                maxWidth:55,
                 borderRadius:'10px',
                 background:"linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)"}}>
                   <span style={{fontSize:12,color:'#FFFFFF',}}>{this.props.type1}</span> 
@@ -78,10 +76,9 @@ class MovieCards extends Component{
                     (<Tag color="#EEEEEE" 
                     style={{
                       borderRadius:'10px',
-                      maxHeight:20,
-                      maxWidth:55,
+                      maxHeight:20,color:'#9B9B9B',
                     }}>
-                    <span style={{fontSize:12,color:'#9B9B9B',}}>{this.props.type2}</span> 
+                    {this.props.type2}
                     </Tag>):''}
                   </div>
                   <div style={{

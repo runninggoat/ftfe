@@ -32,17 +32,16 @@ export default () => (
                 <Col span={22}>
                     <Row>
                         <Col span={12}>
-                            <div style={{margin:'1% 0'}}>
-                                <span
-                                    style={{padding:'1%',background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)'}}
-                                />
-                                <span style={{fontWeight:600,fontSize:'150%',color:'#222222',}}>
+                            <div style={{margin:'50px 0 30px 0',
+                            }}>
+                                
+                                <span style={{fontWeight:600,fontSize:'36px',color:'#222222',}}>
                                     &nbsp;&nbsp;热门佳作
                                 </span>
-                                <span style={{fontWeight:600,fontSize:'150%',color:'#BCBCBC'}}>
+                                <span style={{fontWeight:600,fontSize:'36px',color:'#BCBCBC'}}>
                                     &nbsp;&nbsp;POPULAR
                                 </span>
-                                <span style={{fontWeight:400,fontSize:'100%',color:'#BCBCBC'}}>
+                                <span style={{fontWeight:400,fontSize:'20px',color:'#BCBCBC'}}>
                                     &nbsp;&nbsp;查看更多 》
                                 </span>
                             </div>

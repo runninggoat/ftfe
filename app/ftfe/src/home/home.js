@@ -57,7 +57,7 @@ class Home extends Component {
         
         
         
-        <Col span={24} ><div style={{marginTop:'1%'}}>
+        <Col span={24} >
             <Row>
                <Carousel>
                 <div><HotMovieList /></div>
@@ -67,7 +67,7 @@ class Home extends Component {
                 <div><HotMovieList /></div>
               </Carousel>
             </Row>
-        </div></Col>
+        </Col>
         
         <Col span={24} >
             <Row>
