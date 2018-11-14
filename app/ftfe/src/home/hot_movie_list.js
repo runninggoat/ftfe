@@ -39,7 +39,7 @@ export default () => (
                 <Col span={22}>
                     <Row>
                         <Col span={12}>
-                            <div style={{margin:'50px 0 30px 0',
+                            <div style={{margin:'50px 0 30px 0',borderLeft: '8px solid #FF1367',
                             }}>
                                 
                                 <span style={{fontWeight:600,fontSize:'36px',color:'#222222',}}>

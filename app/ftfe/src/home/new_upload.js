@@ -17,17 +17,14 @@ export default () => (
                     <Row>
                         <Col span={1} />
                             <Col span={11}>
-                                <div style={{margin:'5% 0'}}>
-                                    <span
-                                        style={{padding:'1%',marginRight:'2%',background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,77,79,1) 100%)'}}
-                                    />
-                                    <span style={{fontSize:'150%',color:'#222222',}}>
+                                <div style={{margin:'50px 0 30px 0',borderLeft: '8px solid #FF1367',}}>
+                                    <span style={{fontWeight:600,fontSize:'36px',color:'#222222',}}>
                                         &nbsp;&nbsp;最新上传
                                     </span>
-                                    <span style={{fontSize:'150%',color:'#BCBCBC',}}>
+                                    <span style={{fontWeight:600,fontSize:'36px',color:'#BCBCBC'}}>
                                         &nbsp;&nbsp;LASTEST
                                     </span>
-                                    <span style={{fontSize:'100%',color:'#BCBCBC',}}>
+                                    <span style={{fontWeight:400,fontSize:'20px',color:'#BCBCBC'}}>
                                         &nbsp;&nbsp;查看更多 》
                                     </span>
                                 </div>
@@ -35,16 +32,17 @@ export default () => (
                     <Col span={0} />
                         
                     <Col span={11}>
-                        <div style={{float:'right',margin:'6% 0' }}>
-                        <span>
+                        <div style={{float:'right',fontSize:21,margin:'10% 0 0', }}>
+                        <span style={{fontWeight:500}}>
                             视频
-                            <Divider type="vertical" />
-                            <a href="#">文学</a>
-                            <Divider type="vertical" />
-                            <a href="#">音乐</a>
-                            <Divider type="vertical" />
-                            <a href="#">其他</a>
                         </span>
+                            <Divider type="vertical" />
+                            <span>文学</span>
+                            <Divider type="vertical" />
+                            <span>音乐</span>
+                            <Divider type="vertical" />
+                            <span>其他</span>
+                        
                         </div>
                         
                     </Col>
