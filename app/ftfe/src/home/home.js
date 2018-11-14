@@ -15,13 +15,15 @@ const TabPane = Tabs.TabPane;
 class Home extends Component {
   render () {
     return (
-      <div
+      
+      <Row gutter={12} type="flex" justify="center">
+        <div
         style={{
-          backgroundColor:'#FEFEFE'
+          backgroundColor:'#FEFEFE',
+          maxWidth:'1440px',
+          minWidth:'1200px',
         }}
       >
-      <Row gutter={12}>
-        
         <Col span ={24}>
           <Ad />
         </Col>
@@ -101,10 +103,12 @@ class Home extends Component {
           </Row>
           
         </Col>
+        <PlayModal />
+          </div>
           
       </Row>
-      <PlayModal />
-      </div>
+      
+      
     )
   }
 }

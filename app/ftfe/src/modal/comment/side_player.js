@@ -34,31 +34,31 @@ export default () => (
             <Col span ={22}>
                 <Row>
                     <Col span ={24}>
-                        <div style={{margin:'6% 0 3%'}}><MovieList img={img6} time={time}/></div>
+                        <div style={{margin:'6% 0 3%'}}><MovieList  title1={'相关视频1'} img={img6} time={time}/></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img3} time={time}/></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img3} time={time}/></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img4} time={time}/></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img4} time={time}/></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img7} time={time} /></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img7} time={time} /></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img8} time={time}/></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img8} time={time}/></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img9} time={time}/></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img9} time={time}/></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img10} time={time}/></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img10} time={time}/></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img11} time={time}/></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img11} time={time}/></div>
                     </Col>
                     <Col span ={24}>
-                        <div style={{margin:'3% 0'}}><MovieList img={img12} time={time}/></div>
+                        <div style={{margin:'3% 0'}}><MovieList title1={'相关视频1'} img={img12} time={time}/></div>
                     </Col>
                     
                 </Row>

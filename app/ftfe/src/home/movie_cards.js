@@ -23,11 +23,31 @@ class MovieCards extends Component{
               backgroundSize:'cover',
               borderTopLeftRadius:'16px',borderTopRightRadius:'16px',backgroundImage : `url(${this.props.img?this.props.img:'black'})`}}>
             
-                <span>{this.props.time?(<Tag style={{float:'right',position:'relative',top:'85%',border:0,borderRadius:'10px',background:"#222222"}}>
-                  <span style={{color:'#FFFFFF'}}>{this.props.time}</span> 
+                <span>{this.props.time?(<Tag style={{
+                position:'absolute',
+                bottom:'10px',
+                right:'10px',
+                maxHeight:20,
+                maxWidth:59,
+                border:0,
+                borderRadius:'10px',
+                background:"#222222",
+                }}>
+                  <span style={{
+                  color:'#FFFFFF',
+                  fontSize:12,
+                  }}>{this.props.time}</span> 
                 </Tag>):''}</span>
-                <span>{this.props.type1?(<Tag style={{float:'left',margin:'5%',border:0,borderRadius:'10px',background:"linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)"}}>
-                  <span style={{color:'#FFFFFF'}}>{this.props.type1}</span> 
+                
+                <span>{this.props.type1?(<Tag style={
+                {
+                margin:'10px',
+                border:0,
+                maxHeight:20,
+                maxWidth:55,
+                borderRadius:'10px',
+                background:"linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)"}}>
+                  <span style={{fontSize:12,color:'#FFFFFF',}}>{this.props.type1}</span> 
                 </Tag>):''}</span>
             
             </div>
@@ -35,28 +55,46 @@ class MovieCards extends Component{
           
           <Col span={24}>
             <div style={{background:'rgba(255,255,255,1)',boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
-              borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'70px'
+              borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'110px'
             }}> 
-              <Row>
-                <Col span={24}>
-                  <div style={{fontWight:'900',color:'rgba(0,0,0,1)', 
+              
+                  <div style={{fontSize:18,
+                  fontWeight:500,
+                  color:'rgba(0,0,0,1)',
+                  margin:'0 15px 0 15px',
+                  paddingTop:10,
+                  lineHeight:'24px',
                   }}>{this.props.title1?this.props.title1:''}
                     <div style={{color:'rgba(155,155,155,1)'}}>{this.props.title2?this.props.title2:''}</div>
                   </div>
-                </Col>
-                <Col span={9}>
-                  <div style={{color:'#9B9B9B',fontSize:'70%', marginLeft:'2%'}}>
-                    {this.props.type2?(<Tag color="#EEEEEE" style={{borderRadius:'10px'}}><span style={{color:'#9B9B9B'}}>{this.props.type2}</span> </Tag>):''}
+               
+                  <div style={{
+                  color:'#9B9B9B',
+                  fontSize:12, 
+                  position:'absolute',
+                  left:12,
+                  bottom:15,}}>
+                    {this.props.type2?
+                    (<Tag color="#EEEEEE" 
+                    style={{
+                      borderRadius:'10px',
+                      maxHeight:20,
+                      maxWidth:55,
+                    }}>
+                    <span style={{fontSize:12,color:'#9B9B9B',}}>{this.props.type2}</span> 
+                    </Tag>):''}
                   </div>
-                </Col>
-                <Col span={15}>
-                  <div style={{fontSize:'80%',float:'right',color:'#9B9B9B',marginRight:'2%'}}>
+                  <div style={{
+                  fontSize:12,
+                  color:'#9B9B9B',
+                  position:'absolute',
+                  right:12,
+                  bottom:15,
+                  fontWeight:400,
+                  lineHeight:'12px',
+                  }}>
                     <MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万
                   </div>
-                </Col>
-              </Row>
-                
-                
                 
             </div>
           </Col>
@@ -71,41 +109,3 @@ class MovieCards extends Component{
 
   
   export default MovieCards;
-  
-  
-  // <div style={{margin:'2%',height: '320px'}}>
-        
-        
-        // <div style={{width: '100%', height: '210px',
-        //   backgroundPosition:'50% 50%', 
-        //   backgroundColor:'black',
-        //   backgroundRepeat:'no-repeat',
-        //   backgroundSize:'cover',
-        //   borderTopLeftRadius:'16px',borderTopRightRadius:'16px',backgroundImage : `url(${this.props.img?this.props.img:'black'})`}}>
-        
-        //     <span>{this.props.time?(<Tag style={{float:'right',position:'relative',top:'85%',border:0,borderRadius:'10px',background:"#222222"}}>
-        //       <span style={{color:'#FFFFFF'}}>{this.props.time}</span> 
-        //     </Tag>):''}</span>
-        //     <span>{this.props.type1?(<Tag style={{float:'left',margin:'5%',border:0,borderRadius:'10px',background:"linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)"}}>
-        //       <span style={{color:'#FFFFFF'}}>{this.props.type1}</span> 
-        //     </Tag>):''}</span>
-        
-        // </div>
-        
-        // <div style={{background:'rgba(255,255,255,1)',boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
-        //   borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'110px'
-        // }}> 
-         
-          
-        
-        //     <div style={{fontWight:'900',color:'rgba(0,0,0,1)',
-        //     }}>{this.props.title1?this.props.title1:''}
-        //       <div style={{color:'rgba(155,155,155,1)'}}>{this.props.title2?this.props.title2:''}</div>
-        //     </div>
-            
-        //     <div style={{color:'#9B9B9B'}}>
-        //       {this.props.type2?(<Tag color="#EEEEEE" style={{borderRadius:'10px'}}><span style={{color:'#9B9B9B'}}>{this.props.type2}</span> </Tag>):''}
-        //       <span style={{float:'right'}}><MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万</span>
-        //     </div>
-        // </div>
-  //   </div>

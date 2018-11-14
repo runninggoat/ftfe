@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import { Row, Col} from 'antd';
 import { Input } from 'antd';
 import { Tabs,Button } from 'antd';
-
+import DropdownHot from './dropdown_hot';
+import Dropdowning from './dropdown_ing';
 const TabPane = Tabs.TabPane;
 
 
@@ -37,22 +38,22 @@ class Search extends Component {
     })
     let videos= this.state.type.video.map(v=>{
       return(
-        <span style={{margin:'0 1%'}}>{v}</span>
+        <span style={{margin:'0 0 0 2% '}}>{v}</span>
         )
     })
     let musics= this.state.type.music.map(v=>{
       return(
-        <span style={{margin:'0 1%'}}>{v}</span>
+        <span style={{margin:'0 0 0 2% '}}>{v}</span>
         )
     })
     let docs= this.state.type.doc.map(v=>{
       return(
-        <span style={{margin:'0 1%'}}>{v}</span>
+        <span style={{margin:'0 0 0 2% '}}>{v}</span>
         )
     })
     let others= this.state.type.other.map(v=>{
       return(
-        <span style={{margin:'0 1%'}}>{v}</span>
+        <span style={{margin:'0 0 0 2% '}}>{v}</span>
         )
     })
     return (
@@ -65,10 +66,10 @@ class Search extends Component {
             <Col span ={2} />
               <Col span ={20}><div style={{borderBottom:'1px solid #D8D8D8',}}>
                 <Tabs defaultActiveKey="1" >
-                  <TabPane tab="推荐" key="1"></TabPane>
-                  <TabPane tab="视频" key="2"></TabPane>
-                  <TabPane tab="文学" key="3"></TabPane>
-                  <TabPane tab="其他" key="4"></TabPane>
+                  <TabPane tab='作品' key="1"></TabPane>
+                  <TabPane tab="众筹" key="2"></TabPane>
+                  <TabPane tab="用户" key="3"></TabPane>
+                  <TabPane tab="剧组服务" key="4"></TabPane>
                 </Tabs>
               </div></Col>
               <Col span ={2} />
@@ -127,6 +128,7 @@ class Search extends Component {
           </Col>
           <Col span={2} />
           
+          
           <Col span={2} />
           <Col offset={2} span={20}>
             <div style={{margin:"1% 0",}}>
@@ -138,7 +140,18 @@ class Search extends Component {
           </Col>
           <Col span={2} />
           
-          
+          <Col span={2} />
+          <Col offset={2} span={2} >
+            <div>
+              <DropdownHot />
+            </div>
+          </Col>
+          <Col span={2} >
+            <div>
+              <Dropdowning />
+            </div>
+          </Col>
+          <Col span={2} />
         </Row>
       </div>
     )
