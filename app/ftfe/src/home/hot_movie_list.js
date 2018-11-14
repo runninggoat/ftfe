@@ -23,9 +23,14 @@ export default () => (
             <Row gutter={12}>
                 <Col span={1}>
                     <div style={{maxWidth:60}}>
-                        <Button style={{boxShadow:'none',color:'rgba(254,254,254,1)',borderRadius:'10px',border:0, position:'fixed', top:'33%',padding:0,height:'280px'    
+                        <Button style={{
+                        boxShadow:'none',
+                        color:'rgba(254,254,254,1)',
+                        borderRadius:'10px',border:0, 
+                        position:'fixed', top:'355px',
+                        padding:0,height:'280px'    
                         }}>
-                            <MyIcon type={ 'icon-enter-copy'} style={{fontSize:'300%', color:'#EEEEEE'}}/>
+                            <MyIcon type={ 'icon-enter-copy'} style={{fontSize:'78px', color:'#EEEEEE'}}/>
                         </Button>
                     </div>
                 </Col>
@@ -95,10 +100,20 @@ export default () => (
                     </Row>
                 </Col>
                 <Col span={1}>
-                    <Button style={{boxShadow:'none',color:'rgba(254,254,254,1)',borderRadius:'10px',border:0, position:'fixed', top:'33%',padding:0,height:'280px'    
+                    <div style={{maxWidth:60}}>
+                        <Button style={{
+                    boxShadow:'none',
+                    color:'rgba(254,254,254,1)',
+                    borderRadius:'10px',
+                    border:0, 
+                    position:'fixed', 
+                    top:'355px',
+                    padding:0,
+                    height:'280px',    
                         }}>
-                            <MyIcon type={ 'icon-enter'} style={{fontSize:'300%', color:'#EEEEEE'}}/>
+                            <MyIcon type={ 'icon-enter'} style={{fontSize:'78px', color:'#EEEEEE'}}/>
                     </Button>
+                    </div>
                 </Col>
             </Row>
         
@@ -106,3 +121,7 @@ export default () => (
  )
                 
              
+                    
+                    
+                    
+                    
