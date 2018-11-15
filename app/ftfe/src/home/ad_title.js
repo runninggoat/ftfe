@@ -25,9 +25,11 @@ const ad1=(
     }}>
     
         <div style={{
+        position:'absolute',
+        left:0, 
         width:890,
         height:570,
-        background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
+        background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 75%)',
         }}></div>
     </div>
     <div style={{
@@ -102,6 +104,8 @@ const ad2=(
     }}>
     
         <div style={{
+        position:'absolute',
+        left:0,
         width:890,
         height:570,
         background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
@@ -178,6 +182,8 @@ const ad3=(
     }}>
     
         <div style={{
+        position:'absolute',
+        left:0,
         width:890,
         height:570,
         background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
@@ -254,6 +260,8 @@ const ad4=(
     }}>
     
         <div style={{
+        position:'absolute',
+        left:0,
         width:890,
         height:570,
         background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
@@ -330,6 +338,9 @@ const ad5=(
     }}>
     
         <div style={{
+        position:'absolute',
+        left:0,
+        marginRight:190,
         width:890,
         height:570,
         background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
@@ -403,16 +414,16 @@ export default () => (
             {ad1}
             </div>
             <div>
-            {ad2}
+            {ad1}
             </div>
             <div>
-            {ad3}
+            {ad1}
             </div>
             <div>
-            {ad4}
+            {ad1}
             </div>
             <div>
-            {ad5}
+            {ad1}
             </div>
             
             
