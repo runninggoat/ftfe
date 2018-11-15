@@ -20,7 +20,7 @@ export default() =>(
     lineHeight:'22px',
     fontWeight:400,
     }}>
-     <MyIcon type='icon-rank' /> 热度 <Icon type="down" />
+     热度 <Icon type="down" />
     </a>
   </Dropdown>
 </div>
