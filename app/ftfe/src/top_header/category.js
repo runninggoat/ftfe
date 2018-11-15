@@ -50,19 +50,20 @@ export default class Category extends Component {
         onMouseLeave={ this.handleLeave.bind(this) }
         style={{ height: '60px' }}
       >
-        <span
-          style={{
-            position: 'absolute',
-            lineHeight: '22px',
-            marginTop: '10px',
-            fontSize: '16px',
-            color: '#fff',
-            fontWeight: fw,
-          }}
-        >
-          <div dangerouslySetInnerHTML={{ __html: '首&nbsp&nbsp&nbsp&nbsp&nbsp页' }}></div>
-        </span>
-        { jumbo }
+        <a href="/">
+          <span
+            style={{
+              position: 'absolute',
+              lineHeight: '22px',
+              marginTop: '10px',
+              fontSize: '16px',
+              color: '#fff',
+              fontWeight: fw,
+            }}
+          >
+            <div dangerouslySetInnerHTML={{ __html: '首&nbsp&nbsp&nbsp&nbsp&nbsp页' }}></div>
+          </span>
+        </a>
       </div>
     )
   }
