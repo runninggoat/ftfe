@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 import { Tag } from 'antd';
 import MyIcon from '../my_icon'
 import { Row, Col} from 'antd'
-
+import img10 from '../image/010.jpg'
 //const img1 ="https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
-  
+import { Divider } from 'antd';
   
 class MovieCards extends Component{
   constructor(props) {
@@ -13,10 +13,10 @@ class MovieCards extends Component{
   render(){
     
     return(
-      <div>
+      <div  style={{margin:'15px 0',}}>
         <Row>
           <Col span={24}>
-            <div style={{width: '100%', height: '210px',
+            <div style={{width: '100%', height: '131px',
               backgroundPosition:'50% 50%', 
               backgroundColor:'black',
               backgroundRepeat:'no-repeat',
@@ -35,66 +35,126 @@ class MovieCards extends Component{
                   <span style={{
                   color:'#FFFFFF',
                   fontSize:12,
+                  fontWeight:400,
+                  lineHeight:'12px',
                   }}>{this.props.time}</span> 
                 </Tag>):''}</span>
-                
-                <span>{this.props.type1?(<Tag style={
-                {
-                margin:'10px',
-                border:0,
-                maxHeight:20,
-                borderRadius:'10px',
-                background:"linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)"}}>
-                  <span style={{fontSize:12,color:'#FFFFFF',}}>{this.props.type1}</span> 
-                </Tag>):''}</span>
-            
             </div>
           </Col>
           
           <Col span={24}>
             <div style={{background:'rgba(255,255,255,1)',boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
-              borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'110px'
+              borderBottomLeftRadius:'16px',borderBottomRightRadius:'16px', height:'156px'
             }}> 
-              
-                  <div style={{fontSize:18,
-                  fontWeight:500,
+              <Row>
+                <Col span={24}>
+                  <div style={{
+                  fontSize:16,
+                  fontWeight:400,
                   color:'rgba(0,0,0,1)',
                   margin:'0 15px 0 15px',
                   paddingTop:10,
                   lineHeight:'24px',
                   }}>{this.props.title1?this.props.title1:''}
-                    <div style={{color:'rgba(155,155,155,1)'}}>{this.props.title2?this.props.title2:''}</div>
+                    <span style={{color:'#FF1367'}}>{this.props.title2?this.props.title2:''}</span>
+                    {this.props.title3?this.props.title3:''}
                   </div>
-               
+                </Col>
+                
+                <Col span={24}>
                   <div style={{
+                  fontSize:12,
+                  color:'#BCBCBC',
+                  margin:'6px 15px',
+                  fontWeight:400,
+                  lineHeight:'12px',
+                  }}>
+                    <span style={{float:'left'}}>
+                      2018-12-22
+                    </span>
+                    <span style={{float:'right'}}>
+                      <MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万
+                    </span>
+                  </div>
+                </Col>
+                
+                <Col span={24}>
+                  <div
+                  style={{
+                  fontSize:14,
+                  color:'#BCBCBC',
+                  margin:'6px 15px',
+                  fontWeight:400,
+                  }}>
+                    <img src={img10} style={{
+                    width:'24px',
+                    height:'24px',
+                    borderRadius:'24px',
+                    }} />
+                    <span style={{margin:'0 0 0 15px'}}>用户名<span style={{color:'#FF1367'}}>关键字</span>变粉</span>
+                    <Divider style={{margin:'6px 0 0 0'}}/>
+                  </div>
+                  
+                </Col>
+                
+                <Col span={24}>
+                <div style={{margin:'0 15px'}}>
+                  <span style={{
+                  margin:'0 0px 0 2px',
                   color:'#9B9B9B',
-                  fontSize:12, 
-                  position:'absolute',
-                  left:12,
-                  bottom:15,}}>
-                    {this.props.type2?
+                  fontSize:12,}}>
+                    {this.props.type1?
                     (<Tag color="#EEEEEE" 
                     style={{
                       borderRadius:'10px',
                       maxHeight:20,color:'#9B9B9B',
                     }}>
-                    {this.props.type2}
+                    {this.props.type1}
                     </Tag>):''}
-                  </div>
-                  <div style={{
-                  fontSize:12,
+                  </span>
+                  <span style={{
+                  margin:'0 0px 0 2px',
                   color:'#9B9B9B',
-                  position:'absolute',
-                  right:12,
-                  bottom:15,
-                  fontWeight:400,
-                  lineHeight:'12px',
-                  }}>
-                    <MyIcon type={ 'icon-browse'} /> 9,999   <MyIcon type={ 'icon-praise'} /> 10万
+                  fontSize:12,}}>
+                    {this.props.type1?
+                    (<Tag color="#EEEEEE" 
+                    style={{
+                      borderRadius:'10px',
+                      maxHeight:20,color:'#9B9B9B',
+                    }}>
+                    {this.props.type1}
+                    </Tag>):''}
+                  </span>
+                  <span style={{
+                  margin:'0 0px 0 2px',
+                  color:'#9B9B9B',
+                  fontSize:12,}}>
+                    {this.props.type1?
+                    (<Tag color="#EEEEEE" 
+                    style={{
+                      borderRadius:'10px',
+                      maxHeight:20,color:'#9B9B9B',
+                    }}>
+                    {this.props.type1}
+                    </Tag>):''}
+                  </span>
                   </div>
+                </Col>
+                
+                
+                
+              </Row>
+                  
+               
+                  
+                  
+                  
+                  
                 
             </div>
+            
           </Col>
+          
         </Row>
       
       </div>
@@ -105,4 +165,21 @@ class MovieCards extends Component{
   
 
   
-  export default MovieCards;
+export default MovieCards;
+
+
+// </div>
+                  // <div style={{
+                  // color:'#9B9B9B',
+                  // fontSize:12, 
+                  // position:'absolute',
+                  // left:12,
+                  // bottom:15,}}>
+                  //   {this.props.type2?
+                  //   (<Tag color="#EEEEEE" 
+                  //   style={{
+                  //     borderRadius:'10px',
+                  //     maxHeight:20,color:'#9B9B9B',
+                  //   }}>
+                  //   {this.props.type2}
+                  //   </Tag>):''}
