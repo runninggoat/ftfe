@@ -57,15 +57,15 @@ export default class UploadPanel extends Component {
                 <TypeButton icon="icon-video" text="视频" t="video" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
               <Col span={6}>
-                <TypeButton icon="icon-music" text="音频" t="audio" onChooseType={ this.handleChooseType.bind(this) } />
+                <TypeButton icon="icon-editor" text="文学" t="literature" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
             </Row>
             <Row type="flex" justify="center" style={{ marginTop: '30px' }}>
               <Col span={6} style={{ marginRight: '25px' }}>
-                <TypeButton icon="icon-editor" text="文学" t="literature" onChooseType={ this.handleChooseType.bind(this) } />
+                <TypeButton icon="icon-music" text="音频" t="audio" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
               <Col span={6}>
-                <TypeButton icon="icon-picture" text="其它(图片)" t="figure" onChooseType={ this.handleChooseType.bind(this) } />
+                <TypeButton icon="icon-picture" text="图片" t="figure" onChooseType={ this.handleChooseType.bind(this) } />
               </Col>
             </Row>
           </Col>
