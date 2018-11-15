@@ -126,6 +126,7 @@ class VideoUploader_ extends Component {
     let allVideos = Object.assign([], this.state.videos)
     for (let i = 1; i < allVideos.length; i++) {
       allVideos[i][key] = allVideos[0][key]
+      this.props.form.setFieldsValue({ [key + i]: allVideos[0][key] })
     }
     this.setState({ videos: allVideos })
   }
@@ -295,7 +296,14 @@ class VideoUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={true} text="封面" margin="20px 0 0 0" />
+                    <Title
+                      must={true}
+                      text="封面"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.videos.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('cover') }
+                      handleUnchecked={ () => {} }
+                    />
                     { cover }
                     <FormItem>
                       {getFieldDecorator('cover' + i, {
@@ -306,7 +314,14 @@ class VideoUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={false} text="作品简介 (300字内)" margin="20px 0 0 0" />
+                    <Title
+                      must={false}
+                      text="作品简介 (300字内)"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.videos.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('introduction') }
+                      handleUnchecked={ () => {} }
+                    />
                     <CountableTextArea
                       rows={4}
                       placeholder="请输入作品简介"
@@ -323,7 +338,13 @@ class VideoUploader_ extends Component {
                     </FormItem>
                   </Col>
                   <Col span={12}>
-                    <Title must={true} text="分类（至少一个）" />
+                    <Title
+                      must={true}
+                      text="分类（至少一个）"
+                      batch={0 === i && this.state.videos.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('classification') }
+                      handleUnchecked={ () => {} }
+                    />
                     <Classification
                       value={ this.state.videos[i].classification }
                       handleChange={ (p) => this.handleInputChange(i, 'classification', p) }
@@ -349,7 +370,14 @@ class VideoUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={false} text="列表归属" margin="20px 0 0 0" />
+                    <Title
+                      must={false}
+                      text="列表归属"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.videos.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('album') }
+                      handleUnchecked={ () => {} }
+                    />
                     <AlbumSelector
                       value={ this.state.videos[i].album }
                       handleChange={ (p) => this.handleInputChange(i, 'album', p) }
@@ -358,7 +386,14 @@ class VideoUploader_ extends Component {
                     <FormItem>
                       {getFieldDecorator('album' + i, {})(<span></span>)}
                     </FormItem>
-                    <Title must={true} text="定价￥" margin="20px 0 0 0" />
+                    <Title
+                      must={true}
+                      text="定价￥"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.videos.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('price') }
+                      handleUnchecked={ () => {} }
+                    />
                     <InputNumber
                       min={0}
                       max={Infinity}
@@ -385,11 +420,18 @@ class VideoUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={false} text="添加自定义标签（最多5个）" margin="20px 0 0 0" />
+                    <Title
+                      must={false}
+                      text="添加自定义标签（最多5个）"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.videos.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('tags') }
+                      handleUnchecked={ () => {} }
+                    />
                     <Input
                       placeholder="例：#搞笑；#原创"
                       value={ this.state.videos[i].tags }
-                      onChange={ (p) => this.handleInputChange(i, 'tags', p) }
+                      onChange={ (p) => this.handleInputChange(i, 'tags', p.target.value) }
                       style={{ marginTop: '10px', width: '348px' }}
                     />
                     <FormItem>

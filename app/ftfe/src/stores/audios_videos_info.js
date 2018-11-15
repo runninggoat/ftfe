@@ -65,6 +65,6 @@ export const defaultAVInfo = {
   classification: {},
   album: '',
   tags: '',
-  price: 0,
+  price: null,
   priceType: 0,
 }
