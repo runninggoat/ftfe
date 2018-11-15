@@ -15,8 +15,12 @@ const menu = (
 export default() =>(
 <div>
     <Dropdown overlay={menu} trigger={['click']}>
-    <a className="ant-dropdown-link" href="">
-     <MyIcon type='icon-round' /> 热度 <Icon type="down" />
+    <a  href="" style={{color:'#4A4A4A',
+    fontSize:'16px',
+    lineHeight:'22px',
+    fontWeight:400,
+    }}>
+     <MyIcon type='icon-rank' /> 热度 <Icon type="down" />
     </a>
   </Dropdown>
 </div>

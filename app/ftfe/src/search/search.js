@@ -142,12 +142,12 @@ class Search extends Component {
           
           <Col span={2} />
           <Col offset={2} span={2} >
-            <div>
+            <div style={{margin:'20px 0 0'}}>
               <DropdownHot />
             </div>
           </Col>
           <Col span={2} >
-            <div>
+            <div style={{margin:'20px 0 0'}}>
               <Dropdowning />
             </div>
           </Col>

@@ -10,7 +10,8 @@ import { Row,Col} from 'antd'
 
 
 
-const ad1=(<div>
+const ad1=(
+<div style={{background:'#0058D1',}}>
 
     <div style={{
     marginLeft:190,
@@ -18,50 +19,76 @@ const ad1=(<div>
     height:570,
     backgroundRepeat:'no-repeat',
     backgroundPosition:'50% 50%',
-    backgroundColor:'black',
     overflow:'hidden',
     backgroundSize:'contain',
     backgroundImage:`url(${img1})`,
     }}>
-    <span style={{
-    position:'absolute',
-    left:0,
-    width:190,
-    height:570,
-    background:'#0058D1',
-    }}></span>
-    <div style={{
-    width:1081,
-    height:570,
-    background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
-    }}></div>
     
+        <div style={{
+        width:890,
+        height:570,
+        background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
+        }}></div>
+    </div>
     <div style={{
     position:'absolute',
     top:135,
     left:95, 
     width:405,
     }}>
-            <div style={{lineHeight:50, fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'36px'}}>这幅广告图的正标题</div>
+            <div style={{lineHeight:'50px', 
+            fontWeight:600,
+            color:'rgba(255,255,255,1)',
+            fontSize:'36px'}}>这幅广告图的正标题</div>
             <br />
             <div style={{
             fontWeight:500,
-            lineHeight:33,
+            lineHeight:'33px',
             color:'rgba(255,255,255,1)',
             fontSize:24}}>这幅广告图的副标题</div>
             <br />
             <div style={{fontWeight:400,
             color:'rgba(255,255,255,1)',
             fontSize:16,
-            lineHeight:22,
+            lineHeight:'22px',
             }}>
             同言想人別安，多學水不事少百量他策自、交施力演線成，的打小放你，竟事清保身人張著大片國相院人靜連美海證體情孩幾一。度關文出學。
             </div>
+            <br /><br /><br /><br />
+            <Button style={{
+            width:150,
+            height:40,
+            background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+            borderRadius:20,
+            border:'none',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            }}>
+                <span>播&nbsp;&nbsp;&nbsp;&nbsp;放</span>
+            </Button>
+            
+            <Button style={{
+            width:150,
+            height:40,
+            background:'none',
+            borderRadius:22,
+            border:'2px solid',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            marginLeft:30,
+            }}>
+                <span>收&nbsp;&nbsp;&nbsp;&nbsp;藏</span>
+            </Button>
         </div>
-    </div>
 
     </div>)
-const ad2=(<div>
+    
+const ad2=(
+<div style={{background:'#0058D1',}}>
 
     <div style={{
     marginLeft:190,
@@ -69,50 +96,75 @@ const ad2=(<div>
     height:570,
     backgroundRepeat:'no-repeat',
     backgroundPosition:'50% 50%',
-    backgroundColor:'black',
     overflow:'hidden',
     backgroundSize:'contain',
     backgroundImage:`url(${img2})`,
     }}>
-    <span style={{
-    position:'absolute',
-    left:0,
-    width:190,
-    height:570,
-    background:'#0058D1',
-    }}></span>
-    <div style={{
-    width:1081,
-    height:570,
-    background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
-    }}></div>
     
+        <div style={{
+        width:890,
+        height:570,
+        background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
+        }}></div>
+    </div>
     <div style={{
     position:'absolute',
     top:135,
     left:95, 
     width:405,
     }}>
-            <div style={{lineHeight:50, fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'36px'}}>这幅广告图的正标题</div>
+            <div style={{lineHeight:'50px', 
+            fontWeight:600,
+            color:'rgba(255,255,255,1)',
+            fontSize:'36px'}}>这幅广告图的正标题</div>
             <br />
             <div style={{
             fontWeight:500,
-            lineHeight:33,
+            lineHeight:'33px',
             color:'rgba(255,255,255,1)',
             fontSize:24}}>这幅广告图的副标题</div>
             <br />
             <div style={{fontWeight:400,
             color:'rgba(255,255,255,1)',
             fontSize:16,
-            lineHeight:22,
+            lineHeight:'22px',
             }}>
             同言想人別安，多學水不事少百量他策自、交施力演線成，的打小放你，竟事清保身人張著大片國相院人靜連美海證體情孩幾一。度關文出學。
             </div>
+            <br /><br /><br /><br />
+            <Button style={{
+            width:150,
+            height:40,
+            background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+            borderRadius:20,
+            border:'none',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            }}>
+                <span>播&nbsp;&nbsp;&nbsp;&nbsp;放</span>
+            </Button>
+            
+            <Button style={{
+            width:150,
+            height:40,
+            background:'none',
+            borderRadius:22,
+            border:'2px solid',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            marginLeft:30,
+            }}>
+                <span>收&nbsp;&nbsp;&nbsp;&nbsp;藏</span>
+            </Button>
         </div>
-    </div>
 
-    </div>)
-const ad3=(<div>
+</div>)
+const ad3=(
+<div style={{background:'#0058D1',}}>
 
     <div style={{
     marginLeft:190,
@@ -120,50 +172,75 @@ const ad3=(<div>
     height:570,
     backgroundRepeat:'no-repeat',
     backgroundPosition:'50% 50%',
-    backgroundColor:'black',
     overflow:'hidden',
     backgroundSize:'contain',
     backgroundImage:`url(${img3})`,
     }}>
-    <span style={{
-    position:'absolute',
-    left:0,
-    width:190,
-    height:570,
-    background:'#0058D1',
-    }}></span>
-    <div style={{
-    width:1081,
-    height:570,
-    background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
-    }}></div>
     
+        <div style={{
+        width:890,
+        height:570,
+        background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
+        }}></div>
+    </div>
     <div style={{
     position:'absolute',
     top:135,
     left:95, 
     width:405,
     }}>
-            <div style={{lineHeight:50, fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'36px'}}>这幅广告图的正标题</div>
+            <div style={{lineHeight:'50px', 
+            fontWeight:600,
+            color:'rgba(255,255,255,1)',
+            fontSize:'36px'}}>这幅广告图的正标题</div>
             <br />
             <div style={{
             fontWeight:500,
-            lineHeight:33,
+            lineHeight:'33px',
             color:'rgba(255,255,255,1)',
             fontSize:24}}>这幅广告图的副标题</div>
             <br />
             <div style={{fontWeight:400,
             color:'rgba(255,255,255,1)',
             fontSize:16,
-            lineHeight:22,
+            lineHeight:'22px',
             }}>
             同言想人別安，多學水不事少百量他策自、交施力演線成，的打小放你，竟事清保身人張著大片國相院人靜連美海證體情孩幾一。度關文出學。
             </div>
+            <br /><br /><br /><br />
+            <Button style={{
+            width:150,
+            height:40,
+            background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+            borderRadius:20,
+            border:'none',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            }}>
+                <span>播&nbsp;&nbsp;&nbsp;&nbsp;放</span>
+            </Button>
+            
+            <Button style={{
+            width:150,
+            height:40,
+            background:'none',
+            borderRadius:22,
+            border:'2px solid',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            marginLeft:30,
+            }}>
+                <span>收&nbsp;&nbsp;&nbsp;&nbsp;藏</span>
+            </Button>
         </div>
-    </div>
 
-    </div>)
-const ad4=(<div>
+</div>)
+const ad4=(
+<div style={{background:'#0058D1',}}>
 
     <div style={{
     marginLeft:190,
@@ -171,50 +248,75 @@ const ad4=(<div>
     height:570,
     backgroundRepeat:'no-repeat',
     backgroundPosition:'50% 50%',
-    backgroundColor:'black',
     overflow:'hidden',
     backgroundSize:'contain',
     backgroundImage:`url(${img4})`,
     }}>
-    <span style={{
-    position:'absolute',
-    left:0,
-    width:190,
-    height:570,
-    background:'#0058D1',
-    }}></span>
-    <div style={{
-    width:1081,
-    height:570,
-    background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
-    }}></div>
     
+        <div style={{
+        width:890,
+        height:570,
+        background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
+        }}></div>
+    </div>
     <div style={{
     position:'absolute',
     top:135,
     left:95, 
     width:405,
     }}>
-            <div style={{lineHeight:50, fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'36px'}}>这幅广告图的正标题</div>
+            <div style={{lineHeight:'50px', 
+            fontWeight:600,
+            color:'rgba(255,255,255,1)',
+            fontSize:'36px'}}>这幅广告图的正标题</div>
             <br />
             <div style={{
             fontWeight:500,
-            lineHeight:33,
+            lineHeight:'33px',
             color:'rgba(255,255,255,1)',
             fontSize:24}}>这幅广告图的副标题</div>
             <br />
             <div style={{fontWeight:400,
             color:'rgba(255,255,255,1)',
             fontSize:16,
-            lineHeight:22,
+            lineHeight:'22px',
             }}>
             同言想人別安，多學水不事少百量他策自、交施力演線成，的打小放你，竟事清保身人張著大片國相院人靜連美海證體情孩幾一。度關文出學。
             </div>
+            <br /><br /><br /><br />
+            <Button style={{
+            width:150,
+            height:40,
+            background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+            borderRadius:20,
+            border:'none',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            }}>
+                <span>播&nbsp;&nbsp;&nbsp;&nbsp;放</span>
+            </Button>
+            
+            <Button style={{
+            width:150,
+            height:40,
+            background:'none',
+            borderRadius:22,
+            border:'2px solid',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            marginLeft:30,
+            }}>
+                <span>收&nbsp;&nbsp;&nbsp;&nbsp;藏</span>
+            </Button>
         </div>
-    </div>
 
-    </div>)
-const ad5=(<div>
+</div>)
+const ad5=(
+<div style={{background:'#0058D1',}}>
 
     <div style={{
     marginLeft:190,
@@ -222,49 +324,73 @@ const ad5=(<div>
     height:570,
     backgroundRepeat:'no-repeat',
     backgroundPosition:'50% 50%',
-    backgroundColor:'black',
     overflow:'hidden',
     backgroundSize:'contain',
     backgroundImage:`url(${img5})`,
     }}>
-    <span style={{
-    position:'absolute',
-    left:0,
-    width:190,
-    height:570,
-    background:'#0058D1',
-    }}></span>
-    <div style={{
-    width:1081,
-    height:570,
-    background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
-    }}></div>
     
+        <div style={{
+        width:890,
+        height:570,
+        background:'linear-gradient(270deg,rgba(0,94,255,0) 0%,rgba(35,93,173,0.5) 28%,rgba(0,88,209,1) 100%)',
+        }}></div>
+    </div>
     <div style={{
     position:'absolute',
     top:135,
     left:95, 
     width:405,
     }}>
-            <div style={{lineHeight:50, fontWeight:600,color:'rgba(255,255,255,1)',fontSize:'36px'}}>这幅广告图的正标题</div>
+            <div style={{lineHeight:'50px', 
+            fontWeight:600,
+            color:'rgba(255,255,255,1)',
+            fontSize:'36px'}}>这幅广告图的正标题</div>
             <br />
             <div style={{
             fontWeight:500,
-            lineHeight:33,
+            lineHeight:'33px',
             color:'rgba(255,255,255,1)',
             fontSize:24}}>这幅广告图的副标题</div>
             <br />
             <div style={{fontWeight:400,
             color:'rgba(255,255,255,1)',
             fontSize:16,
-            lineHeight:22,
+            lineHeight:'22px',
             }}>
             同言想人別安，多學水不事少百量他策自、交施力演線成，的打小放你，竟事清保身人張著大片國相院人靜連美海證體情孩幾一。度關文出學。
             </div>
+            <br /><br /><br /><br />
+            <Button style={{
+            width:150,
+            height:40,
+            background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+            borderRadius:20,
+            border:'none',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            }}>
+                <span>播&nbsp;&nbsp;&nbsp;&nbsp;放</span>
+            </Button>
+            
+            <Button style={{
+            width:150,
+            height:40,
+            background:'none',
+            borderRadius:22,
+            border:'2px solid',
+            color:'#FFFFFF',
+            lineHeight:'22px',
+            fontSize:16,
+            fontWeight:400,
+            marginLeft:30,
+            }}>
+                <span>收&nbsp;&nbsp;&nbsp;&nbsp;藏</span>
+            </Button>
         </div>
-    </div>
 
-    </div>)
+</div>)
         
 
 
@@ -276,12 +402,9 @@ export default () => (
             <div>
             {ad1}
             </div>
-            
-            
             <div>
             {ad2}
             </div>
-            
             <div>
             {ad3}
             </div>
@@ -291,6 +414,9 @@ export default () => (
             <div>
             {ad5}
             </div>
+            
+            
+            
         </Carousel>
         
         
