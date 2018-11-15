@@ -7,6 +7,15 @@ const Option = Select.Option
 const CheckableTag = Tag.CheckableTag
 
 export class Title extends Component {
+  constructor (props) {
+    super(props)
+    if (this.props.batch) {
+      if (!(this.props.handleChecked && this.props.handleUnchecked)) {
+        throw new Error('If you want to use batch, you must listen to check state change.')
+      }
+    }
+  }
+
   render () {
     let must = null
     if (this.props.must) {
@@ -16,6 +25,16 @@ export class Title extends Component {
         }}>
           { '* ' }
         </span>
+      )
+    }
+    let batch = null
+    if (this.props.batch) {
+      batch = (
+        <MyCheckableBox
+          handleChecked={ () => this.props.handleChecked() }
+          handleUnchecked={ () => this.props.handleUnchecked() }
+          text="批量应用"
+        />
       )
     }
     return (
@@ -30,7 +49,54 @@ export class Title extends Component {
         <span>
           { this.props.text }
         </span>
+        { batch }
       </div>
+    )
+  }
+}
+
+class MyCheckableBox extends Component {
+  state = {
+    checked: false,
+  }
+
+  handleClick = (e) => {
+    let curChecked = this.state.checked
+    this.setState({ checked: !curChecked })
+
+    //Report checked state to parent react-node
+    if (this.props.handleChecked && this.props.handleUnchecked) {
+      if (curChecked) {
+        this.props.handleUnchecked()
+      } else {
+        this.props.handleChecked()
+      }
+    }
+  }
+
+  render () {
+    let checkBox = (
+      <MyIcon type="icon-square" />
+    )
+    if (this.state.checked) {
+      checkBox = (
+        <MyIcon type="icon-squaretick" />
+      )
+    }
+    return (
+      <span
+        onClick={ this.handleClick }
+        style={{
+          margin: '0 5px',
+          fontSize: '14px',
+          color: '#0058D1',
+        }}
+      >
+        { checkBox }
+        <span>
+          { this.props.text }
+        </span>
+      </span>
     )
   }
 }

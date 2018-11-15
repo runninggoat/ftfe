@@ -8,6 +8,7 @@ import MyIcon from '../my_icon'
 export default class TopHeader extends Component {
   state ={
     scrollOut: false,
+    scrollThreshold: 600,
     clientWidth: 1000,
     height: 42,
   }
@@ -23,9 +24,9 @@ export default class TopHeader extends Component {
 
   handleScroll (e) {
     // console.log(document.documentElement.scrollTop)
-    if (!this.state.scrollOut && document.documentElement.scrollTop > 40) {
+    if (!this.state.scrollOut && document.documentElement.scrollTop > this.state.scrollThreshold) {
       this.setState(() => {return { scrollOut: true }})
-    } else if (this.state.scrollOut && document.documentElement.scrollTop < 40) {
+    } else if (this.state.scrollOut && document.documentElement.scrollTop < this.state.scrollThreshold) {
       this.setState(() => {return { scrollOut: false }})
     }
   }
@@ -43,17 +44,17 @@ export default class TopHeader extends Component {
       <div
         ref="topheader"
         style={{
-          position: 'fixed',
+          position: this.state.scrollOut ? 'fixed' : 'absolute',
           width: '100%',
           height: `${this.state.height}px`,
           border: 0,
           // background: 'linear-gradient(rgba(45, 46, 45, 0.8), rgba(45, 46, 45, 0.01))',
-          background: this.state.scrollOut ? 'rgba(56, 57, 56, 0.7)' : 'transparent',
+          background: this.state.scrollOut ? 'linear-gradient(135deg,rgba(48,35,174,1) 0%,rgba(200,109,215,1) 100%)' : 'transparent',
           zIndex: '99',
           transition: 'all 0.3s',
         }}
       >
-        <Row>
+        <Row type="flex" justify="start">
           <Col span={12}>
             <Row type="flex" justify="start">
               <Col span={4}></Col>
@@ -92,20 +93,6 @@ export default class TopHeader extends Component {
                       fontWeight: 400,
                     }}>
                     <span dangerouslySetInnerHTML={{ __html: '社&nbsp&nbsp&nbsp&nbsp&nbsp区' }}></span>
-                  </span>
-                </div>
-              </Col>
-              <Col span={4}>
-                <div style={{ height: '60px' }}>
-                  <span style={{
-                      position: 'absolute',
-                      lineHeight: '22px',
-                      marginTop: '10px',
-                      fontSize: '16px',
-                      color: '#BCBCBC',
-                      fontWeight: 400,
-                    }}>
-                    <span dangerouslySetInnerHTML={{ __html: '剧组服务' }}></span>
                   </span>
                 </div>
               </Col>

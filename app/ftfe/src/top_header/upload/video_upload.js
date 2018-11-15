@@ -122,6 +122,14 @@ class VideoUploader_ extends Component {
     }
   }
 
+  handleBatchChecked = (key) => {
+    let allVideos = Object.assign([], this.state.videos)
+    for (let i = 1; i < allVideos.length; i++) {
+      allVideos[i][key] = allVideos[0][key]
+    }
+    this.setState({ videos: allVideos })
+  }
+
   render () {
     const { getFieldDecorator } = this.props.form
 
@@ -260,7 +268,13 @@ class VideoUploader_ extends Component {
                 </Row>
                 <Row type="flex" justify="start" style={{ marginTop: '20px' }}>
                   <Col span={12}>
-                    <Title must={true} text="标题（30字内）" />
+                    <Title
+                      must={true}
+                      text="标题（30字内）"
+                      batch={0 === i && this.state.videos.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('title') }
+                      handleUnchecked={ () => {} }
+                    />
                     <CountableInput
                       placeholder="请输入作品标题"
                       maxLen={30}
