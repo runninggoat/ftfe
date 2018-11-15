@@ -6,6 +6,7 @@ import { Input } from 'antd';
 import { Tabs,Button } from 'antd';
 import DropdownHot from './dropdown_hot';
 import Dropdowning from './dropdown_ing';
+import SearchList from './search_list';
 const TabPane = Tabs.TabPane;
 
 
@@ -162,6 +163,10 @@ class Search extends Component {
             </div>
           </Col>
           <Col span={2} />
+          
+          <Col span={24}>
+            <SearchList />
+          </Col>
         </Row>
       </div>
     )

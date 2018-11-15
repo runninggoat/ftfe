@@ -19,6 +19,7 @@ export default() =>(
       fontSize:'16px',
       lineHeight:'22px',
       fontWeight:400,
+      marginLeft:10,
       }}>
       <span style={{paddingBottom:'5px',}}>连载中</span> 
       <Icon type="down" />

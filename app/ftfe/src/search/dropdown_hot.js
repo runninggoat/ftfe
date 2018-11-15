@@ -19,6 +19,7 @@ export default() =>(
     fontSize:'16px',
     lineHeight:'22px',
     fontWeight:400,
+    marginLeft:10,
     }}>
      热度 <Icon type="down" />
     </a>
