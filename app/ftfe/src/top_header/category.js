@@ -50,7 +50,7 @@ export default class Category extends Component {
         onMouseLeave={ this.handleLeave.bind(this) }
         style={{ height: '60px' }}
       >
-        <a href="/">
+        <a href="#/">
           <span
             style={{
               position: 'absolute',

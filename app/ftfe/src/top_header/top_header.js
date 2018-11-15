@@ -14,18 +14,26 @@ export default class TopHeader extends Component {
     alwaysShowBG: false,
   }
 
+  constructor(props) {
+    super(props)
+  }
+
   componentDidMount () {
-    let alwaysShowBG = false
-    if (document.URL.endsWith('search')) {
-      alwaysShowBG = true
-    }
     this.setState((state) => {
       return {
         clientWidth: this.refs.topheader.clientWidth,
-        alwaysShowBG: alwaysShowBG,
       }
     })
     window.addEventListener('scroll', this.handleScroll.bind(this))
+  }
+
+  componentDidUpdate () {
+    if (document.URL.endsWith('search') && !this.state.alwaysShowBG) {
+      this.setState({ alwaysShowBG: true })
+    }
+    if (!document.URL.endsWith('search') && this.state.alwaysShowBG) {
+      this.setState({ alwaysShowBG: false })
+    }
   }
 
   handleScroll (e) {
@@ -118,7 +126,7 @@ export default class TopHeader extends Component {
                 <Icon type="upload" theme="outlined" />
               </Col>
               <Col span={1} style={{ marginRight: '15px' }}>
-                <a href="/search" style={{ color: 'white' }}>
+                <a href="#/search" style={{ color: 'white' }}>
                   <MyIcon type="icon-search" />
                 </a>
               </Col>
