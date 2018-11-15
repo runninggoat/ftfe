@@ -11,12 +11,18 @@ export default class TopHeader extends Component {
     scrollThreshold: 600,
     clientWidth: 1000,
     height: 42,
+    alwaysShowBG: false,
   }
 
   componentDidMount () {
+    let alwaysShowBG = false
+    if (document.URL.endsWith('search')) {
+      alwaysShowBG = true
+    }
     this.setState((state) => {
       return {
         clientWidth: this.refs.topheader.clientWidth,
+        alwaysShowBG: alwaysShowBG,
       }
     })
     window.addEventListener('scroll', this.handleScroll.bind(this))
@@ -49,7 +55,7 @@ export default class TopHeader extends Component {
           height: `${this.state.height}px`,
           border: 0,
           // background: 'linear-gradient(rgba(45, 46, 45, 0.8), rgba(45, 46, 45, 0.01))',
-          background: this.state.scrollOut ? 'linear-gradient(135deg,rgba(48,35,174,1) 0%,rgba(200,109,215,1) 100%)' : 'transparent',
+          background: (this.state.scrollOut || this.state.alwaysShowBG) ? 'linear-gradient(135deg,rgba(48,35,174,1) 0%,rgba(200,109,215,1) 100%)' : 'transparent',
           zIndex: '99',
           transition: 'all 0.3s',
         }}
