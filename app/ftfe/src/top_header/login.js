@@ -25,12 +25,11 @@ export default class LoginPanel extends Component {
         width="410px"
         style={{
           padding: 0,
-          borderRadius: '16px',
-          overflow: 'hidden',
         }}
         bodyStyle={{
           background: '#fff',
           padding: 0,
+          borderRadius: '16px',
         }}
         maskStyle={{
           background: 'linear-gradient(360deg,rgba(63,0,74,0.75) 0%,rgba(32,32,124,0.85) 100%)',
@@ -56,15 +55,15 @@ export default class LoginPanel extends Component {
           </Col>
         </Row>
         <Row type="flex" justify="center">
-          <Col span={12}>
-            <div style={{
-              marginTop: '28px',
-              lineHeight: '100%',
-              color: '#4A4A4A',
-              fontSize: '36px',
-              fontWeight: 600,
-              textAlign: 'center',
-            }}>FT 链</div>
+          <Col span={24} style={{ textAlign: 'center' }}>
+            <img
+              src={ require('../image/logo_login.png') }
+              style={{
+                width: '176px',
+                height: '167px',
+                margin: '-49px 0 0 0'
+              }}
+            />
           </Col>
         </Row>
         <LoginForm
@@ -133,7 +132,7 @@ class LoginForm extends Component {
   render () {
     const names = ['登&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp录', '注&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp册']
     return (
-      <Row type="flex" justify="center">
+      <Row type="flex" justify="center" style={{ margin: '16px 0 0 0' }}>
         <Col span={16}>
           <Tabs
             activeKey={ this.state.activeKey + '' }

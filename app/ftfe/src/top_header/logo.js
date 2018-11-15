@@ -4,15 +4,15 @@ class Logo extends Component {
   render () {
     return (
       <a href="/" style={{ color: '#fff' }}>
-        <span style={{
-          position: 'absolute',
-          lineHeight: '36px',
-          marginTop: '4px',
-          fontSize: '25px',
-          fontWeight: '500',
-        }}>
-          FT 链
-        </span>
+        <img
+          src={ require('../image/logo_home.png') }
+          style={{
+            margin: '7px 0',
+            background: 'transparent',
+            width: '102px',
+            height: '27px',
+          }}
+        />
       </a>
     )
   }
