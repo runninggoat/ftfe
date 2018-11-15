@@ -63,7 +63,7 @@ export class CountableInput extends Component {
           height: '100%',
           right: '10px',
         }}>
-          { (this.props.value || '').length }/{ this.props.maxLen }
+          { (this.props.value || '').length + '/' + this.props.maxLen }
         </span>
       </div>
     )

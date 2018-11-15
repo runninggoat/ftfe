@@ -23,6 +23,7 @@ export function picturesInfo (state = defaultPicturesInfo, action) {
 }
 
 const defaultPicturesInfo = {
+  uploadId: '',
   pictures: [],
 }
 
