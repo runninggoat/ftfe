@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Modal, Row, Col } from 'antd'
 import MyIcon from '../../my_icon'
-import AVUploader from './av_upload'
+import AudioUploader from './audio_upload'
+import VideoUploader from './video_upload'
 import LiteratureEditor from './literature_editor'
 import PictureUploader from './picture_uploader'
 
@@ -85,8 +86,7 @@ export default class UploadPanel extends Component {
       }
       case 'video': {
         content = (
-          <AVUploader
-            uploadType='video'
+          <VideoUploader
             onCloseUpload={ this.props.onCloseUpload }
             handleGoBack={ this.handleGoBack.bind(this) }
           />
@@ -95,8 +95,7 @@ export default class UploadPanel extends Component {
       }
       case 'audio': {
         content = (
-          <AVUploader
-            uploadType='audio'
+          <AudioUploader
             onCloseUpload={ this.props.onCloseUpload }
             handleGoBack={ this.handleGoBack.bind(this) }
           />
