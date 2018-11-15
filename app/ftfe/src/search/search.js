@@ -67,7 +67,10 @@ class Search extends Component {
             <Col span ={2} />
               <Col span ={20}><div style={{borderBottom:'1px solid #D8D8D8',}}>
                 <Tabs defaultActiveKey="1" >
-                  <TabPane tab={<span style={{color:'#000000'}}>作&nbsp;&nbsp;品</span>} key="1"></TabPane>
+                  <TabPane tab={
+                  <span style={{color:'#BCBCBC',}}>
+                  作&nbsp;&nbsp;品
+                  </span>} key="1"></TabPane>
                   <TabPane tab="众筹" key="2"></TabPane>
                   <TabPane tab="用户" key="3"></TabPane>
                   <TabPane tab="剧组服务" key="4"></TabPane>
