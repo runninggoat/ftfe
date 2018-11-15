@@ -1,6 +1,5 @@
 import React from 'react'
 import { Menu, Dropdown, Icon } from 'antd';
-import MyIcon from '../my_icon'
 
 const menu = (
   <Menu>
@@ -15,9 +14,15 @@ const menu = (
 export default() =>(
 <div>
     <Dropdown overlay={menu} trigger={['click']}>
-    <a className="ant-dropdown-link" href="">
-     <MyIcon type='icon-round' /> 连载中 <Icon type="down" />
-    </a>
+    
+      <a  href="" style={{color:'#4A4A4A',
+      fontSize:'16px',
+      lineHeight:'22px',
+      fontWeight:400,
+      }}>
+      <span style={{paddingBottom:'5px',}}>连载中</span> 
+      <Icon type="down" />
+      </a>
   </Dropdown>
 </div>
 )

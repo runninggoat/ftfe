@@ -23,26 +23,32 @@ export default () => (
             <Row gutter={12}>
                 <Col span={1}>
                     <div style={{maxWidth:60}}>
-                        <Button style={{boxShadow:'none',color:'rgba(254,254,254,1)',borderRadius:'10px',border:0, position:'fixed', top:'33%',padding:0,height:'280px'    
+                        <Button style={{
+                        boxShadow:'none',
+                        borderRadius:'10px',
+                        border:0, 
+                        position:'absolute', 
+                        top:'345px',
+                        padding:0,
+                        height:'280px',    
                         }}>
-                            <MyIcon type={ 'icon-enter-copy'} style={{fontSize:'300%', color:'#EEEEEE'}}/>
+                            <MyIcon type={ 'icon-enter-copy'} style={{fontSize:'64px',color:'#EEEEEE'}}/>
                         </Button>
                     </div>
                 </Col>
                 <Col span={22}>
                     <Row>
                         <Col span={12}>
-                            <div style={{margin:'1% 0'}}>
-                                <span
-                                    style={{padding:'1%',background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)'}}
-                                />
-                                <span style={{fontWeight:600,fontSize:'150%',color:'#222222',}}>
+                            <div style={{margin:'50px 0 30px 0',borderLeft: '8px solid #FF1367',
+                            }}>
+                                
+                                <span style={{fontWeight:600,fontSize:'36px',color:'#222222',}}>
                                     &nbsp;&nbsp;热门佳作
                                 </span>
-                                <span style={{fontWeight:600,fontSize:'150%',color:'#BCBCBC'}}>
+                                <span style={{fontWeight:600,fontSize:'36px',color:'#BCBCBC'}}>
                                     &nbsp;&nbsp;POPULAR
                                 </span>
-                                <span style={{fontWeight:400,fontSize:'100%',color:'#BCBCBC'}}>
+                                <span style={{fontWeight:400,fontSize:'20px',color:'#BCBCBC'}}>
                                     &nbsp;&nbsp;查看更多 》
                                 </span>
                             </div>
@@ -96,10 +102,20 @@ export default () => (
                     </Row>
                 </Col>
                 <Col span={1}>
-                    <Button style={{boxShadow:'none',color:'rgba(254,254,254,1)',borderRadius:'10px',border:0, position:'fixed', top:'33%',padding:0,height:'280px'    
+                    <div style={{maxWidth:64}}>
+                        <Button style={{
+                    boxShadow:'none',
+                    borderRadius:'10px',
+                    border:0, 
+                    position:'absolute', 
+                    top:'345px',
+                    left:'-10px',
+                    padding:0,
+                    height:'280px',    
                         }}>
-                            <MyIcon type={ 'icon-enter'} style={{fontSize:'300%', color:'#EEEEEE'}}/>
+                            <MyIcon type={ 'icon-enter'} style={{fontSize:'64px', color:'#EEEEEE'}}/>
                     </Button>
+                    </div>
                 </Col>
             </Row>
         
@@ -107,3 +123,7 @@ export default () => (
  )
                 
              
+                    
+                    
+                    
+                    

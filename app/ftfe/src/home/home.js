@@ -31,18 +31,22 @@ class Home extends Component {
         
         
         <Col span ={24}><div style={{
-          backgroundColor:'#FFFFFF',boxShadow:'0px 2px 31px 0px rgba(205,205,205,0.27)'
+          backgroundColor:'#FFFFFF',
+          boxShadow:'0px 2px 31px 0px rgba(205,205,205,0.27)',
+          maxWidth:1440,
+          height:54,
         }}>
           <Row>
             <Col span ={1} />
               <Col span ={11}>
                 
-                <Tabs defaultActiveKey="1" >
-                  <TabPane tab="推荐" key="1"></TabPane>
-                  <TabPane tab="视频" key="2"></TabPane>
-                  <TabPane tab="文学" key="3"></TabPane>
-                  <TabPane tab="其他" key="4"></TabPane>
+                <Tabs defaultActiveKey="1" size={'large'}>
+                  <TabPane tab={<span >推&nbsp;&nbsp;荐</span>} key="1"></TabPane>
+                  <TabPane tab="视&nbsp;&nbsp;频" key="2"></TabPane>
+                  <TabPane tab="文&nbsp;&nbsp;学" key="3"></TabPane>
+                  <TabPane tab="其&nbsp;&nbsp;他" key="4"></TabPane>
                 </Tabs>
+                
                 
               </Col>
               <Col span ={12} />
@@ -53,7 +57,7 @@ class Home extends Component {
         
         
         
-        <Col span={24} ><div style={{marginTop:'1%'}}>
+        <Col span={24} >
             <Row>
                <Carousel>
                 <div><HotMovieList /></div>
@@ -63,7 +67,7 @@ class Home extends Component {
                 <div><HotMovieList /></div>
               </Carousel>
             </Row>
-        </div></Col>
+        </Col>
         
         <Col span={24} >
             <Row>

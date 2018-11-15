@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import MyIcon from '../my_icon'
 import { Row, Col} from 'antd';
 import { Input } from 'antd';
 import { Tabs,Button } from 'antd';
@@ -66,7 +67,7 @@ class Search extends Component {
             <Col span ={2} />
               <Col span ={20}><div style={{borderBottom:'1px solid #D8D8D8',}}>
                 <Tabs defaultActiveKey="1" >
-                  <TabPane tab='作品' key="1"></TabPane>
+                  <TabPane tab={<span style={{color:'#000000'}}>作&nbsp;&nbsp;品</span>} key="1"></TabPane>
                   <TabPane tab="众筹" key="2"></TabPane>
                   <TabPane tab="用户" key="3"></TabPane>
                   <TabPane tab="剧组服务" key="4"></TabPane>
@@ -88,6 +89,10 @@ class Search extends Component {
                 margin:"1% 1%",
                 borderRadius:'18px',
                 background:'linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)',
+                color:'#FFFFFF',
+                fontWeight:400,
+                fontSize:16,
+                lineHeight:'16px',
                 }}>
                   搜索
                 </Button>
@@ -142,12 +147,14 @@ class Search extends Component {
           
           <Col span={2} />
           <Col offset={2} span={2} >
-            <div>
+            <div style={{margin:'20px 0 0'}}> 
+              <MyIcon type='icon-rank' style={{fontSize:24,float:'left',color:'#FF1367',}}/> 
               <DropdownHot />
             </div>
           </Col>
           <Col span={2} >
-            <div>
+            <div style={{margin:'20px 0 0'}}>
+              <MyIcon type='icon-time' style={{fontSize:24,float:'left',color:'#FF1367',}}/> 
               <Dropdowning />
             </div>
           </Col>
