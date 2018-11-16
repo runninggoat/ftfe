@@ -7,9 +7,7 @@ import img10 from '../image/010.jpg'
 import { Divider } from 'antd';
   
 class MovieCards extends Component{
-  constructor(props) {
-    super(props)
-    }
+ 
   render(){
     
     return(
