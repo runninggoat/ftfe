@@ -126,6 +126,15 @@ class AudioUploader_ extends Component {
     }
   }
 
+  handleBatchChecked = (key) => {
+    let allAudios = Object.assign([], this.state.audios)
+    for (let i = 1; i < allAudios.length; i++) {
+      allAudios[i][key] = allAudios[0][key]
+      this.props.form.setFieldsValue({ [key + i]: allAudios[0][key] })
+    }
+    this.setState({ audios: allAudios })
+  }
+
   render () {
     const { getFieldDecorator } = this.props.form
 
@@ -264,7 +273,13 @@ class AudioUploader_ extends Component {
                 </Row>
                 <Row type="flex" justify="start" style={{ marginTop: '20px' }}>
                   <Col span={12}>
-                    <Title must={true} text="标题（30字内）" />
+                    <Title
+                      must={true}
+                      text="标题（30字内）"
+                      batch={0 === i && this.state.audios.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('title') }
+                      handleUnchecked={ () => {} }
+                    />
                     <CountableInput
                       placeholder="请输入作品标题"
                       maxLen={30}
@@ -285,7 +300,14 @@ class AudioUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={true} text="封面" margin="20px 0 0 0" />
+                    <Title
+                      must={true}
+                      text="封面"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.audios.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('cover') }
+                      handleUnchecked={ () => {} }
+                    />
                     { cover }
                     <FormItem>
                       {getFieldDecorator('cover' + i, {
@@ -296,7 +318,14 @@ class AudioUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={false} text="作品简介 (300字内)" margin="20px 0 0 0" />
+                    <Title
+                      must={false}
+                      text="作品简介 (300字内)"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.audios.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('introduction') }
+                      handleUnchecked={ () => {} }
+                    />
                     <CountableTextArea
                       rows={4}
                       placeholder="请输入作品简介"
@@ -313,7 +342,13 @@ class AudioUploader_ extends Component {
                     </FormItem>
                   </Col>
                   <Col span={12}>
-                    <Title must={true} text="分类（至少一个）" />
+                    <Title
+                      must={true}
+                      text="分类（至少一个）"
+                      batch={0 === i && this.state.audios.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('classification') }
+                      handleUnchecked={ () => {} }
+                    />
                     <Classification
                       value={ this.state.audios[i].classification }
                       handleChange={ (p) => this.handleInputChange(i, 'classification', p) }
@@ -339,7 +374,14 @@ class AudioUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={false} text="列表归属" margin="20px 0 0 0" />
+                    <Title
+                      must={false}
+                      text="列表归属"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.audios.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('album') }
+                      handleUnchecked={ () => {} }
+                    />
                     <AlbumSelector
                       value={ this.state.audios[i].album }
                       handleChange={ (p) => this.handleInputChange(i, 'album', p) }
@@ -348,7 +390,14 @@ class AudioUploader_ extends Component {
                     <FormItem>
                       {getFieldDecorator('album' + i, {})(<span></span>)}
                     </FormItem>
-                    <Title must={true} text="定价￥" margin="20px 0 0 0" />
+                    <Title
+                      must={true}
+                      text="定价￥"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.audios.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('price') }
+                      handleUnchecked={ () => {} }
+                    />
                     <InputNumber
                       min={0}
                       max={Infinity}
@@ -375,11 +424,18 @@ class AudioUploader_ extends Component {
                         ],
                       })(<span></span>)}
                     </FormItem>
-                    <Title must={false} text="添加自定义标签（最多5个）" margin="20px 0 0 0" />
+                    <Title
+                      must={false}
+                      text="添加自定义标签（最多5个）"
+                      margin="20px 0 0 0"
+                      batch={0 === i && this.state.audios.length > 1}
+                      handleChecked={ () => this.handleBatchChecked('tags') }
+                      handleUnchecked={ () => {} }
+                    />
                     <Input
                       placeholder="例：#搞笑；#原创"
                       value={ this.state.audios[i].tags }
-                      onChange={ (p) => this.handleInputChange(i, 'tags', p) }
+                      onChange={ (p) => this.handleInputChange(i, 'tags', p.target.value) }
                       style={{ marginTop: '10px', width: '348px' }}
                     />
                     <FormItem>

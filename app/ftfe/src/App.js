@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Route, BrowserRouter} from 'react-router-dom'
+import {Route, HashRouter} from 'react-router-dom'
 import TopHeader from './top_header/top_header.js'
 import Home from './home/home.js'
 import Search from './search/search.js'
@@ -83,31 +83,31 @@ class App extends Component {
     }
     return (
       <Provider store={store}>
-      <BrowserRouter>
-        <div>
-          <div style={{
-            filter: this.state.blur ? 'blur(5px)' : '',
-          }}>
-            <TopHeader
-              handleOpenLogin={ this.handleOpenLogin.bind(this) }
-              handleOpenUpload={ this.handleOpenUpload.bind(this) }
-            />
-            <Route exact path="/" component={ Home } />
-            <Route exact path="/search" component={ Search } />
-            <BottomFooter></BottomFooter>
+        <HashRouter>
+          <div>
+            <div style={{
+              filter: this.state.blur ? 'blur(5px)' : '',
+            }}>
+              <TopHeader
+                handleOpenLogin={ this.handleOpenLogin.bind(this) }
+                handleOpenUpload={ this.handleOpenUpload.bind(this) }
+              />
+              <Route exact path="/" component={ Home } />
+              <Route exact path="/search" component={ Search } />
+              <BottomFooter></BottomFooter>
+            </div>
+            { loginP }
+            { uploadP }
+            <div style={{ height: 0 }}>
+              <svg width="0" height="0">
+                <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop stopColor="#FF8487" offset="0%" />
+                  <stop stopColor="#FF1367" offset="100%" />
+                </linearGradient>
+              </svg>
+            </div>
           </div>
-          { loginP }
-          { uploadP }
-          <div style={{ height: 0 }}>
-            <svg width="0" height="0">
-              <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop stopColor="#FF8487" offset="0%" />
-                <stop stopColor="#FF1367" offset="100%" />
-              </linearGradient>
-            </svg>
-          </div>
-        </div>
-      </BrowserRouter>
+        </HashRouter>
       </Provider>
     )
   }
