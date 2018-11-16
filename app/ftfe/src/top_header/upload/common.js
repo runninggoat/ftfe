@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Row, Col, Input, Select, Tag, InputNumber, Button } from 'antd'
+import { Row, Col, Input, Select, Tag, InputNumber, Button, Slider } from 'antd'
+import AvatarEditor from 'react-avatar-editor'
 import MyIcon from '../../my_icon'
 
 const TextArea = Input.TextArea
@@ -131,6 +132,63 @@ export class CountableInput extends Component {
         }}>
           { (this.props.value || '').length + '/' + this.props.maxLen }
         </span>
+      </div>
+    )
+  }
+}
+
+export class MyCoverEditor extends Component {
+  state = {
+    scale: 1,
+    rotate: 0,
+  }
+
+  componentDidMount () {
+    this.props.onRef(this)
+  }
+
+  saveCrop () {
+    const canvas = this.refs.avatarEditor.getImage()
+    this.props.handleSave(canvas.toDataURL())
+  }
+
+  render () {
+    return (
+      <div style={ this.props.style }>
+        <Row type="flex" justify="start">
+          <Col span={12}>
+            <AvatarEditor
+              ref="avatarEditor"
+              image={ this.props.thumbUrl }
+              width={ this.props.width }
+              height={ this.props.height }
+              border={ this.props.border }
+              color={[255, 255, 255, 0.5]} // RGBA
+              scale={ this.state.scale }
+              rotate={ this.state.rotate }
+            />
+          </Col>
+          <Col span={12}>
+            <div style={{ margin: '25px 0 0 0' }}>
+              { 'Scale: ' }
+              <Slider
+                min={1}
+                max={2}
+                step={0.1}
+                onChange={ (value) => this.setState({ scale: value }) }
+              />
+            </div>
+            <div>
+              { 'Rotation: ' }
+              <Slider
+                min={0}
+                max={359}
+                step={1}
+                onChange={ (value) => this.setState({ rotate: value }) }
+              />
+            </div>
+          </Col>
+        </Row>
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Row, Col, Form, Input, Select, Tag, InputNumber, Button } from 'antd'
 import MyIcon from '../../my_icon'
-import { Title, CountableInput, CountableTextArea, Classification, AlbumSelector } from './common'
+import { Title, CountableInput, MyCoverEditor, CountableTextArea, Classification, AlbumSelector } from './common'
 import './my_style.css'
 
 const FormItem = Form.Item
@@ -11,6 +11,25 @@ const CheckableTag = Tag.CheckableTag
 const md5 = require('js-md5')
 
 class LiteratureEditor_ extends Component {
+  state = {
+    literature: {
+      title: '',
+      cover: {
+        selected: false,
+        editing: false,
+        file: null,
+        thumbUrl: '',
+      },
+      introduction: '',
+      classification: '',
+      album: '',
+      price: '',
+      tags: '',
+      content: '',
+    },
+    coverEditor: null,
+  }
+
   constructor (props) {
     super(props)
 
@@ -22,18 +41,16 @@ class LiteratureEditor_ extends Component {
     this.props.set('uploadId', md5(parts.join('-')))
   }
 
-  componentDidMount () {
-    this.props.form.setFieldsValue({
-      title: this.props.literatureInfo.title,
-      cover: this.props.literatureInfo.cover,
-      classification: this.props.literatureInfo.classification,
-      price: this.props.literatureInfo.price,
-    })
+  handleInputChange = (key, value) => {
+    let literature = Object.assign({}, this.state.literature)
+    literature[key] = value
+    this.setState({ literature: literature })
+    this.props.form.setFieldsValue({ [key]: value })
   }
 
   classificationValidator = (rule, value, callback) => {
     let classes = this.props.form.getFieldValue('classification')
-    let keys = Object.keys(classes)
+    let keys = Object.keys(classes || {})
     let empty = true
     for (let k = 0; k < keys.length; k++) {
       if (classes[keys[k]]) {
@@ -59,6 +76,10 @@ class LiteratureEditor_ extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    let keys = Object.keys(this.state.literature)
+    for (let key in keys) {
+      this.props.form.setFieldsValue({ [key]: this.state.literature[key] })
+    }
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         console.log('Receive values of form: ', values)
@@ -79,14 +100,47 @@ class LiteratureEditor_ extends Component {
         let thumbUrl = onloadEvent.target.result
         let cover = {
           selected: true,
+          editing: false,
           file: file,
           thumbUrl: thumbUrl,
         }
         this.props.set('cover', cover)
+        this.handleInputChange('cover', cover)
         this.props.form.setFieldsValue({ cover: cover })
       }
     })(file)
     reader.readAsDataURL(file)
+  }
+
+  handleCoverUnselect (e) {
+    let cover = {
+      selected: false,
+      editing: false,
+      file: null,
+      thumbUrl: '',
+    }
+    this.props.set('cover', cover)
+    this.handleInputChange('cover', cover)
+    this.props.form.setFieldsValue({ cover: cover })
+  }
+
+  handleCoverEditing () {
+    let literature = Object.assign({}, this.state.literature)
+    literature.cover.editing = true
+    this.setState({ literature: literature })
+  }
+
+  handleCoverSaving () {
+    this.state.coverEditor.saveCrop()
+    let literature = Object.assign({}, this.state.literature)
+    literature.cover.editing = false
+    this.setState({ literature: literature })
+  }
+
+  handleCoverChange (p) {
+    let literature = Object.assign({}, this.state.literature)
+    literature.cover.thumbUrl = p
+    this.setState({ literature: literature })
   }
 
   render () {
@@ -134,24 +188,81 @@ class LiteratureEditor_ extends Component {
         </div>
       </div>
     )
-    if (this.props.literatureInfo.cover.selected) {
+    if (this.state.literature.cover.selected) {
+      let operation = (
+        <MyIcon
+          type="icon-editor"
+          onClick={ () => this.handleCoverEditing() }
+          style={{
+            position: 'absolute',
+            top: '5px',
+            right: '35px',
+            fontSize: '25px',
+          }}
+        />
+      )
+      let workspace = ( //Preview
+        <img
+          src={ this.state.literature.cover.thumbUrl }
+          style={{
+            height: '100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+          }}
+        />
+      )
+      if (this.state.literature.cover.editing) {
+        operation = (
+          <MyIcon
+            type="icon-praise"
+            onClick={ () => this.handleCoverSaving() }
+            style={{
+              position: 'absolute',
+              top: '5px',
+              right: '35px',
+              fontSize: '25px',
+            }}
+          />
+        )
+        workspace = ( //Editor
+          <MyCoverEditor
+            thumbUrl={ this.state.literature.cover.thumbUrl }
+            width={ 160 }
+            height={ 160 }
+            border={ 20 }
+            onRef={ (ref) => { this.setState({ coverEditor: ref }) } }
+            handleSave={ (p) => this.handleCoverChange(p) }
+            style={{
+              position: 'absolute',
+              top: '0px',
+              left: '0px',
+              height: '100%',
+              width: '100%',
+            }}
+          />
+        )
+      }
       cover = (
         <div style={{
           position: 'relative',
           marginTop: '13px',
-          width: '370px',
+          width: '400px',
           height: '200px',
           padding: '10px',
           background: 'rgba(248,248,248,1)',
           borderRadius: '8px',
           textAlign: 'center',
         }}>
-          <img
-            src={ this.props.literatureInfo.cover.thumbUrl }
+          { workspace }
+          { operation }
+          <MyIcon
+            type="icon-close"
+            onClick={ () => this.handleCoverUnselect() }
             style={{
-              height: '100%',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'contain',
+              position: 'absolute',
+              top: '5px',
+              right: '5px',
+              fontSize: '25px',
             }}
           />
         </div>
@@ -186,6 +297,16 @@ class LiteratureEditor_ extends Component {
             <Row type="flex" justify="start" style={{ marginTop: '25px' }}>
               <Col span={24}>
                 <Title must={true} text="标题（30字内）" />
+                <CountableInput
+                  placeholder="请输入作品标题"
+                  maxLen={30}
+                  value={ this.state.literature.title }
+                  handleChange={ (p) => this.handleInputChange('title', p) }
+                  style={{
+                    width: '560px',
+                    marginTop: '10px',
+                  }}
+                />
                 <FormItem>
                   {getFieldDecorator('title', {
                     rules: [
@@ -194,17 +315,7 @@ class LiteratureEditor_ extends Component {
                         message: '请输入标题',
                       },
                     ],
-                  })(
-                    <CountableInput
-                      placeholder="请输入作品标题"
-                      maxLen={30}
-                      handleChange={ (p) => { this.props.form.setFieldsValue({ title: p }); this.props.set('title', p) } }
-                      style={{
-                        width: '560px',
-                        marginTop: '10px',
-                      }}
-                    />
-                  )}
+                  })(<span></span>)}
                 </FormItem>
               </Col>
             </Row>
@@ -223,22 +334,41 @@ class LiteratureEditor_ extends Component {
                         validator: this.coverValidator,
                       },
                     ],
-                  })(<div></div>)}
+                  })(<span></span>)}
                 </FormItem>
                 <Title must={false} text="作品简介 (300字内)" margin="20px 0 0 0" />
                 <CountableTextArea
                   placeholder="请输入作品简介"
                   maxLen={300}
-                  value={ this.props.literatureInfo.introduction }
-                  handleChange={ (p) => this.props.set('introduction', p) }
+                  value={ this.state.literature.introduction }
+                  handleChange={ (p) => this.handleInputChange('introduction', p) }
                   style={{
-                    width: '366px',
+                    width: '400px',
                     marginTop: '10px',
                   }}
                 />
+                <FormItem>
+                  {getFieldDecorator('introduction', {})(<span></span>)}
+                </FormItem>
               </Col>
               <Col span={12}>
                 <Title must={true} text="分类（至少一个）" />
+                <Classification
+                  classes={ ['新闻', '动画', '综艺', '电影', '纪录片', '美食', '旅行', '自然'] }
+                  value={ this.state.literature.classification }
+                  handleChange={ (p) => this.handleInputChange('classification', p) }
+                  selectStyle={{
+                    width: '300px',
+                    marginTop: '10px',
+                    backgroundColor: '#F8F8F8',
+                    borderRadius: '4px',
+                  }}
+                  radioPartStyle={{
+                    width: '300px',
+                    margin: '10px 0',
+                    lineHeight: '30px',
+                  }}
+                />
                 <FormItem>
                   {getFieldDecorator('classification', {
                     rules: [
@@ -250,31 +380,34 @@ class LiteratureEditor_ extends Component {
                         validator: this.classificationValidator,
                       },
                     ],
-                  })(
-                    <Classification
-                      classes={ ['新闻', '动画', '综艺', '电影', '纪录片', '美食', '旅行', '自然'] }
-                      handleChange={ (p) => { this.props.form.setFieldsValue({ classification: p }); this.props.set('classification', p) } }
-                      selectStyle={{
-                        width: '300px',
-                        marginTop: '10px',
-                        backgroundColor: '#F8F8F8',
-                        borderRadius: '4px',
-                      }}
-                      radioPartStyle={{
-                        width: '300px',
-                        margin: '10px 0',
-                        lineHeight: '30px',
-                      }}
-                    />
-                  )}
+                  })(<span></span>)}
                 </FormItem>
                 <Title must={false} text="列表归属" margin="20px 0 0 0" />
                 <AlbumSelector
                   albums={ ['新闻360', '人与自然', '科教频道', '财经第一线', '喜洋洋'] }
-                  value={ this.props.literatureInfo.album }
-                  handleChange={ (p) => this.props.set('album', p) }
+                  value={ this.state.literature.album }
+                  handleChange={ (p) => this.handleInputChange('album', p) }
                 />
+                <FormItem>
+                  {getFieldDecorator('album', {})(<span></span>)}
+                </FormItem>
                 <Title must={true} text="定价￥" margin="20px 0 0 0" />
+                <InputNumber
+                  min={0}
+                  max={Infinity}
+                  step={1}
+                  precision={2}
+                  placeholder="输入金额"
+                  value={ this.state.literature.price }
+                  onChange={ (p) => this.handleInputChange('price', p) }
+                  style={{
+                    width: '280px',
+                    marginTop: '10px',
+                    backgroundColor: '#F8F8F8',
+                    borderRadius: '4px',
+                    border: 0,
+                  }}
+                />
                 <FormItem>
                   {getFieldDecorator('price', {
                     rules: [
@@ -283,31 +416,18 @@ class LiteratureEditor_ extends Component {
                         message: '请填写本文定价',
                       },
                     ],
-                  })(
-                    <InputNumber
-                      min={0}
-                      max={Infinity}
-                      step={1}
-                      precision={2}
-                      placeholder="输入金额"
-                      onChange={ (p) => { this.props.form.setFieldsValue({ price: p }); this.props.set('price', p)} }
-                      style={{
-                        width: '280px',
-                        marginTop: '10px',
-                        backgroundColor: '#F8F8F8',
-                        borderRadius: '4px',
-                        border: 0,
-                      }}
-                    />
-                  )}
+                  })(<span></span>)}
                 </FormItem>
                 <Title must={false} text="添加自定义标签（最多5个）" margin="20px 0 0 0" />
                 <Input
                   placeholder="例：#搞笑；#原创"
-                  value={ this.props.literatureInfo.tags }
-                  onChange={ (e) => this.props.set('tags', e.target.value) }
+                  value={ this.state.literature.tags }
+                  onChange={ (e) => this.handleInputChange('tags', e.target.value) }
                   style={{ marginTop: '10px', width: '348px' }}
                 />
+                <FormItem>
+                  {getFieldDecorator('tags', {})(<span></span>)}
+                </FormItem>
               </Col>
             </Row>
             <Row type="flex" justify="start" style={{ marginTop: '20px' }}>
@@ -326,12 +446,15 @@ class LiteratureEditor_ extends Component {
                 <CountableTextArea
                   maxLen={20000}
                   rows={20}
-                  value={ this.props.literatureInfo.content }
-                  handleChange={ (p) => this.props.set('content', p) }
+                  value={ this.state.literature.content }
+                  handleChange={ (p) => this.handleInputChange('content', p) }
                   placeholder="请输入正文内容"
                   bgColor="#fff"
                   style={{ width: '100%' }}
                 />
+                <FormItem>
+                  {getFieldDecorator('content', {})(<span></span>)}
+                </FormItem>
               </Col>
             </Row>
             <Row type="flex" justify="end" style={{ marginTop: '35px' }}>
