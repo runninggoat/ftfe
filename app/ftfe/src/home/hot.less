@@ -35,10 +35,13 @@
   
 }
 .ant-pagination-item-active a{
-  color:#FFFFFF;
+  color:#FFFFFF !important;
 }
 .ant-pagination-item-active{
   background:linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%);
+}
+.ant-pagination-item a{
+  color:#BCBCBC;
 }
 .ant-pagination-item-active:hover{
   border-color:none;
@@ -47,4 +50,23 @@
   background-color:#EEEEEE;
   color:#BCBCBC;
   border:none;
+}
+.ant-input-affix-wrapper .ant-input:not(:first-child){
+
+height:38px;
+background:rgba(248,248,248,1);
+border-radius:19px;
+border:1px solid #BCBCBC;
+}
+.ant-pagination-item-active:focus a{
+  color:yellow
+} 
+.ant-pagination-item-active:hover a{
+  color:red
+}
+.ant-pagination-item:focus{
+  color:purple
+}
+.ant-pagination-item:hover a{
+  color:#BCBCBC
 }
