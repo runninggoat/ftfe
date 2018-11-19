@@ -84,7 +84,7 @@ class MovieCards extends Component{
                   margin:'6px 15px',
                   fontWeight:400,
                   }}>
-                    <img src={img10} style={{
+                    <img src={img10} alt='' style={{
                     width:'24px',
                     height:'24px',
                     borderRadius:'24px',

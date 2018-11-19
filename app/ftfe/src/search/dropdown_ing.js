@@ -22,7 +22,7 @@ export default() =>(
       marginLeft:10,
       }}>
       <span style={{paddingBottom:'5px',}}>连载中</span> 
-      <Icon type="down" />
+      <Icon style={{margin:'0 10px'}} type="down" />
       </a>
   </Dropdown>
 </div>

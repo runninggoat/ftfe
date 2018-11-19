@@ -117,13 +117,13 @@ export default class SearchTop extends Component{
           <Col span={20}>
             <div style={{margin:"1% 0",}}>
               <Row>
-                <Col span={4}><div style={{
+                <Col span={2}><div style={{
                   fontSize:'16px',
                   fontWeight:500,
                   color:'rgba(74,74,74,1)',
                   lineHeight:'22px',
                 }}>视频</div></Col>
-                <Col span={20}>
+                <Col span={22}>
                   <div style={{
                   color:'#9B9B9B',
                   fontSize:14,
@@ -143,13 +143,13 @@ export default class SearchTop extends Component{
           <Col offset={2} span={20}>
             <div style={{margin:"1% 0",}}>
               <Row>
-                <Col span={4}><div style={{
+                <Col span={2}><div style={{
                   fontSize:'16px',
                   fontWeight:500,
                   color:'rgba(74,74,74,1)',
                   lineHeight:'22px',
                 }}>音乐</div></Col>
-                <Col span={20}>
+                <Col span={22}>
                   <div style={{
                   color:'#9B9B9B',
                   fontSize:14,
@@ -167,13 +167,13 @@ export default class SearchTop extends Component{
           <Col offset={2} span={20}>
             <div style={{margin:"1% 0",}}>
               <Row>
-                <Col span={4}><div style={{
+                <Col span={2}><div style={{
                   fontSize:'16px',
                   fontWeight:500,
                   color:'rgba(74,74,74,1)',
                   lineHeight:'22px',
                 }}>文学</div></Col>
-                <Col span={20}>
+                <Col span={22}>
                   <div style={{
                   color:'#9B9B9B',
                   fontSize:14,
@@ -191,13 +191,13 @@ export default class SearchTop extends Component{
           <Col offset={2} span={20}>
             <div style={{margin:"1% 0",}}>
               <Row>
-                <Col span={4}><div style={{
+                <Col span={2}><div style={{
                   fontSize:'16px',
                   fontWeight:500,
                   color:'rgba(74,74,74,1)',
                   lineHeight:'22px',
                 }}>其他</div></Col>
-                <Col span={20}>
+                <Col span={22}>
                   <div style={{
                   color:'#9B9B9B',
                   fontSize:14,

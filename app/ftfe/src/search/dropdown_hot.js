@@ -21,7 +21,7 @@ export default() =>(
     fontWeight:400,
     marginLeft:10,
     }}>
-     热度 <Icon type="down" />
+     热度 <Icon style={{margin:'0 10px'}} type="down" />
     </a>
   </Dropdown>
 </div>

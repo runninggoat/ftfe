@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Row, Col} from 'antd'
 import SearchTop from './search_top'
-import SearchList from './search_list';
+import SearchList from './search_list'
+import SmallSearch from './small_search'
 
 
-
-class Search extends Component {
+export default class Search extends Component {
   
   
   render () {
@@ -16,6 +16,9 @@ class Search extends Component {
             <SearchTop />
           </Col>
           <Col span={24}>
+            <SmallSearch />
+          </Col>
+          <Col span={24}>
             <SearchList />
           </Col>
         </Row>
@@ -23,5 +26,3 @@ class Search extends Component {
     )
   }
 }
-
-export default Search
