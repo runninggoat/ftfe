@@ -16,7 +16,16 @@ export default class Search extends Component {
             <SearchTop />
           </Col>
           <Col span={24}>
-            <SmallSearch />
+            <div style={{
+            position:'fixed', 
+            top:'42px',
+            width:'100%', height: 60,
+            zIndex: 99,
+            boxShadow:'0px 2px 31px 0px rgba(205,205,205,0.27)}',
+            background:'#F8F8F8',
+            }}>
+              <SmallSearch />
+            </div>
           </Col>
           <Col span={24}>
             <SearchList />

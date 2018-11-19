@@ -33,6 +33,7 @@ export default class SmallSearch extends Component {
                 fontSize:16,
                 height:'36px',
                 lineHeight:'16px',
+                border:0,
                 }}>
                   搜索
                 </Button>
