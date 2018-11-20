@@ -35,8 +35,7 @@ export default class PlayModal extends Component{
         <Modal
           visible={this.state.visible}
           onCancel={this.handleCancel}
-          closable={false}
-          destroyOnClose={false}
+          closable={true}
           footer={null}
           centered={true}
           width={'90%'}

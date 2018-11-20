@@ -25,6 +25,8 @@ export default class HotMovieList extends Component{
     this.refs.subcomponents.showModal();
     console.log('2')
   }
+  
+  handleCancel
     render(){
     return(
         <div style={{margin:'1% 0'}} onClick={this.handleClick.bind(this)}>
