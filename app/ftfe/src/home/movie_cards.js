@@ -2,15 +2,18 @@ import React,{Component} from 'react';
 import { Tag } from 'antd';
 import MyIcon from '../my_icon'
 import { Row, Col} from 'antd'
-
+import PlayModal from '../modal/play_modal' 
 //const img1 ="https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
   
   
 class MovieCards extends Component{
+  
+  
   render(){
     
     return(
-      <div>
+      <div >
+        
         <Row>
           <Col span={24}>
             <div style={{width: '100%', height: '210px',

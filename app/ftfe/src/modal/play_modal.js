@@ -6,12 +6,16 @@ import PaidMovie from './movie/paid_movie';
 import Comments from './comment/comment_editor';
 import { Row, Col,Button} from 'antd';
 import MyIcon from '../my_icon'
-class PlayModal extends Component{
-  
 
-  state = { visible: false }
+export default class PlayModal extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false,
+    };
+  }
   
-  showModal = () => {
+  showModal(){
     this.setState({
       visible: true,
     });
@@ -28,11 +32,11 @@ class PlayModal extends Component{
   render(){
     return(
       <div >
-        <button onClick={this.showModal} >弹窗</button>
-        
         <Modal
           visible={this.state.visible}
           onCancel={this.handleCancel}
+          closable={false}
+          destroyOnClose={false}
           footer={null}
           centered={true}
           width={'90%'}
@@ -97,6 +101,5 @@ class PlayModal extends Component{
   }
 }
 
-export default PlayModal;
 
 

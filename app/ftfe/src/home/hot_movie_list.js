@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react';
 import MovieCards from './movie_cards'
+import PlayModal from '../modal/play_modal'
 
 import { Row, Col,Button } from 'antd';
 
@@ -18,8 +19,15 @@ import img13 from'../image/013.jpg'
 import MyIcon from '../my_icon' 
 
   
-export default () => (
-        <div style={{margin:'1% 0'}}>
+export default class HotMovieList extends Component{ 
+    handleClick(){
+    console.log('1')
+    this.refs.subcomponents.showModal();
+    console.log('2')
+  }
+    render(){
+    return(
+        <div style={{margin:'1% 0'}} onClick={this.handleClick.bind(this)}>
             <Row gutter={12}>
                 <Col span={1}>
                     <div style={{maxWidth:60}}>
@@ -61,7 +69,7 @@ export default () => (
                                     <MovieCards 
                                     img={img6} title1={"自媒体《独白》团队访问徐峥：药神不是药神,徐峥还是徐峥"}
                                     type1={'视频'} type2={'访谈'} time={'1460:59'}
-                                    /></Col>
+                                    /><PlayModal ref="subcomponents" /></Col>
                                     <Col span={4} ><MovieCards 
                                     img={img4} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
                                     type1={'文学'} type2={'言情'} time={'长篇小说'}
@@ -122,8 +130,8 @@ export default () => (
         </div>
  )
                 
-             
-                    
+}
+}          
                     
                     
                     
