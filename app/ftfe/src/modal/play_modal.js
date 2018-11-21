@@ -20,8 +20,7 @@ export default class PlayModal extends Component{
       visible: true,
     });
   }
-  handleCancel = (e) => {
-    console.log(e);
+  handleCancel(){
     this.setState({
       visible: false,
     });
@@ -32,23 +31,38 @@ export default class PlayModal extends Component{
   render(){
     return(
       <div >
+      
         <Modal
           visible={this.state.visible}
-          onCancel={this.handleCancel}
-          closable={true}
+          closable={false}
           footer={null}
           centered={true}
           width={'90%'}
           bodyStyle={{padding:'0px',margin:'5% 0'}}
           
         >
+          <div
+          onClick={ () => this.handleCancel() }
+          style={{
+            position: 'fixed',
+            top: '65px',
+            right: '50px',
+            color: 'white',
+            fontSize: '30px',
+            float: 'right',
+            marginRight: '6px',
+            textAlign: 'center',
+          }}
+        >
+          <MyIcon type="icon-close" />
+        </div>
         <div >
         <Row >
         
             <Col span={19}>
                 <Row>
                     <Col>
-                    <div id='top'>
+                    <div >
                     <PaidMovie />
                     </div>
                     </Col>
@@ -61,7 +75,7 @@ export default class PlayModal extends Component{
                     
                 </Row>
                 <Row>
-                    <Col><div id='comment'>
+                    <Col><div >
                     <Comments />
                     </div></Col>
                 </Row>
@@ -73,13 +87,13 @@ export default class PlayModal extends Component{
                   <Col>
                     <div style={{position:'fixed',top:'80%'}}>
                       <div style={{
-                      }}><a href='#top' >&nbsp;<Button 
+                      }}><a  >&nbsp;<Button 
                         style={{width:'68px',height:'68px',
                         background:'rgba(238,238,238,1',
                         borderRadius:'17px'}}
                       ><MyIcon type='icon-totop' style={{fontSize:29,color:'#BCBCBC'}} /></Button></a></div>
                       <br />
-                      <div style={{}}><a href='#comment' >&nbsp;<Button 
+                      <div style={{}}><a  >&nbsp;<Button 
                         style={{width:'68px',height:'68px',
                         background:'rgba(238,238,238,1',
                         borderRadius:'17px'}}
