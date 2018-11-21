@@ -6,18 +6,26 @@ export default class BottomFooter extends Component {
     return (
       <div style={{
         width: '100%',
-        background: '#3D316A',
+        background: '#4A4A4A',
       }}>
         <Row justify="start">
-          <Col offset={6} span={12}>
+          <Col offset={4} span={16}>
             <Row type="flex" justify="space-around">
-              <Col span={3}>
+              <Col span={4}>
                 <div style={{
                   color: '#fff',
-                  fontSize: '24px',
-                  padding: '30px 0',
-                  marginTop: '28px',
-                }}>FT 链</div>
+                  marginTop: '55px',
+                }}>
+                  <img
+                    src={ require('../image/logo_home.png') }
+                    style={{
+                      margin: '7px 0',
+                      background: 'transparent',
+                      width: '141px',
+                      height: '36px',
+                    }}
+                  />
+                </div>
               </Col>
               <Col span={3}>
                 <Section
