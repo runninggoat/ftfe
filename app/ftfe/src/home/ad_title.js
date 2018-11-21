@@ -15,7 +15,6 @@ const ad1=(
 
     <div style={{
     marginLeft:190,
-    width:1250,
     height:570,
     backgroundRepeat:'no-repeat',
     backgroundPosition:'50% 50%',
