@@ -129,7 +129,7 @@ class Home extends Component {
               backgroundColor:'#FEFEFE',
               maxWidth:'1440px',
               minWidth:'1200px',
-              margin: 'auto',
+              margin: '1% auto',
             }}
           >
             <div><NewUpload /></div>
