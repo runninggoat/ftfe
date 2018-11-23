@@ -34,7 +34,7 @@ const ad1=(
     <div style={{
     position:'absolute',
     top:135,
-    left:95, 
+    left:'15%', 
     width:405,
     }}>
             <div style={{lineHeight:'50px', 
