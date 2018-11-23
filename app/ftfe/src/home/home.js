@@ -16,7 +16,7 @@ class Home extends Component {
   render () {
     return (
       
-      <Row gutter={12} type="flex" justify="center">
+      <Row type="flex" justify="center">
         <Col span ={24}>
           <Ad />
         </Col>
@@ -53,6 +53,7 @@ class Home extends Component {
               maxWidth:'1440px',
               minWidth:'1200px',
               margin: 'auto',
+              position:'relative',
             }}
           >
             <Carousel>
@@ -62,6 +63,26 @@ class Home extends Component {
               <div><HotMovieList /></div>
               <div><HotMovieList /></div>
             </Carousel>
+            <div style={{
+            width:60,
+            position:'absolute', 
+            top: 345,
+            right: 1400,
+            }}>
+                <Button className='homepage-btn'>
+                    <MyIcon className='homepage-icon' type={ 'icon-enter-copy'}/>
+                </Button>
+            </div>
+            <div style={{
+            width:60,
+            position:'absolute', 
+            top: 345,
+            left: 1400,
+            }}>
+                <Button className='homepage-btn'>
+                    <MyIcon className='homepage-icon' type={ 'icon-enter'}/>
+                </Button>
+            </div>
           </div>
         </Col>
         
@@ -71,6 +92,7 @@ class Home extends Component {
               maxWidth:'1440px',
               minWidth:'1200px',
               margin: 'auto',
+              position:'relative',
             }}
           >
             <Carousel>
@@ -80,6 +102,26 @@ class Home extends Component {
               <div><WatchList /></div>
               <div><WatchList /></div>
             </Carousel>
+            <div style={{
+            width:60,
+            position:'absolute', 
+            top: 345,
+            right: 1400,
+            }}>
+                <Button className='homepage-btn'>
+                    <MyIcon className='homepage-icon' type={ 'icon-enter-copy'}/>
+                </Button>
+            </div>
+            <div style={{
+            width:60,
+            position:'absolute', 
+            top: 345,
+            left: 1400,
+            }}>
+                <Button className='homepage-btn'>
+                    <MyIcon className='homepage-icon' type={ 'icon-enter'}/>
+                </Button>
+            </div>
           </div>
         </Col>
         <Col span={24} >

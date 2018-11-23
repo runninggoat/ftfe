@@ -20,23 +20,8 @@ import MyIcon from '../my_icon'
   
 export default () => (
         <div style={{margin:'1% 0'}}>
-            <Row gutter={12}>
-                <Col span={1}>
-                    <div style={{maxWidth:60}}>
-                        <Button style={{
-                        boxShadow:'none',
-                        borderRadius:'10px',
-                        border:0, 
-                        position:'absolute', 
-                        top:'345px',
-                        padding:0,
-                        height:'280px',    
-                        }}>
-                            <MyIcon type={ 'icon-enter-copy'} style={{fontSize:'64px',color:'#EEEEEE'}}/>
-                        </Button>
-                    </div>
-                </Col>
-                <Col span={22}>
+            <Row>
+                <Col offset={1} span={22}>
                     <Row>
                         <Col span={12}>
                             <div style={{margin:'50px 0 30px 0',borderLeft: '8px solid #FF1367'}}>
@@ -76,49 +61,31 @@ export default () => (
                     </Row>
                     
                     <Row gutter={12} >
+                        <Col span={24}><div style={{margin:'1% 0 1%'}}>
+                            <Row gutter={12}>
+                                <Col span={4} ><MovieCards 
+                                img={img12} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
+                                type1={'文学'} type2={'言情'} time={'长篇小说'}
+                                /></Col>
+                                <Col span={7} ><MovieCards 
+                                img={img9} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
+                                type1={'其他'} type2={'访谈'} time={'1460:59'}
+                                /></Col>
+                                <Col span={7} ><MovieCards
+                                img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
+                                type1={'视频'} type2={'访谈'} time={'1460:59'}
+                                /></Col>
+                                <Col span={6} ><MovieCards 
+                                img={img5} title1={"BABEL"} time={'10:59'}
+                                title2={'Mumford & Sons'} type1={'音乐'} type2={'独立摇滚'}
+                                /></Col>
+                            </Row></div>
+                        </Col>
                         
-                        <div style={{margin:'1% 0 2%'}}>
-                            
-                            <Col span={24}><div style={{margin:'1% 0 1%'}}>
-                                <Row gutter={12}>
-                                    <Col span={4} ><MovieCards 
-                                    img={img12} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
-                                    type1={'文学'} type2={'言情'} time={'长篇小说'}
-                                    /></Col>
-                                    <Col span={7} ><MovieCards 
-                                    img={img9} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
-                                    type1={'其他'} type2={'访谈'} time={'1460:59'}
-                                    /></Col>
-                                    <Col span={7} ><MovieCards
-                                    img={img1} title1={"自媒体《独白》团队访问徐峥：药神不是药神，徐峥还是徐峥"}
-                                    type1={'视频'} type2={'访谈'} time={'1460:59'}
-                                    /></Col>
-                                    <Col span={6} ><MovieCards 
-                                    img={img5} title1={"BABEL"} time={'10:59'}
-                                    title2={'Mumford & Sons'} type1={'音乐'} type2={'独立摇滚'}
-                                    /></Col>
-                                </Row></div>
-                            </Col>
-                        </div>
                     </Row>
                       
                 </Col>
-                <Col span={1}>
-                    <div style={{maxWidth:64}}>
-                        <Button style={{
-                    boxShadow:'none',
-                    borderRadius:'10px',
-                    border:0, 
-                    position:'absolute', 
-                    top:'345px',
-                    left:'-10px',
-                    padding:0,
-                    height:'280px',    
-                        }}>
-                            <MyIcon type={ 'icon-enter'} style={{fontSize:'64px', color:'#EEEEEE'}}/>
-                    </Button>
-                    </div>
-                </Col>
+                
             </Row>
         
         </div>

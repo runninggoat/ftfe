@@ -30,23 +30,8 @@ export default class HotMovieList extends Component{
     render(){
     return(
         <div style={{margin:'1% 0'}}>
-            <Row gutter={12}>
-                <Col span={1}>
-                    <div style={{maxWidth:60}}>
-                        <Button style={{
-                        boxShadow:'none',
-                        borderRadius:'10px',
-                        border:0, 
-                        position:'absolute', 
-                        top:'345px',
-                        padding:0,
-                        height:'280px',    
-                        }}>
-                            <MyIcon type={ 'icon-enter-copy'} style={{fontSize:'64px',color:'#EEEEEE'}}/>
-                        </Button>
-                    </div>
-                </Col>
-                <Col span={22}>
+            <Row >
+                <Col offset={1} span={22}>
                     <Row>
                         <Col span={12} >
                             <div style={{margin:'50px 0 30px 0',borderLeft: '8px solid #FF1367',
@@ -94,9 +79,8 @@ export default class HotMovieList extends Component{
                     </Row>
                     
                     <Row gutter={12} >
-                        
-                        <div style={{margin:'1% 0 2%'}}>
-                            
+                        <Col span={24}><div style={{margin:'1% 0 1%'}}>
+                            <Row gutter={12}>
                                 <Col span={4} onClick={this.handleClick.bind(this)}><MovieCards 
                                     img={img7} title1={"穿越清朝智斗妃嫔成皇后一统后宫"}
                                     type1={'文学'} type2={'言情'} time={'长篇小说'}
@@ -113,27 +97,12 @@ export default class HotMovieList extends Component{
                                     img={img10} title1={"BABEL"} time={'10:59'}
                                     title2={'Mumford & Sons'} type1={'音乐'} type2={'独立摇滚'}
                                 /></Col>
-                            </div>
+                            </Row></div>
+                        </Col>
                     </Row>
                     
                 </Col>
-                <Col span={1}>
-                    <div style={{maxWidth:64}}>
-                        <Button style={{
-                    boxShadow:'none',
-                    borderRadius:'10px',
-                    border:0, 
-                    position:'absolute', 
-                    top:'345px',
-                    left:'-10px',
-                    padding:0,
-                    height:'280px',    
-                        }}>
-                            <MyIcon type={ 'icon-enter'} style={{fontSize:'64px', color:'#EEEEEE'}}/>
-                    </Button>
-                    
-                    </div>
-                </Col>
+               
             </Row>
             <PlayModal ref="subcomponents" />
         </div>
