@@ -41,9 +41,9 @@ class Home extends Component {
                   style={{ marginLeft: "-30px" }}
                 >
                   <TabPane tab={<span>推&nbsp;&nbsp;荐</span>} key="1" />
-                  <TabPane tab={<span>视&nbsp;&nbsp;频</span>} key="2" />
-                  <TabPane tab={<span>文&nbsp;&nbsp;学</span>} key="3" />
-                  <TabPane tab={<span>其&nbsp;&nbsp;他</span>} key="4" />
+                  <TabPane tab={<span>预&nbsp;&nbsp;热</span>} key="2" />
+                  <TabPane tab={<span>众凑中</span>} key="3" />
+                  <TabPane tab={<span>成功项目</span>} key="4" />
                 </Tabs>
               </Col>
             </Row>
