@@ -107,20 +107,6 @@ export default class TopHeader extends Component {
                   </div>
                 </a>
               </Col>
-              <Col span={4}>
-                <div style={{ height: '60px' }}>
-                  <span style={{
-                      position: 'absolute',
-                      lineHeight: '22px',
-                      marginTop: '10px',
-                      fontSize: '16px',
-                      color: '#BCBCBC',
-                      fontWeight: 400,
-                    }}>
-                    <span dangerouslySetInnerHTML={{ __html: '社&nbsp&nbsp&nbsp&nbsp&nbsp区' }}></span>
-                  </span>
-                </div>
-              </Col>
             </Row>
           </Col>
           <Col span={12}>
