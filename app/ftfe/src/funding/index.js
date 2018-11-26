@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import Ad from "../home/ad_title";
-import HotMovieList from "../home/hot_movie_list";
 import { Row, Col, Button, Icon, Carousel } from "antd";
-import WatchList from "../home/watch_list";
-import NewUpload from "../home/new_upload";
 import PlayModal from "../modal/play_modal";
+import Title from './title'
 import MyIcon from "../my_icon";
 import { Tabs } from "antd";
 import "../home/hot.less";
+import img1 from "../image/001.jpeg";
+import img2 from "../image/003.jpg";
+import img3 from "../image/004.jpeg";
+import img4 from "../image/005.jpg";
+import img5 from "../image/006.jpg";
+import img9 from "../image/009.jpg";
 
 const TabPane = Tabs.TabPane;
+const color1='linear-gradient(270deg,rgba(250,217,97,1) 0%,rgba(249,163,63,1) 100%)'
 
 class Home extends Component {
   render() {
@@ -46,170 +51,19 @@ class Home extends Component {
                   <TabPane tab={<span>成功项目</span>} key="4" />
                 </Tabs>
               </Col>
+              
             </Row>
+            
+            
           </div>
+        </Col>
+        <Col span={24} style={{
+            margin:'50px 0 0',}}>
+            <div >
+                <Title img={img1} background={color1}/>
+            </div>
         </Col>
 
-        <Col span={24} style={{ marginTop: "5px" }}>
-          <div
-            style={{
-              backgroundColor: "#FEFEFE",
-              maxWidth: "1440px",
-              minWidth: "1200px",
-              margin: "auto",
-              position: "relative"
-            }}
-          >
-            <Carousel>
-              <div>
-                <HotMovieList />
-              </div>
-              <div>
-                <HotMovieList />
-              </div>
-              <div>
-                <HotMovieList />
-              </div>
-              <div>
-                <HotMovieList />
-              </div>
-              <div>
-                <HotMovieList />
-              </div>
-            </Carousel>
-            <div
-              style={{
-                width: 60,
-                position: "absolute",
-                top: 345,
-                right: 1400
-              }}
-            >
-              <Button className="homepage-btn">
-                <MyIcon className="homepage-icon" type={"icon-enter-copy"} />
-              </Button>
-            </div>
-            <div
-              style={{
-                width: 60,
-                position: "absolute",
-                top: 345,
-                left: 1400
-              }}
-            >
-              <Button className="homepage-btn">
-                <MyIcon className="homepage-icon" type={"icon-enter"} />
-              </Button>
-            </div>
-          </div>
-        </Col>
-
-        <Col span={24}>
-          <div
-            style={{
-              backgroundColor: "#FEFEFE",
-              maxWidth: "1440px",
-              minWidth: "1200px",
-              margin: "auto",
-              position: "relative"
-            }}
-          >
-            <Carousel>
-              <div>
-                <WatchList />
-              </div>
-              <div>
-                <WatchList />
-              </div>
-              <div>
-                <WatchList />
-              </div>
-              <div>
-                <WatchList />
-              </div>
-              <div>
-                <WatchList />
-              </div>
-            </Carousel>
-            <div
-              style={{
-                width: 60,
-                position: "absolute",
-                top: 345,
-                right: 1400
-              }}
-            >
-              <Button className="homepage-btn">
-                <MyIcon className="homepage-icon" type={"icon-enter-copy"} />
-              </Button>
-            </div>
-            <div
-              style={{
-                width: 60,
-                position: "absolute",
-                top: 345,
-                left: 1400
-              }}
-            >
-              <Button className="homepage-btn">
-                <MyIcon className="homepage-icon" type={"icon-enter"} />
-              </Button>
-            </div>
-          </div>
-        </Col>
-        <Col span={24}>
-          <div
-            style={{
-              backgroundColor: "#FEFEFE",
-              maxWidth: "1440px",
-              minWidth: "1200px",
-              margin: "1% auto"
-            }}
-          >
-            <div>
-              <NewUpload />
-            </div>
-          </div>
-        </Col>
-
-        <Col span={24}>
-          <div
-            style={{
-              backgroundColor: "#FEFEFE",
-              maxWidth: "1440px",
-              minWidth: "1200px",
-              margin: "auto"
-            }}
-          >
-            <Row>
-              <Col span={9} />
-              <Col span={6}>
-                <div style={{ textAlign: "center" }}>
-                  <Button
-                    style={{
-                      background:
-                        "linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)",
-                      margin: "30px 0 60px 0",
-                      width: "300px",
-                      height: "45px",
-                      boxShadow: "0px 5px 10px 0px rgba(255,79,81,0.66)",
-                      borderRadius: "41px",
-                      border: "0px"
-                    }}
-                  >
-                    <MyIcon
-                      type="icon-refresh"
-                      theme="outlined"
-                      style={{ color: "#FFFFFF" }}
-                    />
-                    <span style={{ color: "#FFFFFF" }}>加载更多</span>
-                  </Button>
-                </div>
-              </Col>
-              <Col span={9} />
-            </Row>
-          </div>
-        </Col>
         <PlayModal />
       </Row>
     );
