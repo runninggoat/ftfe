@@ -42,8 +42,6 @@ export default class Category extends Component {
         </div>
       )
     }
-    let fw = 500
-    if (this.state.hover) fw = 500
     return (
       <div
         onMouseEnter={ this.handleEnter.bind(this) }
@@ -57,8 +55,8 @@ export default class Category extends Component {
               lineHeight: '22px',
               marginTop: '10px',
               fontSize: '16px',
-              color: '#fff',
-              fontWeight: fw,
+              color: this.props.active ? '#fff' : '#BCBCBC',
+              fontWeight: 400,
             }}
           >
             <div dangerouslySetInnerHTML={{ __html: '首&nbsp&nbsp&nbsp&nbsp&nbsp页' }}></div>

@@ -3,6 +3,7 @@ import { Route, HashRouter } from "react-router-dom";
 import TopHeader from "./top_header/top_header.js";
 import Home from "./home/home.js";
 import Search from "./search/search.js";
+import Funding from "./funding/index.js";
 import BottomFooter from "./bottom_footer/bottom_footer.js";
 import LoginPanel from "./top_header/login";
 import UploadPanel from "./top_header/upload/upload";
@@ -95,6 +96,7 @@ class App extends Component {
                 handleOpenUpload={this.handleOpenUpload.bind(this)}
               />
               <Route exact path="/" component={Home} />
+              <Route exact path="/funding" component={Funding} />
               <Route exact path="/search" component={Search} />
               <BottomFooter />
             </div>

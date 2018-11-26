@@ -12,6 +12,7 @@ export default class TopHeader extends Component {
     clientWidth: 1000,
     height: 42,
     alwaysShowBG: false,
+    activeTab: 1,
   }
 
   constructor(props) {
@@ -33,6 +34,13 @@ export default class TopHeader extends Component {
     }
     if (!document.URL.endsWith('search') && this.state.alwaysShowBG) {
       this.setState({ alwaysShowBG: false })
+    }
+    if (document.URL.endsWith('search') && this.state.activeTab !== 0) {
+      this.setState({ activeTab: 0 })
+    } else if (document.URL.endsWith('/') && this.state.activeTab !== 1) {
+      this.setState({ activeTab: 1 })
+    } else if (document.URL.endsWith('funding') && this.state.activeTab !== 2) {
+      this.setState({ activeTab: 2 })
     }
   }
 
@@ -77,24 +85,27 @@ export default class TopHeader extends Component {
               </Col>
               <Col span={4}>
                 <Category
+                  active={ this.state.activeTab === 1 }
                   subheight={ this.state.height }
                   subwidth={ this.state.clientWidth }
                   handleHover={ this.handleHover.bind(this) }
                 ></Category>
               </Col>
               <Col span={4}>
-                <div style={{ height: '60px' }}>
-                  <span style={{
-                      position: 'absolute',
-                      lineHeight: '22px',
-                      marginTop: '10px',
-                      fontSize: '16px',
-                      color: '#BCBCBC',
-                      fontWeight: 400,
-                    }}>
-                    <span dangerouslySetInnerHTML={{ __html: '众&nbsp&nbsp&nbsp&nbsp&nbsp筹' }}></span>
-                  </span>
-                </div>
+                <a href="#/funding">
+                  <div style={{ height: '60px' }}>
+                    <span style={{
+                        position: 'absolute',
+                        lineHeight: '22px',
+                        marginTop: '10px',
+                        fontSize: '16px',
+                        color: this.state.activeTab === 2 ? '#fff' : '#BCBCBC',
+                        fontWeight: 400,
+                      }}>
+                      <span dangerouslySetInnerHTML={{ __html: '众&nbsp&nbsp&nbsp&nbsp&nbsp筹' }}></span>
+                    </span>
+                  </div>
+                </a>
               </Col>
               <Col span={4}>
                 <div style={{ height: '60px' }}>
