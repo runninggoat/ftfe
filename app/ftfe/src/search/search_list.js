@@ -10,79 +10,73 @@ const title1 = "搜索匹配到的";
 const title2 = "关键字";
 const title3 = "变成粉色变成团队采访徐峥徐峥…";
 const searchr = (
-  <span>
-    <Col span={24}>
-      <Row gutter={12}>
-        <Col span={2} />
-        <Col span={4}>
-          <Card
-            img={img6}
-            time={time}
-            title1={title1}
-            title2={title2}
-            title3={title3}
-            icon={img10}
-            type1={"分类"}
-            type2={"分类"}
-            type3={"分类"}
-          />
-        </Col>
-        <Col span={4}>
-          <Card
-            img={img6}
-            time={time}
-            title1={title1}
-            title2={title2}
-            title3={title3}
-            icon={img10}
-            type1={"分类"}
-            type2={"分类"}
-            type3={"分类"}
-          />
-        </Col>
-        <Col span={4}>
-          <Card
-            img={img6}
-            time={time}
-            title1={title1}
-            title2={title2}
-            title3={title3}
-            icon={img10}
-            type1={"分类"}
-            type2={"分类"}
-            type3={"分类"}
-          />
-        </Col>
-        <Col span={4}>
-          <Card
-            img={img6}
-            time={time}
-            title1={title1}
-            title2={title2}
-            title3={title3}
-            icon={img10}
-            type1={"分类"}
-            type2={"分类"}
-            type3={"分类"}
-          />
-        </Col>
-        <Col span={4}>
-          <Card
-            img={img6}
-            time={time}
-            title1={title1}
-            title2={title2}
-            title3={title3}
-            icon={img10}
-            type1={"分类"}
-            type2={"分类"}
-            type3={"分类"}
-          />
-        </Col>
-        <Col span={2} />
-      </Row>
+  <Row type="flex" justify="space-around">
+    <Col span={4}>
+      <Card
+        img={img6}
+        time={time}
+        title1={title1}
+        title2={title2}
+        title3={title3}
+        icon={img10}
+        type1={"分类"}
+        type2={"分类"}
+        type3={"分类"}
+      />
     </Col>
-  </span>
+    <Col span={4}>
+      <Card
+        img={img6}
+        time={time}
+        title1={title1}
+        title2={title2}
+        title3={title3}
+        icon={img10}
+        type1={"分类"}
+        type2={"分类"}
+        type3={"分类"}
+      />
+    </Col>
+    <Col span={4}>
+      <Card
+        img={img6}
+        time={time}
+        title1={title1}
+        title2={title2}
+        title3={title3}
+        icon={img10}
+        type1={"分类"}
+        type2={"分类"}
+        type3={"分类"}
+      />
+    </Col>
+    <Col span={4}>
+      <Card
+        img={img6}
+        time={time}
+        title1={title1}
+        title2={title2}
+        title3={title3}
+        icon={img10}
+        type1={"分类"}
+        type2={"分类"}
+        type3={"分类"}
+      />
+    </Col>
+    <Col span={4}>
+      <Card
+        img={img6}
+        time={time}
+        title1={title1}
+        title2={title2}
+        title3={title3}
+        icon={img10}
+        type1={"分类"}
+        type2={"分类"}
+        type3={"分类"}
+      />
+    </Col>
+  </Row>
 );
 export default class SearchList extends Component {
   render() {
@@ -90,10 +84,11 @@ export default class SearchList extends Component {
       <div
         style={{
           background: "#FEFEFE",
-          boxShadow: "0px 2px 31px 0px rgba(205,205,205,0.27)"
+          maxWidth: "1440px",
+          minWidth: "1200px"
         }}
       >
-        <Row gutter={8}>
+        <Row>
           {searchr}
           {searchr}
           {searchr}

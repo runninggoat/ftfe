@@ -14,7 +14,6 @@ class MovieCards extends Component {
           <Col span={24}>
             <div
               style={{
-                width: "100%",
                 height: "131px",
                 backgroundPosition: "50% 50%",
                 backgroundColor: "black",
@@ -211,19 +210,3 @@ class MovieCards extends Component {
 }
 
 export default MovieCards;
-
-// </div>
-// <div style={{
-// color:'#9B9B9B',
-// fontSize:12,
-// position:'absolute',
-// left:12,
-// bottom:15,}}>
-//   {this.props.type2?
-//   (<Tag color="#EEEEEE"
-//   style={{
-//     borderRadius:'10px',
-//     maxHeight:20,color:'#9B9B9B',
-//   }}>
-//   {this.props.type2}
-//   </Tag>):''}
