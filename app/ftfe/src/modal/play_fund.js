@@ -5,6 +5,7 @@ import SidePanel from "./comment/side_panel";
 import CommentBar from "./comment/comment_bar";
 import PaidMovie from "./movie/paid_movie";
 import Comments from "./comment/comment_editor";
+import Questions from './fund/questions'
 import ProjectDetail from './fund/project_details'
 import Timeline from './fund/timeline'
 import { Row, Col, Progress, Tag, Button, Divider } from "antd";
@@ -312,7 +313,7 @@ export default class PlayModal extends Component {
                      <Timeline />
                     </TabPane>
                     <TabPane tab="问&nbsp;&nbsp;答" key="3">
-                      Content of Tab Pane 3
+                    <Questions />
                     </TabPane>
                   </Tabs>
                 </div>
