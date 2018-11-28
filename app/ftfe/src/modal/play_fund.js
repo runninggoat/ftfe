@@ -192,7 +192,6 @@ export default class PlayModal extends Component {
                         </div>
                       )}
                     </div>
-                    
 
                     <div
                       style={{
@@ -200,7 +199,7 @@ export default class PlayModal extends Component {
                         fontWeight: 400,
                         color: "rgba(155,155,155,1)",
                         lineHeight: "28px",
-                        marginTop:'30px',
+                        marginTop: "30px"
                       }}
                     >
                       2018.09.11
@@ -414,31 +413,85 @@ export default class PlayModal extends Component {
                     </div>
                   </Col>
                   <Col span={24}>
-                          <div style={{
-                            width:'275px',
-                            height:'146px',
-                            background:'rgba(255,255,255,1)',
-                            boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
-                            borderRadius:'16px',
-                            margin: "15px 0 15px -9px"
-                          }}>
-                          <div style={{
-                            fontSize:'20px',
-                            fontWeight:400,
-                            color:'rgba(74,74,74,1)',
-                            lineHeight:'28px',
-                            padding:'15px',
-                          }}>
-                          项目宣发
-                          </div>
-                          <div>
-
-                          </div>
-
-                          </div>
+                    <div
+                      style={{
+                        width: "275px",
+                        height: "146px",
+                        background: "rgba(255,255,255,1)",
+                        boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
+                        borderRadius: "16px",
+                        margin: "15px 0 15px -9px"
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: 400,
+                          color: "rgba(74,74,74,1)",
+                          lineHeight: "28px",
+                          padding: "15px"
+                        }}
+                      >
+                        项目宣发
+                      </div>
+                      <div>
+                        <span>
+                          <MyIcon
+                            type="icon-weibo"
+                            style={{ fontSize: 40, margin: "0 0 0 40px" }}
+                          />
+                          <MyIcon
+                            type="icon-weixin"
+                            style={{ fontSize: 40, margin: "5px 40px" }}
+                          />
+                          <MyIcon
+                            type="icon-facebook"
+                            style={{ fontSize: 40 }}
+                          />
+                        </span>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "12px",
+                          fontWeight: 400,
+                          color: "rgba(155,155,155,1)",
+                          lineHeight: "17px"
+                        }}
+                      >
+                        <span style={{ margin: "0 0 0 42px" }}>微 博</span>
+                        <span style={{ margin: "0 55px" }}>微 信</span>
+                        <span>脸 书</span>
+                      </div>
+                    </div>
                   </Col>
+                  <Col span={24}>
+                <div
+                  style={{
+                    width: "275px",
+                    height: "563px",
+                    background: "rgba(255,255,255,1)",
+                    boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
+                    borderRadius: "16px",
+                    margin: "15px 0 15px -9px"
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "20px",
+                      fontWeight: 400,
+                      color: "rgba(74,74,74,1)",
+                      lineHeight: "28px",
+                      padding: "15px"
+                    }}
+                  >
+                    项目宣发
+                  </div>
+                </div>
+              </Col>
                 </Row>
               </Col>
+
+              
             </Row>
           </div>
         </Modal>
