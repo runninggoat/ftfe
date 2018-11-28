@@ -15,17 +15,17 @@ export default props => (
         <div>
           <img
             src={faker.image.food()}
-            style={{ height: 90, width: 90, marginRight: "10px" }}
+            style={{ height: 90, width: 90, margin:'10px 10px 10px 0', }}
           />
           <img
             src={faker.image.sports()}
-            style={{ height: 90, width: 90, marginRight: "10px" }}
+            style={{ height: 90, width: 90,  }}
           />
         </div>
         <div>
           <img
             src={faker.image.nightlife()}
-            style={{ height: 90, width: 90, marginRight: "10px" }}
+            style={{ height: 90, width: 90, marginBottom:'10px',}}
           />
         </div>
       </Timeline.Item>

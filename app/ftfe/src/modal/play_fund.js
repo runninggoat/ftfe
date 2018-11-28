@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Modal } from "antd";
 import { Tabs } from "antd";
+import faker from "faker";
 import SidePanel from "./comment/side_panel";
 import CommentBar from "./comment/comment_bar";
 import PaidMovie from "./movie/paid_movie";
 import Comments from "./comment/comment_editor";
-import Questions from './fund/questions'
-import ProjectDetail from './fund/project_details'
-import Timeline from './fund/timeline'
+import Questions from "./fund/questions";
+import ProjectDetail from "./fund/project_details";
+import Timeline from "./fund/timeline";
 import { Row, Col, Progress, Tag, Button, Divider } from "antd";
 import img12 from "../image/012.jpg";
 import img11 from "../image/011.jpg";
@@ -191,32 +192,15 @@ export default class PlayModal extends Component {
                         </div>
                       )}
                     </div>
-                    <Button
-                      style={{
-                        margin: "41px 0 18px",
-                        background:
-                          "linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)",
-                        boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
-                        borderRadius: "16px",
-                        border: "none",
-                        fontSize: "16px",
-                        fontWeight: 400,
-                        lineHeight: "16px",
-                        color: "rgba(255,255,255,1)",
-                        width: 185,
-                        height: 40
-                      }}
-                    >
-                      {" "}
-                      购&nbsp;&nbsp;买
-                    </Button>
+                    
 
                     <div
                       style={{
                         fontSize: 28,
                         fontWeight: 400,
                         color: "rgba(155,155,155,1)",
-                        lineHeight: "28px"
+                        lineHeight: "28px",
+                        marginTop:'30px',
                       }}
                     >
                       2018.09.11
@@ -305,20 +289,156 @@ export default class PlayModal extends Component {
                     borderRadius: "16px"
                   }}
                 >
-                  <Tabs defaultActiveKey="1" size={'large'} tabBarStyle={{textAlign:'center', }}>
+                  <Tabs
+                    defaultActiveKey="1"
+                    size={"large"}
+                    tabBarStyle={{ textAlign: "center" }}
+                  >
                     <TabPane tab="项目详情" key="1">
-                    <ProjectDetail img={img11}/>
+                      <ProjectDetail img={img11} />
                     </TabPane>
                     <TabPane tab="动&nbsp;&nbsp;态" key="2">
-                     <Timeline />
+                      <Timeline />
                     </TabPane>
                     <TabPane tab="问&nbsp;&nbsp;答" key="3">
-                    <Questions />
+                      <Questions />
                     </TabPane>
                   </Tabs>
                 </div>
               </Col>
-              <Col span={5} />
+              <Col span={5}>
+                <Row>
+                  <Col span={24}>
+                    <div
+                      style={{
+                        width: "275px",
+                        height: "365px",
+                        background: "rgba(255,255,255,1)",
+                        borderRadius: "16px",
+                        margin: "15px 0 15px -9px"
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: "400",
+                          color: "rgba(74,74,74,1)",
+                          lineHeight: "28px",
+                          padding: "15px"
+                        }}
+                      >
+                        发起人
+                      </div>
+                      <div style={{ textAlign: "center" }}>
+                        <img
+                          src={faker.image.avatar()}
+                          style={{
+                            width: "90px",
+                            height: "90px",
+                            borderRadius: 45
+                          }}
+                        />
+                      </div>
+                      <div
+                        style={{
+                          textAlign: "center",
+                          fontSize: "18px",
+                          fontWeight: 400,
+                          color: "rgba(0,0,0,1)",
+                          lineHeight: "18px",
+                          marginTop: "10px"
+                        }}
+                      >
+                        导演老李
+                      </div>
+                      <div
+                        style={{
+                          textAlign: "center",
+                          fontSize: "16px",
+                          fontWeight: 400,
+                          color: "rgba(74,74,74,1)",
+                          lineHeight: "18px",
+                          marginTop: "10px"
+                        }}
+                      >
+                        100作品 202.33万 粉丝
+                      </div>
+                      <div
+                        style={{
+                          margin: "0 15px",
+                          textAlign: "center",
+                          fontSize: "16px",
+                          fontWeight: 400,
+                          color: "rgba(155,155,155,1)",
+                          lineHeight: "24px",
+                          marginTop: "10px"
+                        }}
+                      >
+                        {" "}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近意，生言有我感際英面，別一他草；社團時任光地？住情半電地裡看畫朋我我室劇。
+                      </div>
+                      <div style={{ margin: "24px 0 33px 0px" }}>
+                        <Button
+                          style={{
+                            margin: "0px 15px 0px 40px",
+                            width: "90px",
+                            height: "32px",
+                            background:
+                              "linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)",
+                            borderRadius: "18px",
+                            fontSize: "14px",
+                            fontWeight: 400,
+                            color: "rgba(255,255,255,1)",
+                            lineHeight: "14px"
+                          }}
+                        >
+                          关 注
+                        </Button>
+                        <Button
+                          style={{
+                            margin: "0px 40px 0px 0px",
+                            width: "90px",
+                            height: "32px",
+                            background: "rgba(255,255,255,1)",
+                            borderRadius: "18px",
+                            border: "1px solid",
+                            fontSize: "14px",
+                            fontWeight: 400,
+                            color: "rgba(255,19,103,1)",
+                            lineHeight: "14px"
+                          }}
+                        >
+                          私 信
+                        </Button>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col span={24}>
+                          <div style={{
+                            width:'275px',
+                            height:'146px',
+                            background:'rgba(255,255,255,1)',
+                            boxShadow:'0px 2px 15px 0px rgba(0,0,0,0.05)',
+                            borderRadius:'16px',
+                            margin: "15px 0 15px -9px"
+                          }}>
+                          <div style={{
+                            fontSize:'20px',
+                            fontWeight:400,
+                            color:'rgba(74,74,74,1)',
+                            lineHeight:'28px',
+                            padding:'15px',
+                          }}>
+                          项目宣发
+                          </div>
+                          <div>
+
+                          </div>
+
+                          </div>
+                  </Col>
+                </Row>
+              </Col>
             </Row>
           </div>
         </Modal>
