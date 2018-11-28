@@ -14,7 +14,6 @@ const menu = (
 );
 export default () => (
   <div>
-    
     <Dropdown overlay={menu} trigger={["click"]}>
       <a
         href=""

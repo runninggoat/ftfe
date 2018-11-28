@@ -2,26 +2,14 @@ import React, { Component } from "react";
 import { Row, Col } from "antd";
 import MyIcon from "../my_icon";
 import { Input } from "antd";
-import { Tabs, Button,Pagination } from "antd";
+import { Tabs, Button } from "antd";
 import { Tag } from "antd";
 import DropdownHot from "./dropdown_hot";
 import Dropdowning from "./dropdown_ing";
-import DropdownFunding from "./dropdown_funding";
+
 import SearchList from "./search_list";
 import SmallSearch from "./small_search";
-import img1 from "../image/001.jpeg";
-import img2 from "../image/007.jpg";
-import img3 from "../image/004.jpeg";
-import Title from "../funding/title";
-const color1 =
-  "linear-gradient(270deg,rgba(250,217,97,1) 0%,rgba(249,163,63,1) 100%)";
-const fontcolor1 = "#FAAD14";
-const color2 =
-  "linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)";
-const fontcolor2 = "#FF1367";
-const color3 =
-  "linear-gradient(270deg,rgba(197,222,49,1) 0%,rgba(67,245,219,1) 100%)";
-const fontcolor3 = "#52C41A";
+
 const TabPane = Tabs.TabPane;
 
 const { CheckableTag } = Tag;
@@ -349,11 +337,13 @@ export default class SearchTop extends Component {
                                   />
                                   <Dropdowning />
                                 </div>
+                                
                               </Col>
                               <Col span={2} />
                             </Row>
+                            
                           </Col>
-
+                          
                           {this.state.scrollOut ? (
                             <Col span={24}>
                               <div
@@ -374,117 +364,13 @@ export default class SearchTop extends Component {
                           ) : (
                             ""
                           )}
-                          <Col
-                            span={24}
-                            style={{
-                              boxShadow:
-                                "0px 2px 31px 0px rgba(205,205,205,0.27)",
-                              padding: "1px"
-                            }}
-                          >
+                          <Col span={24} style={{boxShadow: "0px 2px 31px 0px rgba(205,205,205,0.27)",padding:'1px'}}>
                             <SearchList />
                           </Col>
                         </Row>
                       </TabPane>
 
-                      <TabPane tab="众&nbsp;&nbsp;筹" key="2">
-                        <Row style={{ borderTop: "1px solid #D8D8D8" }}>
-                          <Col span={7}>
-                            <div style={{ margin: "2% 0" }}>
-                              <Input
-                                placeholder="输入关键字搜索作品、众筹项目或用户"
-                                prefix={
-                                  <MyIcon
-                                    type="icon-search"
-                                    style={{
-                                      fontSize: 20,
-                                      color: "rgba(0,0,0,.25)"
-                                    }}
-                                  />
-                                }
-                              />
-                            </div>
-                          </Col>
-                          <Col span={3}>
-                            <Button
-                              style={{
-                                margin: "8px 15px",
-                                borderRadius: "18px",
-                                background:
-                                  "linear-gradient(90deg,rgba(255,132,135,1) 0%,rgba(255,19,103,1) 100%)",
-                                color: "#FFFFFF",
-                                fontWeight: 400,
-                                fontSize: 16,
-                                height: "36px",
-                                lineHeight: "16px"
-                              }}
-                            >
-                              搜索
-                            </Button>
-                          </Col>
-                          <Col span={3} style={{ padding: "12px" }}>
-                            <MyIcon
-                              type="icon-rank"
-                              style={{
-                                fontSize: 24,
-                                float: "left",
-                                color: "#FF1367"
-                              }}
-                            />
-                            <DropdownHot />
-                          </Col>
-                          <Col span={3} style={{ padding: "12px" }}>
-                            <MyIcon
-                              type="icon-time"
-                              style={{
-                                fontSize: 24,
-                                float: "left",
-                                color: "#FF1367"
-                              }}
-                            />
-                            <DropdownFunding />
-                          </Col>
-                          <Col
-          span={24}
-          style={{
-            margin: "50px 0 0"
-          }}
-        >
-          <div
-            style={{
-              maxWidth: "1440px",
-              minWidth: "1200px",
-              margin: "auto"
-            }}
-          >
-            <Title
-              img={img1}
-              color={color1}
-              fontcolor={fontcolor1}
-              percent={25}
-              money={"16,000"}
-            />
-            <Title
-              img={img2}
-              color={color2}
-              percent={0}
-              fontcolor={fontcolor2}
-              money={0}
-            />
-            <Title
-              img={img3}
-              fontcolor={fontcolor3}
-              color={color3}
-              percent={100}
-              money={"20,000"}
-            />
-            <div style={{margin: '48px 0px 80px 900px',}}>
-              <Pagination defaultCurrent={2} total={200} />
-            </div>
-          </div>
-        </Col>
-                        </Row>
-                      </TabPane>
+                      <TabPane tab="众&nbsp;&nbsp;筹" key="2" />
                       <TabPane tab="用&nbsp;&nbsp;户" key="3" />
                       <TabPane tab="剧组服务" key="4" />
                     </Tabs>
