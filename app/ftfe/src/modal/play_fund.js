@@ -7,6 +7,7 @@ import CommentBar from "./comment/comment_bar";
 import PaidMovie from "./movie/paid_movie";
 import Comments from "./comment/comment_editor";
 import Questions from "./fund/questions";
+import Payment from "./fund/payment";
 import ProjectDetail from "./fund/project_details";
 import Timeline from "./fund/timeline";
 import { Row, Col, Progress, Tag, Button, Divider } from "antd";
@@ -129,6 +130,7 @@ export default class PlayModal extends Component {
                       </Tag>
                     </div>
                   </Col>
+                  
                   <Col span={19}>
                     <div style={{ width: "969px", margin: "20px 0 52px 41px" }}>
                       <Player poster={img12} preload="metadata">
@@ -276,7 +278,27 @@ export default class PlayModal extends Component {
                     </div>
                     <div>目标资金 (糖分)</div>
                   </Col>
-                </Row>
+                  <Col span={24} style={{
+                    width:1270,
+                    height:359,
+                        fontSize: "32px",
+                        fontWeight: 500,
+                        color: "rgba(0,0,0,1)",
+                        lineHeight: "45px",
+                        margin: "30px 0 0px 38px"
+                      }}>
+                    <Row>
+                      <Col span={8}>
+                      <Payment />
+                      </Col>
+                      <Col span={8}>
+                      <Payment />
+                      </Col>
+                      <Col span={8}>
+                      <Payment />
+                      </Col>
+                    </Row>
+                    </Col></Row>
               </Col>
               <Col span={19}>
                 <div
@@ -484,7 +506,7 @@ export default class PlayModal extends Component {
                       padding: "15px"
                     }}
                   >
-                    项目宣发
+                    预算分配
                   </div>
                 </div>
               </Col>
