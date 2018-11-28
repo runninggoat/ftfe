@@ -6,6 +6,7 @@ import CommentBar from "./comment/comment_bar";
 import PaidMovie from "./movie/paid_movie";
 import Comments from "./comment/comment_editor";
 import ProjectDetail from './fund/project_details'
+import Timeline from './fund/timeline'
 import { Row, Col, Progress, Tag, Button, Divider } from "antd";
 import img12 from "../image/012.jpg";
 import img11 from "../image/011.jpg";
@@ -308,7 +309,7 @@ export default class PlayModal extends Component {
                     <ProjectDetail img={img11}/>
                     </TabPane>
                     <TabPane tab="动&nbsp;&nbsp;态" key="2">
-                      Content of Tab Pane 2
+                     <Timeline />
                     </TabPane>
                     <TabPane tab="问&nbsp;&nbsp;答" key="3">
                       Content of Tab Pane 3

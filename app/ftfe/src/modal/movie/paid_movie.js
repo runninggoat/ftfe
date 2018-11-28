@@ -6,7 +6,6 @@ import {
   VolumeMenuButton,
   LoadingSpinner
 } from "video-react";
-import { Button } from "antd";
 import "video-react/dist/video-react.css";
 import MyIcon from "../../my_icon";
 import { Row, Col, Tag } from "antd";
