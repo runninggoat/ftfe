@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Ad from "../home/ad_title";
 import { Row, Col, Pagination } from "antd";
-import PlayModal from "../modal/play_modal";
+import PlayModal from "../modal/play_fund";
 import Title from "./title";
 import MyIcon from "../my_icon";
 import { Tabs } from "antd";
