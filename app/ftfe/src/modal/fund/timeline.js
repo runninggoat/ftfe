@@ -1,29 +1,73 @@
 import React, { Component } from "react";
 import { Timeline } from "antd";
-import faker from 'faker'
+import faker from "faker";
 const text =
   "许多小伙伴会有疑问，古法红糖的食品安全问题。红糖由制糖人手工熬制、手工切割，虽不用机器加工，但也能保证生态健康。我们将红糖做了质检，可以放心食用。我们希望把原生态的原汁糖，带给更多的人。 许多小伙伴会有疑问，古法红糖的食品安全问题。红糖由制糖人手工熬制、手工切割。";
 export default props => (
-  <div style={{ margin: "35px 0 0 107px" }}>
+  <div style={{ borderTop: "1px solid #EEEEEE" }}>
+  <div style={{ margin: "35px 44px 30px 107px"}}>
     <Timeline>
       <Timeline.Item
-        color="#4A4A4A"
+        color="#FF1367"
         style={{ fontSize: 15, fontseight: 400, lineHeight: "21px" }}
       >
         {text}
         <div>
-          <img src={faker.image.food()} />
+          <img
+            src={faker.image.food()}
+            style={{ height: 90, width: 90, marginRight: "10px" }}
+          />
+          <img
+            src={faker.image.sports()}
+            style={{ height: 90, width: 90, marginRight: "10px" }}
+          />
+        </div>
+        <div>
+          <img
+            src={faker.image.nightlife()}
+            style={{ height: 90, width: 90, marginRight: "10px" }}
+          />
         </div>
       </Timeline.Item>
-      <Timeline.Item color="#4A4A4A">
-        Solve initial network problems 2015-09-01
-      </Timeline.Item>
-      <Timeline.Item color="#4A4A4A">
-        >Technical testing 2015-09-01
-      </Timeline.Item>
-      <Timeline.Item color="#4A4A4A">
-        Network problems being solved 2015-09-01
-      </Timeline.Item>
+      <Timeline.Item color="#FF1367">{text}</Timeline.Item>
+      <Timeline.Item color="#FF1367">{text}</Timeline.Item>
+      <Timeline.Item color="#FF1367">{text}</Timeline.Item>
     </Timeline>
-  </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "80px",
+        left: "45px"
+      }}
+    >
+      2小时前
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "345px",
+        left: "45px"
+      }}
+    >
+      1天前
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "428px",
+        left: "45px"
+      }}
+    >
+      59天前
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "510px",
+        left: "18px"
+      }}
+    >
+      2018-09-28
+    </div>
+  </div></div>
 );
