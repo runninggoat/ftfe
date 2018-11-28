@@ -20,9 +20,7 @@ import MyIcon from "../my_icon";
 
 export default class HotMovieList extends Component {
   handleClick(e) {
-    console.log("1");
     this.refs.subcomponents.showModal();
-    console.log("2");
   }
 
   render() {
