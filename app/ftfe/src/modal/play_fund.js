@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { Modal } from "antd";
+import { Tabs } from "antd";
 import SidePanel from "./comment/side_panel";
 import CommentBar from "./comment/comment_bar";
 import PaidMovie from "./movie/paid_movie";
 import Comments from "./comment/comment_editor";
+import ProjectDetail from './fund/project_details'
 import { Row, Col, Progress, Tag, Button, Divider } from "antd";
 import img12 from "../image/012.jpg";
+import img11 from "../image/011.jpg";
 import MyIcon from "../my_icon";
 import {
   Player,
@@ -14,7 +17,7 @@ import {
   VolumeMenuButton,
   LoadingSpinner
 } from "video-react";
-
+const TabPane = Tabs.TabPane;
 export default class PlayModal extends Component {
   constructor(props) {
     super(props);
@@ -243,11 +246,12 @@ export default class PlayModal extends Component {
                         marginBottom: 15,
                         fontSize: 28,
                         fontWeight: 400,
-                        color: (this.props.money == 0
-                          ? "rgba(155,155,155,1)"
-                          : this.props.money == "20,000"
-                          ? "rgb(135, 208, 104)"
-                          : "rgb(16, 142, 233)"),
+                        color:
+                          this.props.money == 0
+                            ? "rgba(155,155,155,1)"
+                            : this.props.money == "20,000"
+                            ? "rgb(135, 208, 104)"
+                            : "rgb(16, 142, 233)",
                         lineHeight: "28px"
                       }}
                     >
@@ -289,7 +293,29 @@ export default class PlayModal extends Component {
                   </Col>
                 </Row>
               </Col>
-              <Col span={19} />
+              <Col span={19}>
+                <div
+                  style={{
+                    width: 980,
+                    marginTop: "15px",
+                    background: "rgba(255, 255, 255, 1)",
+                    boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
+                    borderRadius: "16px"
+                  }}
+                >
+                  <Tabs defaultActiveKey="1" size={'large'} tabBarStyle={{textAlign:'center', }}>
+                    <TabPane tab="项目详情" key="1">
+                    <ProjectDetail img={img11}/>
+                    </TabPane>
+                    <TabPane tab="动&nbsp;&nbsp;态" key="2">
+                      Content of Tab Pane 2
+                    </TabPane>
+                    <TabPane tab="问&nbsp;&nbsp;答" key="3">
+                      Content of Tab Pane 3
+                    </TabPane>
+                  </Tabs>
+                </div>
+              </Col>
               <Col span={5} />
             </Row>
           </div>
