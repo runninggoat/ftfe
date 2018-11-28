@@ -9,16 +9,7 @@ module.exports = {
     jest: true,
     jasmine: true,
   },
-  "parser": "babel-eslint",
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
-  },
-  "ecmaFeatures": {
-    "modules": true,
-    "jsx": true
-  },
+  parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2017,

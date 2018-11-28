@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Modal } from "antd";
-import { Tabs } from "antd";
 import SidePanel from "./comment/side_panel";
 import CommentBar from "./comment/comment_bar";
 import PaidMovie from "./movie/paid_movie";
 import Comments from "./comment/comment_editor";
+<<<<<<< HEAD
 import ProjectDetail from './fund/project_details'
 import Timeline from './fund/timeline'
+=======
+>>>>>>> parent of dad68f1... 项目详情
 import { Row, Col, Progress, Tag, Button, Divider } from "antd";
 import img12 from "../image/012.jpg";
-import img11 from "../image/011.jpg";
 import MyIcon from "../my_icon";
 import {
   Player,
@@ -18,7 +19,7 @@ import {
   VolumeMenuButton,
   LoadingSpinner
 } from "video-react";
-const TabPane = Tabs.TabPane;
+
 export default class PlayModal extends Component {
   constructor(props) {
     super(props);
@@ -247,12 +248,11 @@ export default class PlayModal extends Component {
                         marginBottom: 15,
                         fontSize: 28,
                         fontWeight: 400,
-                        color:
-                          this.props.money == 0
-                            ? "rgba(155,155,155,1)"
-                            : this.props.money == "20,000"
-                            ? "rgb(135, 208, 104)"
-                            : "rgb(16, 142, 233)",
+                        color: (this.props.money == 0
+                          ? "rgba(155,155,155,1)"
+                          : this.props.money == "20,000"
+                          ? "rgb(135, 208, 104)"
+                          : "rgb(16, 142, 233)"),
                         lineHeight: "28px"
                       }}
                     >
@@ -294,6 +294,7 @@ export default class PlayModal extends Component {
                   </Col>
                 </Row>
               </Col>
+<<<<<<< HEAD
               <Col span={19}>
                 <div
                   style={{
@@ -317,6 +318,9 @@ export default class PlayModal extends Component {
                   </Tabs>
                 </div>
               </Col>
+=======
+              <Col span={19} />
+>>>>>>> parent of dad68f1... 项目详情
               <Col span={5} />
             </Row>
           </div>
