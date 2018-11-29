@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, Col, Icon } from 'antd'
+import { Row, Col, Icon, Tooltip } from 'antd'
 import Logo from './logo'
 import Category from './category'
 import AlertBell from './alert_bell'
@@ -117,10 +117,21 @@ export default class TopHeader extends Component {
             }}>
               <Col
                 span={1}
+                onClick={ () => this.props.handleOpenFundingUpload() }
+                style={{ marginRight: '15px' }}
+              >
+                <Tooltip title='众筹上传'>
+                  <Icon type="dollar" theme="outlined" />
+                </Tooltip>
+              </Col>
+              <Col
+                span={1}
                 onClick={ () => this.props.handleOpenUpload() }
                 style={{ marginRight: '15px' }}
               >
-                <Icon type="upload" theme="outlined" />
+                <Tooltip title='普通上传'>
+                  <Icon type="upload" theme="outlined" />
+                </Tooltip>
               </Col>
               <Col span={1} style={{ marginRight: '15px' }}>
                 <a href="#/search" style={{ color: 'white' }}>

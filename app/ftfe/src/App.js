@@ -7,6 +7,7 @@ import Funding from "./funding/index.js";
 import BottomFooter from "./bottom_footer/bottom_footer.js";
 import LoginPanel from "./top_header/login";
 import UploadPanel from "./top_header/upload/upload";
+import FundingEditor from './top_header/upload/funding_upload.js'
 import { Provider } from "react-redux";
 import store from "./stores/store";
 
@@ -14,7 +15,8 @@ class App extends Component {
   state = {
     blur: false,
     displayLogin: false,
-    displayUpload: false
+    displayUpload: false,
+    displayFundingUpload: false,
   };
 
   turnOnBlur() {
@@ -63,6 +65,21 @@ class App extends Component {
     this.turnOffBlur();
   }
 
+  handleOpenFundingUpload(e) {
+    this.setState(() => {
+      return { displayFundingUpload: true };
+    });
+    this.turnOnBlur();
+  }
+
+  handleCloseFundingUpload(e) {
+    // console.log(e)
+    this.setState(state => {
+      return { displayFundingUpload: false };
+    });
+    this.turnOffBlur();
+  }
+
   render() {
     let loginP = null;
     if (this.state.displayLogin) {
@@ -82,6 +99,15 @@ class App extends Component {
         />
       );
     }
+    let fundingUploader = null;
+    if (this.state.displayFundingUpload) {
+      fundingUploader = (
+        <FundingEditor
+          display={this.state.displayFundingUpload}
+          onCloseFundingUpload={this.handleCloseFundingUpload.bind(this)}
+        />
+      )
+    }
     return (
       <Provider store={store}>
         <HashRouter>
@@ -94,6 +120,7 @@ class App extends Component {
               <TopHeader
                 handleOpenLogin={this.handleOpenLogin.bind(this)}
                 handleOpenUpload={this.handleOpenUpload.bind(this)}
+                handleOpenFundingUpload={this.handleOpenFundingUpload.bind(this)}
               />
               <Route exact path="/" component={Home} />
               <Route exact path="/funding" component={Funding} />
@@ -102,6 +129,7 @@ class App extends Component {
             </div>
             {loginP}
             {uploadP}
+            {fundingUploader}
             <div style={{ height: 0 }}>
               <svg width="0" height="0">
                 <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">

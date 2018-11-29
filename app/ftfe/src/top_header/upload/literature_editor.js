@@ -67,7 +67,7 @@ class LiteratureEditor_ extends Component {
 
   coverValidator = (rule, value, callback) => {
     let cover = this.props.form.getFieldValue('cover')
-    if (cover.selected) {
+    if (cover && cover.selected) {
       callback()
     } else {
       callback('请选择封面图片')
