@@ -130,7 +130,7 @@ export default class PlayModal extends Component {
                       </Tag>
                     </div>
                   </Col>
-                  
+
                   <Col span={19}>
                     <div style={{ width: "969px", margin: "20px 0 52px 41px" }}>
                       <Player poster={img12} preload="metadata">
@@ -278,32 +278,57 @@ export default class PlayModal extends Component {
                     </div>
                     <div>目标资金 (糖分)</div>
                   </Col>
-                 </Row>
+                </Row>
               </Col>
-              <Col span={24} style={{
-                    width:1270,
-                    height:359,
-                        fontSize: "32px",
-                        fontWeight: 500,
-                        color: "rgba(0,0,0,1)",
-                        lineHeight: "45px",
-                        margin: "15px 0 0px 0px",
-                        background: "rgba(255, 255, 255, 1)",
-                        boxShadow:'0px 2px 20px 0px rgba(0,0,0,0.06)',
-                        borderRadius:'16px',
-                      }}>
-                    <Row style={{}}>
-                      <Col span={8}>
-                      <Payment />
-                      </Col>
-                      <Col span={8}>
-                      <Payment />
-                      </Col>
-                      <Col span={8}>
-                      <Payment />
-                      </Col>
-                    </Row>
-                    </Col>
+              <Col
+                span={24}
+                style={{
+                  width: 1270,
+                  height: 359,
+                  fontSize: "32px",
+                  fontWeight: 500,
+                  color: "rgba(0,0,0,1)",
+                  lineHeight: "45px",
+                  margin: "15px 0 0px 0px",
+                  background: "rgba(255, 255, 255, 1)",
+                  boxShadow: "0px 2px 20px 0px rgba(0,0,0,0.06)",
+                  borderRadius: "16px"
+                }}
+              >
+                <Row style={{}}>
+                  <Col span={7}>
+                    <Payment />
+                  </Col>
+                  <Col span={1}>
+                    <Divider
+                      type="vertical"
+                      style={{
+                        width: "1px",
+                        height: "265px",
+                        background: "rgba(238,238,238,1)",
+                        margin: "49px 25px 0 25px",
+                      }}
+                    />
+                  </Col>
+                  <Col span={8}>
+                    <Payment />
+                  </Col>
+                  <Col span={1}>
+                    <Divider
+                      type="vertical"
+                      style={{
+                        width: "1px",
+                        height: "265px",
+                        background: "rgba(238,238,238,1)",
+                        margin: "49px 25px 0 25px",
+                      }}
+                    />
+                  </Col>
+                  <Col span={7}>
+                    <Payment />
+                  </Col>
+                </Row>
+              </Col>
               <Col span={19}>
                 <div
                   style={{
@@ -491,33 +516,31 @@ export default class PlayModal extends Component {
                     </div>
                   </Col>
                   <Col span={24}>
-                <div
-                  style={{
-                    width: "275px",
-                    height: "563px",
-                    background: "rgba(255,255,255,1)",
-                    boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
-                    borderRadius: "16px",
-                    margin: "15px 0 15px -9px"
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "20px",
-                      fontWeight: 400,
-                      color: "rgba(74,74,74,1)",
-                      lineHeight: "28px",
-                      padding: "15px"
-                    }}
-                  >
-                    预算分配
-                  </div>
-                </div>
-              </Col>
+                    <div
+                      style={{
+                        width: "275px",
+                        height: "563px",
+                        background: "rgba(255,255,255,1)",
+                        boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
+                        borderRadius: "16px",
+                        margin: "15px 0 15px -9px"
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: 400,
+                          color: "rgba(74,74,74,1)",
+                          lineHeight: "28px",
+                          padding: "15px"
+                        }}
+                      >
+                        预算分配
+                      </div>
+                    </div>
+                  </Col>
                 </Row>
               </Col>
-
-              
             </Row>
           </div>
         </Modal>

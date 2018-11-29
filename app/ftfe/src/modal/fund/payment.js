@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Button } from "antd";
 import faker from "faker";
 import Mock from 'mockjs'
-export default () => (
+export default props => (
   <Row>
     <Col span={8} style={{}}>
       <div
@@ -43,16 +43,16 @@ export default () => (
     </Col>
     <Col span={24} style={{ textAlign: "center" }}>
       <img
-        src={faker.image.animals()} alt={Mock.Random.image('200x100', '#50B347', '#FFF', '有图')}
+        src={faker.image.animals()} alt=""
         style={{ width: 70, height: 70, borderRadius: 4 }}
       />
       <img
         style={{ width: 70, height: 70, borderRadius: 4, margin: " 0 10px" }}
-        src={faker.image.cats()} alt={Mock.Random.image('200x100', '#50B347', '#FFF', '有图')}
+        src={faker.image.cats()} alt=""
       />
       <img
         style={{ width: 70, height: 70, borderRadius: 4 }}
-        src={faker.image.fashion()} alt={Mock.Random.image('200x100', '#50B347', '#FFF', '有图')}
+        src={faker.image.fashion()} alt=""
       />
     </Col>
     <Col span={24}>
@@ -62,7 +62,8 @@ export default () => (
           fontWeight: 400,
           color: "rgba(74,74,74,1)",
           lineHeight: "22px",
-          margin: "15px 0 10px 25px",
+          margin: "15px 25px 10px 25px",
+          width:321,
         }}
       >
         的條別然所日怕了影近意，生言有我感際英面，別一他草；社團時任光地？住情半電地裡看畫朋我我室劇。樂不外我我室劇的條別然所日怕了影近意，生言有我感際英面，別一他草；社團時
