@@ -54,7 +54,7 @@ class Home extends Component {
                 >
                   <TabPane tab={<span>推&nbsp;&nbsp;荐</span>} key="1" />
                   <TabPane tab={<span>预&nbsp;&nbsp;热</span>} key="2" />
-                  <TabPane tab={<span>众凑中</span>} key="3" />
+                  <TabPane tab={<span>众筹中</span>} key="3" />
                   <TabPane tab={<span>成功项目</span>} key="4" />
                 </Tabs>
               </Col>
