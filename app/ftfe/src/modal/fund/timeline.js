@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Timeline } from "antd";
 import faker from "faker";
+import Mock from 'mockjs';
 const text =
   "许多小伙伴会有疑问，古法红糖的食品安全问题。红糖由制糖人手工熬制、手工切割，虽不用机器加工，但也能保证生态健康。我们将红糖做了质检，可以放心食用。我们希望把原生态的原汁糖，带给更多的人。 许多小伙伴会有疑问，古法红糖的食品安全问题。红糖由制糖人手工熬制、手工切割。";
 export default props => (
@@ -14,17 +15,17 @@ export default props => (
         {text}
         <div>
           <img
-            src={faker.image.food()}
+            src={faker.image.food()} alt={Mock.Random.image('200x100', '#50B347', '#FFF', '有图')}
             style={{ height: 90, width: 90, margin:'10px 10px 10px 0', }}
           />
           <img
-            src={faker.image.sports()}
+            src={faker.image.sports()} alt={Mock.Random.image('200x100', '#50B347', '#FFF', '有图')}
             style={{ height: 90, width: 90,  }}
           />
         </div>
         <div>
           <img
-            src={faker.image.nightlife()}
+            src={faker.image.nightlife()} alt={Mock.Random.image('200x100', '#50B347', '#FFF', '有图')}
             style={{ height: 90, width: 90, marginBottom:'10px',}}
           />
         </div>
@@ -36,7 +37,7 @@ export default props => (
     <div
       style={{
         position: "absolute",
-        top: "80px",
+        top: "85px",
         left: "45px"
       }}
     >
@@ -45,7 +46,7 @@ export default props => (
     <div
       style={{
         position: "absolute",
-        top: "345px",
+        top: "375px",
         left: "45px"
       }}
     >
@@ -54,7 +55,7 @@ export default props => (
     <div
       style={{
         position: "absolute",
-        top: "428px",
+        top: "458px",
         left: "45px"
       }}
     >
@@ -63,7 +64,7 @@ export default props => (
     <div
       style={{
         position: "absolute",
-        top: "510px",
+        top: "540px",
         left: "18px"
       }}
     >

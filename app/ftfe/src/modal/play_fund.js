@@ -278,16 +278,21 @@ export default class PlayModal extends Component {
                     </div>
                     <div>目标资金 (糖分)</div>
                   </Col>
-                  <Col span={24} style={{
+                 </Row>
+              </Col>
+              <Col span={24} style={{
                     width:1270,
                     height:359,
                         fontSize: "32px",
                         fontWeight: 500,
                         color: "rgba(0,0,0,1)",
                         lineHeight: "45px",
-                        margin: "30px 0 0px 38px"
+                        margin: "15px 0 0px 0px",
+                        background: "rgba(255, 255, 255, 1)",
+                        boxShadow:'0px 2px 20px 0px rgba(0,0,0,0.06)',
+                        borderRadius:'16px',
                       }}>
-                    <Row>
+                    <Row style={{}}>
                       <Col span={8}>
                       <Payment />
                       </Col>
@@ -298,8 +303,7 @@ export default class PlayModal extends Component {
                       <Payment />
                       </Col>
                     </Row>
-                    </Col></Row>
-              </Col>
+                    </Col>
               <Col span={19}>
                 <div
                   style={{
