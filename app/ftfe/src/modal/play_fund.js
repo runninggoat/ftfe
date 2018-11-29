@@ -14,6 +14,7 @@ import { Row, Col, Progress, Tag, Button, Divider } from "antd";
 import img12 from "../image/012.jpg";
 import img11 from "../image/011.jpg";
 import MyIcon from "../my_icon";
+import imgChart from "../image/分组 12.png";
 import {
   Player,
   BigPlayButton,
@@ -22,6 +23,41 @@ import {
   LoadingSpinner
 } from "video-react";
 const TabPane = Tabs.TabPane;
+const chart = (fcolor) =>(
+  <div
+                        style={{
+                          margin: "20px 0 0 23px",
+                          fontSize: "20px",
+                          fontWeight: 400,
+                          color: '#4A4A4A',
+                          lineHeight: "28px",
+                          position: "relative"
+                        }}
+                      >
+                        <div>
+                          <div
+                            style={{
+                              height: 17,
+                              width: 17,
+                              borderRadius: 9,
+                              background: fcolor,
+                            }}
+                          />{" "}
+                          <span
+                            style={{
+                              position: "absolute",
+                              top: "-5px",
+                              left: "40px"
+                            }}
+                          >
+                            90% &nbsp;&nbsp;&nbsp;分类1
+                          </span>
+                        </div>
+                      </div>
+)
+
+
+
 export default class PlayModal extends Component {
   constructor(props) {
     super(props);
@@ -306,7 +342,7 @@ export default class PlayModal extends Component {
                         width: "1px",
                         height: "265px",
                         background: "rgba(238,238,238,1)",
-                        margin: "49px 25px 0 25px",
+                        margin: "49px 25px 0 25px"
                       }}
                     />
                   </Col>
@@ -320,7 +356,7 @@ export default class PlayModal extends Component {
                         width: "1px",
                         height: "265px",
                         background: "rgba(238,238,238,1)",
-                        margin: "49px 25px 0 25px",
+                        margin: "49px 25px 0 25px"
                       }}
                     />
                   </Col>
@@ -536,6 +572,60 @@ export default class PlayModal extends Component {
                         }}
                       >
                         预算分配
+                      </div>
+                      <div style={{ margin: "28px 0 38px 53px" }}>
+                        <img src={imgChart} />
+                      </div>
+
+                      
+                      {chart('#F0F5FF')}
+                      {chart('#D6E4FF')}
+                      {chart('#85A5FF')}
+                      {chart('#597EF7')}
+                      {chart('#2F54EB')}
+                      {chart('#1D39C4')}
+                      {chart('#061178')}
+                      
+                    </div>
+                  </Col>
+                  <Col>
+                    <div style={{ position: "fixed", top: "80%" }}>
+                      <div style={{}}>
+                        <a>
+                          &nbsp;
+                          <Button
+                            style={{
+                              width: "68px",
+                              height: "68px",
+                              background: "rgba(238,238,238,1",
+                              borderRadius: "17px"
+                            }}
+                          >
+                            <MyIcon
+                              type="icon-totop"
+                              style={{ fontSize: 29, color: "#BCBCBC" }}
+                            />
+                          </Button>
+                        </a>
+                      </div>
+                      <br />
+                      <div style={{}}>
+                        <a>
+                          &nbsp;
+                          <Button
+                            style={{
+                              width: "68px",
+                              height: "68px",
+                              background: "rgba(238,238,238,1",
+                              borderRadius: "17px"
+                            }}
+                          >
+                            <MyIcon
+                              type="icon-interactive"
+                              style={{ fontSize: 40, color: "#BCBCBC" }}
+                            />
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </Col>
