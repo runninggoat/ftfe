@@ -9,6 +9,13 @@ const Option = Select.Option
 const CheckableTag = Tag.CheckableTag
 
 class FundingEditor extends Component {
+  state = {
+    title: '',
+    classification: {},
+    targetAmount: '',
+    content: '',
+  }
+
   render () {
     return (
       <Modal
@@ -73,8 +80,8 @@ class FundingEditor extends Component {
                   <CountableInput
                     placeholder="请输入项目名"
                     maxLen={30}
-                    value={ '' }
-                    handleChange={ (p) => {} }
+                    value={ this.state.title }
+                    handleChange={ (p) => {this.setState({ title: p })} }
                     style={{
                       width: '560px',
                       marginTop: '10px',
@@ -87,8 +94,8 @@ class FundingEditor extends Component {
                   <Title must={true} text="分类（至少一个）" />
                   <Classification
                     classes={ ['新闻', '动画', '综艺', '电影', '纪录片', '美食', '旅行', '自然'] }
-                    value={ '' }
-                    handleChange={ (p) => {} }
+                    value={ this.state.classification }
+                    handleChange={ (p) => {this.setState({classification: p})} }
                     selectStyle={{
                       width: '300px',
                       marginTop: '10px',
@@ -112,8 +119,8 @@ class FundingEditor extends Component {
                         step={1}
                         precision={2}
                         placeholder="最少1000"
-                        value={ '' }
-                        onChange={ (p) => {} }
+                        value={ this.state.targetAmount }
+                        onChange={ (p) => {this.setState({targetAmount: p})} }
                         style={{
                           width: '280px',
                           marginTop: '10px',
@@ -483,8 +490,8 @@ class FundingEditor extends Component {
                   <CountableTextArea
                     maxLen={20000}
                     rows={20}
-                    value={ '' }
-                    handleChange={ (p) => {} }
+                    value={ this.state.content }
+                    handleChange={ (p) => {this.setState({content: p})} }
                     placeholder="请输入正文内容"
                     bgColor="#fff"
                     style={{ width: '100%' }}
