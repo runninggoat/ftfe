@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import { Modal } from "antd";
 import { Tabs } from "antd";
 import faker from "faker";
-import SidePanel from "./comment/side_panel";
-import CommentBar from "./comment/comment_bar";
-import PaidMovie from "./movie/paid_movie";
-import Comments from "./comment/comment_editor";
 import Questions from "./fund/questions";
 import Payment from "./fund/payment";
 import ProjectDetail from "./fund/project_details";
@@ -333,7 +329,7 @@ export default class PlayModal extends Component {
               >
                 <Row style={{}}>
                   <Col span={7}>
-                    <Payment />
+                    <Payment money="￥69"/>
                   </Col>
                   <Col span={1}>
                     <Divider
@@ -347,7 +343,7 @@ export default class PlayModal extends Component {
                     />
                   </Col>
                   <Col span={8}>
-                    <Payment />
+                    <Payment money="￥10,000"/>
                   </Col>
                   <Col span={1}>
                     <Divider
@@ -361,7 +357,7 @@ export default class PlayModal extends Component {
                     />
                   </Col>
                   <Col span={7}>
-                    <Payment />
+                    <Payment money="￥20,000"/>
                   </Col>
                 </Row>
               </Col>
