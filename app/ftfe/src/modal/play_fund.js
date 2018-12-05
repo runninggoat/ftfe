@@ -19,40 +19,82 @@ import {
   LoadingSpinner
 } from "video-react";
 const TabPane = Tabs.TabPane;
-const chart = (fcolor) =>(
-  <div
-                        style={{
-                          margin: "20px 0 0 23px",
-                          fontSize: "20px",
-                          fontWeight: 400,
-                          color: '#4A4A4A',
-                          lineHeight: "28px",
-                          position: "relative"
+const investor = money => (
+  <div style={{
+                          margin: "20px 15px 10px 10px"
                         }}
                       >
-                        <div>
-                          <div
-                            style={{
-                              height: 17,
-                              width: 17,
-                              borderRadius: 9,
-                              background: fcolor,
-                            }}
-                          />{" "}
-                          <span
-                            style={{
-                              position: "absolute",
-                              top: "-5px",
-                              left: "40px"
-                            }}
-                          >
-                            90% &nbsp;&nbsp;&nbsp;分类1
-                          </span>
-                        </div>
+                        <img
+                          src={faker.image.avatar()}
+                          style={{
+                            width: 35,
+                            height: 35,
+                            borderRadius: 18,
+                            marginLeft: 10
+                          }}
+                        />
+                        <span
+                          style={{
+                            marginLeft: 15,
+                            fontSize: "14px",
+                            fontWeight: 400,
+                            color: "rgba(74,74,74,1)",
+                            lineHeight: "20px"
+                          }}
+                        >
+                          演员丽娜朱丽叶
+                        </span>
+                        <span
+                          style={{
+                            marginLeft: 24,
+                            fontSize: "14px",
+                            fontWeight: 400,
+                            color: "rgba(255,19,103,1)",
+                            lineHeight: "20px"
+                          }}
+                        >
+                          ¥ {money}
+                        </span>
+                        <Divider
+                          style={{
+                            width: "80%",
+                            margin: 'auto',
+                          }}
+                        />
                       </div>
 )
-
-
+const chart = fcolor => (
+  <div
+    style={{
+      margin: "20px 0 0 23px",
+      fontSize: "20px",
+      fontWeight: 400,
+      color: "#4A4A4A",
+      lineHeight: "28px",
+      position: "relative"
+    }}
+  >
+    <div>
+      <div
+        style={{
+          height: 17,
+          width: 17,
+          borderRadius: 9,
+          background: fcolor
+        }}
+      />{" "}
+      <span
+        style={{
+          position: "absolute",
+          top: "-5px",
+          left: "40px"
+        }}
+      >
+        90% &nbsp;&nbsp;&nbsp;分类1
+      </span>
+    </div>
+  </div>
+);
 
 export default class PlayModal extends Component {
   constructor(props) {
@@ -329,7 +371,7 @@ export default class PlayModal extends Component {
               >
                 <Row style={{}}>
                   <Col span={7}>
-                    <Payment money="￥69"/>
+                    <Payment money="￥69" />
                   </Col>
                   <Col span={1}>
                     <Divider
@@ -343,7 +385,7 @@ export default class PlayModal extends Component {
                     />
                   </Col>
                   <Col span={8}>
-                    <Payment money="￥10,000"/>
+                    <Payment money="￥10,000" />
                   </Col>
                   <Col span={1}>
                     <Divider
@@ -357,7 +399,7 @@ export default class PlayModal extends Component {
                     />
                   </Col>
                   <Col span={7}>
-                    <Payment money="￥20,000"/>
+                    <Payment money="￥20,000" />
                   </Col>
                 </Row>
               </Col>
@@ -390,6 +432,64 @@ export default class PlayModal extends Component {
               </Col>
               <Col span={5}>
                 <Row>
+                  <Col span={24}>
+                    <div
+                      style={{
+                        width: "275px",
+                        height: "563px",
+                        background: "rgba(255,255,255,1)",
+                        borderRadius: "16px",
+                        margin: "15px 0 15px -9px"
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: 150,
+                          height: 28,
+                          fontSize: "20px",
+                          fontWeight: "400",
+                          color: "rgba(74,74,74,1)",
+                          lineHeight: "28px",
+                          padding: "15px"
+                        }}
+                      >
+                        最新投资人
+                      </div>
+                      <div
+                        style={{
+                          margin: "20px 0 0 0",
+                          fontSize: 14,
+                          fontWeight: 400,
+                          color: "rgba(155,155,155,1)",
+                          lineHeight: "20px"
+                        }}
+                      >
+                        <span
+                          style={{
+                            margin: "0 0 0 40px"
+                          }}
+                        >
+                          用户名
+                        </span>
+                        <span
+                          style={{
+                            margin: "0 40px 0 110px"
+                          }}
+                        >
+                          投票糖分
+                        </span>
+                      </div>
+                      {investor("20,000")}
+                      {investor("60")}
+                      {investor("10,000")}
+                      {investor("10,000")}
+                      {investor("60")}
+                      {investor("60")}
+                      {investor("60")}
+                      {investor("60")}
+
+                    </div>
+                  </Col>
                   <Col span={24}>
                     <div
                       style={{
@@ -573,15 +673,13 @@ export default class PlayModal extends Component {
                         <img src={imgChart} />
                       </div>
 
-                      
-                      {chart('#F0F5FF')}
-                      {chart('#D6E4FF')}
-                      {chart('#85A5FF')}
-                      {chart('#597EF7')}
-                      {chart('#2F54EB')}
-                      {chart('#1D39C4')}
-                      {chart('#061178')}
-                      
+                      {chart("#F0F5FF")}
+                      {chart("#D6E4FF")}
+                      {chart("#85A5FF")}
+                      {chart("#597EF7")}
+                      {chart("#2F54EB")}
+                      {chart("#1D39C4")}
+                      {chart("#061178")}
                     </div>
                   </Col>
                   <Col>
