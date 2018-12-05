@@ -20,49 +20,50 @@ import {
 } from "video-react";
 const TabPane = Tabs.TabPane;
 const investor = money => (
-  <div style={{
-                          margin: "20px 15px 10px 10px"
-                        }}
-                      >
-                        <img
-                          src={faker.image.avatar()}
-                          style={{
-                            width: 35,
-                            height: 35,
-                            borderRadius: 18,
-                            marginLeft: 10
-                          }}
-                        />
-                        <span
-                          style={{
-                            marginLeft: 15,
-                            fontSize: "14px",
-                            fontWeight: 400,
-                            color: "rgba(74,74,74,1)",
-                            lineHeight: "20px"
-                          }}
-                        >
-                          演员丽娜朱丽叶
-                        </span>
-                        <span
-                          style={{
-                            marginLeft: 24,
-                            fontSize: "14px",
-                            fontWeight: 400,
-                            color: "rgba(255,19,103,1)",
-                            lineHeight: "20px"
-                          }}
-                        >
-                          ¥ {money}
-                        </span>
-                        <Divider
-                          style={{
-                            width: "80%",
-                            margin: 'auto',
-                          }}
-                        />
-                      </div>
-)
+  <div
+    style={{
+      margin: "20px 15px 10px 10px"
+    }}
+  >
+    <img
+      src={faker.image.avatar()}
+      style={{
+        width: 35,
+        height: 35,
+        borderRadius: 18,
+        marginLeft: 10
+      }}
+    />
+    <span
+      style={{
+        marginLeft: 15,
+        fontSize: "14px",
+        fontWeight: 400,
+        color: "rgba(74,74,74,1)",
+        lineHeight: "20px"
+      }}
+    >
+      演员丽娜朱丽叶
+    </span>
+    <span
+      style={{
+        marginLeft: 24,
+        fontSize: "14px",
+        fontWeight: 400,
+        color: "rgba(255,19,103,1)",
+        lineHeight: "20px"
+      }}
+    >
+      ¥ {money}
+    </span>
+    <Divider
+      style={{
+        width: "80%",
+        margin: "auto"
+      }}
+    />
+  </div>
+);
 const chart = fcolor => (
   <div
     style={{
@@ -487,7 +488,6 @@ export default class PlayModal extends Component {
                       {investor("60")}
                       {investor("60")}
                       {investor("60")}
-
                     </div>
                   </Col>
                   <Col span={24}>
