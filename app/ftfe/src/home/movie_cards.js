@@ -113,11 +113,15 @@ class MovieCards extends Component {
               >
                 {this.props.type2 ? (
                   <Tag
-                    color="#EEEEEE"
+                    color={this.props.type2=='访谈' ?'#85A5FF':
+                    this.props.type2=='言情' ?'#FFC53D':
+                    this.props.type2=='独立摇滚' ?'#5CDBD3':
+                    this.props.type2=='编舞' ?'#BAE637':
+                    "yellow"}
                     style={{
                       borderRadius: "10px",
                       maxHeight: 20,
-                      color: "#9B9B9B"
+                      color: "#FFFFFF"
                     }}
                   >
                     {this.props.type2}
