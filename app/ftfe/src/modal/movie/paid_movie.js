@@ -71,19 +71,19 @@ export default () => (
                 style={{
                   border: 0,
                   borderRadius: "10px",
-                  background: "#EEEEEE"
+                  background: "#FFC53D"
                 }}
               >
-                <span style={{ color: "#9B9B9B" }}>动画</span>
+                <span style={{ color: "#FFFFFF" }}>动画</span>
               </Tag>
               <Tag
                 style={{
                   border: 0,
                   borderRadius: "10px",
-                  background: "#EEEEEE"
+                  background: "#5CDBD3"
                 }}
               >
-                <span style={{ color: "#9B9B9B" }}>原创</span>
+                <span style={{ color: "#FFFFFF" }}>原创</span>
               </Tag>
             </div>
           </Col>
