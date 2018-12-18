@@ -8,7 +8,7 @@ import PlayModal from "../modal/play_modal";
 import MyIcon from "../my_icon";
 import { Tabs } from "antd";
 import "./hot.less";
-
+import ftImg from '../image/ft.png'
 const TabPane = Tabs.TabPane;
 
 class Home extends Component {
@@ -34,7 +34,14 @@ class Home extends Component {
             }}
           >
             <Row type="flex" justify="center">
-              <Col offset={1} span={22}>
+            <Col offset={1} span={6}>
+            <img src={ftImg} style={{
+                position: 'absolute',
+                bottom: '0px'
+            }}/>
+            </Col>
+              <Col  span={17}>
+                
                 <Tabs
                   defaultActiveKey="1"
                   size={"large"}
