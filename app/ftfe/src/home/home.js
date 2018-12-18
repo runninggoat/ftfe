@@ -3,6 +3,7 @@ import Ad from "./ad_title";
 import HotMovieList from "./hot_movie_list";
 import { Row, Col, Button, Icon, Carousel } from "antd";
 import WatchList from "./watch_list";
+import UserList from "./hot_user_list";
 import NewUpload from "./new_upload";
 import PlayModal from "../modal/play_modal";
 import MyIcon from "../my_icon";
@@ -138,6 +139,60 @@ class Home extends Component {
               </div>
               <div>
                 <WatchList />
+              </div>
+            </Carousel>
+            <div
+              style={{
+                width: 60,
+                position: "absolute",
+                top: 345,
+                right: 1400
+              }}
+            >
+              <Button className="homepage-btn">
+                <MyIcon className="homepage-icon" type={"icon-enter-copy"} />
+              </Button>
+            </div>
+            <div
+              style={{
+                width: 60,
+                position: "absolute",
+                top: 345,
+                left: 1400
+              }}
+            >
+              <Button className="homepage-btn">
+                <MyIcon className="homepage-icon" type={"icon-enter"} />
+              </Button>
+            </div>
+          </div>
+        </Col>
+        {/* user */}
+        <Col span={24}>
+          <div
+            style={{
+              backgroundColor: "#FEFEFE",
+              maxWidth: "1440px",
+              minWidth: "1200px",
+              margin: "auto",
+              position: "relative"
+            }}
+          >
+            <Carousel>
+              <div>
+                <UserList />
+              </div>
+              <div>
+                <UserList />
+              </div>
+              <div>
+                <UserList />
+              </div>
+              <div>
+                <UserList />
+              </div>
+              <div>
+                <UserList />
               </div>
             </Carousel>
             <div
