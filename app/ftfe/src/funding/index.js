@@ -13,6 +13,8 @@ import img4 from "../image/005.jpg";
 import img5 from "../image/006.jpg";
 import img9 from "../image/009.jpg";
 
+import ftImg from '../image/ft.png'
+
 const TabPane = Tabs.TabPane;
 const color1 =
   "linear-gradient(270deg,rgba(250,217,97,1) 0%,rgba(249,163,63,1) 100%)";
@@ -46,16 +48,25 @@ class Home extends Component {
             }}
           >
             <Row type="flex" justify="center">
-              <Col offset={1} span={22}>
+            <Col offset={1} span={6}>
+                <img
+                  src={ftImg}
+                  style={{
+                    position: "absolute",
+                    bottom: "0px"
+                  }}
+                />
+              </Col>
+              <Col span={17}>
                 <Tabs
                   defaultActiveKey="1"
                   size={"large"}
                   style={{ marginLeft: "-30px" }}
                 >
                   <TabPane tab={<span>推&nbsp;&nbsp;荐</span>} key="1" />
-                  <TabPane tab={<span>预&nbsp;&nbsp;热</span>} key="2" />
-                  <TabPane tab={<span>众筹中</span>} key="3" />
-                  <TabPane tab={<span>成功项目</span>} key="4" />
+                  <TabPane tab={<span>视&nbsp;&nbsp;频</span>} key="2" />
+                  <TabPane tab={<span>文&nbsp;&nbsp;学</span>} key="3" />
+                  <TabPane tab={<span>其&nbsp;&nbsp;他</span>} key="4" />
                 </Tabs>
               </Col>
             </Row>

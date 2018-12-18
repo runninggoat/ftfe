@@ -23,28 +23,28 @@ const Right =(props) =>{
             <Col span={24}>
             <Tag style={{
                     margin:"0 5px",
-                    color:"#9B9B9B",
+                    color:"#FFFFFF",
                     width:55,
                     height:20,
-                    background:'rgba(238,238,238,1)',
+                    background:'#FFC53D',
                     borderRadius:'10px',
                     textAlign: 'center',
                 }}>动画</Tag>
                 <Tag style={{
                     margin:"0 5px",
-                    color:"#9B9B9B",
+                    color:"#FFFFFF",
                     width:55,
                     height:20,
-                    background:'rgba(238,238,238,1)',
+                    background:'#FFC53D',
                     borderRadius:'10px',
                     textAlign: 'center',
                 }}>视频</Tag>
                 <Tag style={{
                     margin:"0 5px",
-                    color:"#9B9B9B",
+                    color:"#FFFFFF",
                     width:55,
                     height:20,
-                    background:'rgba(238,238,238,1)',
+                    background:'#FFC53D',
                     borderRadius:'10px',
                     textAlign: 'center',
                 }}>原创</Tag>
