@@ -10,7 +10,7 @@ const title1 = "搜索匹配到的";
 const title2 = "关键字";
 const title3 = "变成粉色变成团队采访徐峥徐峥…";
 const searchr = (
-  <Row type="flex" justify="space-around">
+  <Row type="flex" justify="space-around" >
     <Col span={4}>
       <Card
         img={img6}

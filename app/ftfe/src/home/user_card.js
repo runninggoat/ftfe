@@ -32,7 +32,7 @@ class UserCard extends Component {
       >
         <Col span={8}>
           <img
-            src={faker.image.people()}
+            src={faker.image.avatar()}
             style={{
               width: "90px",
               height: "90px",

@@ -64,7 +64,7 @@ class MovieCards extends Component {
                 boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
                 borderBottomLeftRadius: "16px",
                 borderBottomRightRadius: "16px",
-                height: "156px"
+                height: "180px"
               }}
             >
               <Row>
@@ -135,17 +135,17 @@ class MovieCards extends Component {
                     <span
                       style={{
                         margin: "0 0px 0 2px",
-                        color: "#9B9B9B",
+                        color: "#85A5FF",
                         fontSize: 12
                       }}
                     >
                       {this.props.type1 ? (
                         <Tag
-                          color="#EEEEEE"
+                          color="#85A5FF"
                           style={{
                             borderRadius: "10px",
                             maxHeight: 20,
-                            color: "#9B9B9B"
+                            color: "#FFFFFF"
                           }}
                         >
                           {this.props.type1}
@@ -163,11 +163,11 @@ class MovieCards extends Component {
                     >
                       {this.props.type1 ? (
                         <Tag
-                          color="#EEEEEE"
+                          color="#FFC53D"
                           style={{
                             borderRadius: "10px",
                             maxHeight: 20,
-                            color: "#9B9B9B"
+                            color: "#FFFFFF"
                           }}
                         >
                           {this.props.type1}
@@ -185,11 +185,11 @@ class MovieCards extends Component {
                     >
                       {this.props.type1 ? (
                         <Tag
-                          color="#EEEEEE"
+                          color="#5CDBD3"
                           style={{
                             borderRadius: "10px",
                             maxHeight: 20,
-                            color: "#9B9B9B"
+                            color: "#FFFFFF"
                           }}
                         >
                           {this.props.type1}
