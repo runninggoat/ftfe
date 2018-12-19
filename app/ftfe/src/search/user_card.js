@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import { Tag } from "antd";
-import MyIcon from "../my_icon";
+// import { Tag } from "antd";
+// import MyIcon from "../my_icon";
 import faker from "faker";
 import { Row, Col } from "antd";
-import PlayModal from "../modal/play_modal";
+// import PlayModal from "../modal/play_modal";
 //const img1 ="https://pic.36krcnd.com/201804/21023539/7g8t9syx7cwv6lrm.png!1200";
-import img1 from "../image/001.jpeg";
-import img3 from "../image/003.jpg";
+// import img1 from "../image/001.jpeg";
+// import img3 from "../image/003.jpg";
 import img4 from "../image/004.jpeg";
 import img5 from "../image/005.jpg";
-import img6 from "../image/006.jpg";
+// import img6 from "../image/006.jpg";
 import img7 from "../image/007.jpg";
-import img8 from "../image/008.jpg";
-import img9 from "../image/009.jpg";
-import img10 from "../image/010.jpg";
-import img11 from "../image/011.jpg";
-import img12 from "../image/012.jpg";
-import img13 from "../image/013.jpg";
+// import img8 from "../image/008.jpg";
+// import img9 from "../image/009.jpg";
+// import img10 from "../image/010.jpg";
+// import img11 from "../image/011.jpg";
+// import img12 from "../image/012.jpg";
+// import img13 from "../image/013.jpg";
 
 class UserCard extends Component {
   render() {

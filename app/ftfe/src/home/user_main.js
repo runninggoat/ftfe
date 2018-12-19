@@ -9,17 +9,17 @@ import MyIcon from "../my_icon";
 import DDate from "../search/dropdown_date";
 import DProject from "../search/dropdown_project";
 import MovieCard from "./movie_cards";
-import img1 from "../image/001.jpeg";
-import img3 from "../image/003.jpg";
-import img4 from "../image/004.jpeg";
-import img5 from "../image/005.jpg";
-import img6 from "../image/006.jpg";
-import img7 from "../image/007.jpg";
-import img8 from "../image/008.jpg";
+// import img1 from "../image/001.jpeg";
+// import img3 from "../image/003.jpg";
+// import img4 from "../image/004.jpeg";
+// import img5 from "../image/005.jpg";
+// import img6 from "../image/006.jpg";
+// import img7 from "../image/007.jpg";
+// import img8 from "../image/008.jpg";
 import img9 from "../image/009.jpg";
-import img10 from "../image/010.jpg";
-import img11 from "../image/011.jpg";
-import img12 from "../image/012.jpg";
+// import img10 from "../image/010.jpg";
+// import img11 from "../image/011.jpg";
+// import img12 from "../image/012.jpg";
 import img13 from "../image/013.jpg";
 import { Select } from "antd";
 
@@ -46,7 +46,7 @@ export default () => (
         position: "relative"
       }}
     >
-      <img
+      <img alt=""
         src={img9}
         style={{
           width: "1280px",
@@ -55,7 +55,7 @@ export default () => (
           borderTopRightRadius: "16px"
         }}
       />
-      <img
+      <img alt=""
         src={faker.image.avatar()}
         style={{
           width: "100px",
