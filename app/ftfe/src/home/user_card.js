@@ -126,6 +126,72 @@ class UserCard extends Component {
             分类
           </button>
         </Col>
+        <Col span={24} style={{ marginTop: "15px" }}>
+          <div
+            style={{
+              width: "240px",
+              height: "178px",
+              background: "rgba(255,255,255,1)",
+              boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
+              borderRadius: "16px",
+              margin: "15px auto"
+            }}
+          >
+            <img
+              src={img7}
+              style={{
+                width: "240px",
+                height: "136px",
+                borderTopLeftRadius: "16px",
+                borderTopRightRadius: "16px"
+              }}
+            />
+            <div
+              style={{
+                padding: "10px",
+                fontSize: "18px",
+                fontWeight: 400,
+                color: "rgba(0,0,0,1)",
+                lineHeight: "24px"
+              }}
+            >
+              相关视频1
+            </div>
+          </div>
+        </Col>
+        <Col span={24}>
+          <div
+            style={{
+              width: "240px",
+              height: "178px",
+              background: "rgba(255,255,255,1)",
+              boxShadow: "0px 2px 15px 0px rgba(0,0,0,0.05)",
+              borderRadius: "16px",
+              margin: "0 auto"
+            }}
+          >
+            <img
+              src={img7}
+              style={{
+                width: "240px",
+                height: "136px",
+                borderTopLeftRadius: "16px",
+                borderTopRightRadius: "16px"
+              }}
+            />
+            <div
+              style={{
+                padding: "10px",
+                fontSize: "18px",
+                fontWeight: 400,
+                color: "rgba(0,0,0,1)",
+                lineHeight: "24px"
+              }}
+            >
+              相关视频1
+            </div>
+          </div>
+        </Col>
       </Row>
     );
   }
