@@ -179,9 +179,9 @@ class Home extends Component {
             }}
           >
             <Carousel>
-              <div>
+              <a href='#/user_main'><div>
                 <UserList />
-              </div>
+              </div></a>
               <div>
                 <UserList />
               </div>

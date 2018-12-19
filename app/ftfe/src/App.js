@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, HashRouter } from "react-router-dom";
 import TopHeader from "./top_header/top_header.js";
 import Home from "./home/home.js";
+import UserMain from './home/user_main'
 import Search from "./search/search.js";
 import Funding from "./funding/index.js";
 import BottomFooter from "./bottom_footer/bottom_footer.js";
@@ -125,6 +126,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/funding" component={Funding} />
               <Route exact path="/search" component={Search} />
+              <Route exact path="/user_main" component={UserMain} />
               <BottomFooter />
             </div>
             {loginP}
