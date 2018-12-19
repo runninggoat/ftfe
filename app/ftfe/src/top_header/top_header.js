@@ -4,6 +4,9 @@ import Logo from './logo'
 import Category from './category'
 import AlertBell from './alert_bell'
 import MyIcon from '../my_icon'
+import { Input } from 'antd';
+
+const Search = Input.Search;
 
 export default class TopHeader extends Component {
   state ={
@@ -164,9 +167,13 @@ export default class TopHeader extends Component {
               marginTop: '4px',
             }}>
             <Col span={7} style={{ marginRight: '15px' }}>
-                <a href="#/search" style={{ color: 'white' }}>
-                  <MyIcon type="icon-search" />
-                </a>
+                
+                <Search
+                
+      placeholder="输入搜索关键字"
+      onSearch={() => window.location.href="#/search"}
+    />
+                
               </Col>
               <Col
                 span={1}
