@@ -83,7 +83,7 @@ export default class TopHeader extends Component {
               <Col span={4}>
                 <Logo></Logo>
               </Col>
-              <Col span={4}>
+              <Col span={3}>
                 <Category
                   active={ this.state.activeTab === 1 }
                   subheight={ this.state.height }
@@ -91,7 +91,7 @@ export default class TopHeader extends Component {
                   handleHover={ this.handleHover.bind(this) }
                 ></Category>
               </Col>
-              <Col span={4}>
+              <Col span={3}>
                 <a href="#/funding">
                   <div style={{ height: '60px' }}>
                     <span style={{
@@ -107,6 +107,54 @@ export default class TopHeader extends Component {
                   </div>
                 </a>
               </Col>
+              <Col span={3}>
+                <a href="#/funding">
+                  <div style={{ height: '60px' }}>
+                    <span style={{
+                        position: 'absolute',
+                        lineHeight: '22px',
+                        marginTop: '10px',
+                        fontSize: '16px',
+                        color: this.state.activeTab === 2 ? '#fff' : '#BCBCBC',
+                        fontWeight: 400,
+                      }}>
+                      <span dangerouslySetInnerHTML={{ __html: '直&nbsp&nbsp&nbsp&nbsp&nbsp播' }}></span>
+                    </span>
+                  </div>
+                </a>
+              </Col>
+              <Col span={3}>
+                <a href="#/funding">
+                  <div style={{ height: '60px' }}>
+                    <span style={{
+                        position: 'absolute',
+                        lineHeight: '22px',
+                        marginTop: '10px',
+                        fontSize: '16px',
+                        color: this.state.activeTab === 2 ? '#fff' : '#BCBCBC',
+                        fontWeight: 400,
+                      }}>
+                      <span dangerouslySetInnerHTML={{ __html: '游&nbsp&nbsp&nbsp&nbsp&nbsp戏' }}></span>
+                    </span>
+                  </div>
+                </a>
+              </Col>
+              <Col span={3}>
+                <a href="#/funding">
+                  <div style={{ height: '60px' }}>
+                    <span style={{
+                        position: 'absolute',
+                        lineHeight: '22px',
+                        marginTop: '10px',
+                        fontSize: '16px',
+                        color: this.state.activeTab === 2 ? '#fff' : '#BCBCBC',
+                        fontWeight: 400,
+                      }}>
+                      <span dangerouslySetInnerHTML={{ __html: '方塘币' }}></span>
+                    </span>
+                  </div>
+                </a>
+              </Col>
             </Row>
           </Col>
           <Col span={12}>
@@ -115,6 +163,11 @@ export default class TopHeader extends Component {
               fontSize: '22px',
               marginTop: '4px',
             }}>
+            <Col span={7} style={{ marginRight: '15px' }}>
+                <a href="#/search" style={{ color: 'white' }}>
+                  <MyIcon type="icon-search" />
+                </a>
+              </Col>
               <Col
                 span={1}
                 onClick={ () => this.props.handleOpenFundingUpload() }
@@ -133,11 +186,7 @@ export default class TopHeader extends Component {
                   <Icon type="upload" theme="outlined" />
                 </Tooltip>
               </Col>
-              <Col span={1} style={{ marginRight: '15px' }}>
-                <a href="#/search" style={{ color: 'white' }}>
-                  <MyIcon type="icon-search" />
-                </a>
-              </Col>
+              
               <Col span={1} style={{ marginRight: '15px' }}>
                 <AlertBell />
               </Col>

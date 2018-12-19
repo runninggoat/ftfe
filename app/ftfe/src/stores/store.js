@@ -49,6 +49,7 @@ const rootReducer = combineReducers({
   counter,
   user,
   uploadInfo,
+  
 })
 
 // 创建 Redux store 来存放应用的状态。
