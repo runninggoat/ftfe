@@ -21,3 +21,11 @@ code {
 .gradient-icon svg * {
   fill: url(#rg) !important;
 }
+.ant-input-affix-wrapper .ant-input:not(:last-child){
+  width:220px;
+height:30px;
+color:white;
+background: black;
+border-radius: 15px;
+opacity: 0.2;
+}

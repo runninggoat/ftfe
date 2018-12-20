@@ -168,7 +168,7 @@ export default class TopHeader extends Component {
             }}>
             <Col span={7} style={{ marginRight: '15px' }}>
                 
-                <Search
+                <Search 
                 
       placeholder="输入搜索关键字"
       onSearch={() => window.location.href="#/search"}
