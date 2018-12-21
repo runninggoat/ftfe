@@ -186,7 +186,7 @@ export default class TopHeader extends Component {
                         fontWeight: 400
                       }}
                     >
-                      <span dangerouslySetInnerHTML={{ __html: "方塘币" }} />
+                      <span dangerouslySetInnerHTML={{ __html: "方糖币" }} />
                     </span>
                   </div>
                 </a>
