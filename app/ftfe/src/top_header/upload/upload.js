@@ -109,7 +109,7 @@ export default class UploadPanel extends Component {
         visible={ this.props.display }
         closable={ false }
         keyboard={ false }
-        maskClosable={ false }
+        maskClosable={ true }
         footer={ null }
         width="1200px"
         style={{
@@ -129,7 +129,7 @@ export default class UploadPanel extends Component {
           style={{
             position: 'fixed',
             top: '31px',
-            right: '41px',
+            right: '220px',
             color: '#BCBCBC',
             fontSize: '32px',
           }}

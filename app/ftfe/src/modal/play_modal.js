@@ -30,6 +30,7 @@ export default class PlayModal extends Component {
     return (
       <div>
         <Modal
+          maskClosable={ true }
           visible={this.state.visible}
           closable={false}
           footer={null}

@@ -20,7 +20,7 @@ export default class LoginPanel extends Component {
         visible={ this.props.display }
         closable={ false }
         keyboard={ false }
-        maskClosable={ false }
+        maskClosable={ true }
         footer={ null }
         width="410px"
         style={{
@@ -38,9 +38,9 @@ export default class LoginPanel extends Component {
         <div
           onClick={ () => this.props.onCloseLogin('Close') }
           style={{
-            position: 'fixed',
-            top: '30px',
-            right: '40px',
+            position: 'relative',
+            top: '-15px',
+            right: '-50px',
             color: 'white',
             fontSize: '30px',
             float: 'right',
@@ -61,7 +61,7 @@ export default class LoginPanel extends Component {
               style={{
                 width: '176px',
                 height: '167px',
-                margin: '-49px 0 0 0'
+                margin: '-49px 0 0 0',
               }}
             />
           </Col>

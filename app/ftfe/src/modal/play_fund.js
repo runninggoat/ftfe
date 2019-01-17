@@ -123,6 +123,7 @@ export default class PlayModal extends Component {
           visible={this.state.visible}
           closable={false}
           footer={null}
+          maskClosable={ true }
           centered={true}
           width={"1270px"}
           bodyStyle={{ padding: "0px", margin: "5% 0" }}

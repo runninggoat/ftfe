@@ -260,7 +260,7 @@ export default class PicWall extends Component {
             </Col>
           </Row>
         </div>
-        <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
+        <Modal maskClosable={ true } visible={previewVisible} footer={null} onCancel={this.handleCancel}>
           <img alt="example" style={{ width: '100%' }} src={previewImage} />
         </Modal>
       </div>
